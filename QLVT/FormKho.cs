@@ -133,7 +133,7 @@ namespace QLVT
                 return false;
             }
 
-            if (Regex.IsMatch(txtMaKho.Text, @"^[a-zA-Z0-9]+$") == false)
+            if (Regex.IsMatch(txtMaKho.Text, @"^[a-zA-Z0-9 ]+$") == false)
             {
                 MessageBox.Show("Mã kho chỉ chấp nhận chữ và số", "Thông báo", MessageBoxButtons.OK);
                 txtMaKho.Focus();
