@@ -229,7 +229,7 @@ namespace QLVT
                     diachi = dt["DIACHI"].ToString();
                     ngaysinh = dt["NGAYSINH"].ToString() == "" ? null : (DateTime?)dt["NGAYSINH"];
                     luong = float.Parse(dt["LUONG"].ToString());
-                    macn = dt["MACN"].ToString(); ;
+                    macn = dt["MACN"].ToString();
                     trangthaixoa = 0;
                     if (dt["TrangThaiXoa"].ToString() == "true") trangthaixoa = 1;
 

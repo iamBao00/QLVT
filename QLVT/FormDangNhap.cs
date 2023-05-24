@@ -99,7 +99,7 @@ namespace QLVT
             Program.password = tePassword.Text.Trim();
 
             if (Program.KetNoi() == 0) return;
-
+            
             Program.mChinhNhanh = cbChiNhanh.SelectedIndex;
             Program.mloginDN = Program.mlogin;
             Program.passwordDN = Program.password;
