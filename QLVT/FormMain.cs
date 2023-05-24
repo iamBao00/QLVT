@@ -184,5 +184,20 @@ namespace QLVT
                 }
             }
         }
+
+        private void barButtonItem12_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            Form form = this.CheckExists(typeof(Frpt_In_DSNV));
+            {
+                if (form != null) form.Activate();
+                else
+                {
+                    Frpt_In_DSNV f = new Frpt_In_DSNV();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+            }
+        }
     }
 }
