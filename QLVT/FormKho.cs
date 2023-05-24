@@ -44,6 +44,8 @@ namespace QLVT
             btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnReload.Enabled = btnThoat.Enabled = btnPhucHoi.Enabled = false;
             btnGhi.Enabled = btnHuy.Enabled = true;
             dangThemMoi = true;
+
+            khoGridControl.Enabled = false;
         }
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
