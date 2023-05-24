@@ -100,6 +100,7 @@ namespace QLVT
 
             if (Program.KetNoi() == 0) return;
 
+
             try
             {
                 String checkDangNhap = "declare @result int " +
