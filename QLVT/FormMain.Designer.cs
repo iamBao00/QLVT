@@ -238,6 +238,7 @@
             this.barButtonItem13.Id = 32;
             this.barButtonItem13.ImageOptions.SvgImage = global::QLVT.Properties.Resources.bo_appearance;
             this.barButtonItem13.Name = "barButtonItem13";
+            this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
             // 
             // ribbonPageNhapXuat
             // 

@@ -96,6 +96,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSPHIEUXUAT.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Frpt_Hoat_Dong_Nhan_Vien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frpt_Hoat_Dong_Nhan_Vien.Designer.cs">
+      <DependentUpon>Frpt_Hoat_Dong_Nhan_Vien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frpt_In_DSNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTaoTaiKhoan.resx">
       <DependentUpon>FormTaoTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frpt_Hoat_Dong_Nhan_Vien.resx">
+      <DependentUpon>Frpt_Hoat_Dong_Nhan_Vien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frpt_In_DSNV.resx">
       <DependentUpon>Frpt_In_DSNV.cs</DependentUpon>

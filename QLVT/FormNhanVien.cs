@@ -249,8 +249,13 @@ namespace QLVT
             try
             {
                 this.nhanVienTableAdapter.Fill(this.DS1.NhanVien);
+                this.userTableAdapter.Fill(this.DS1.USER);
+                this.phieuNhapTableAdapter.Fill(this.DS1.PhieuNhap);
+                this.phieuXuatTableAdapter.Fill(this.DS1.PhieuXuat);
+                this.datHangTableAdapter.Fill(this.DS1.DatHang);
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Lỗi Reload !" + ex.Message, "", MessageBoxButtons.OK);
                 return;

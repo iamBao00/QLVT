@@ -199,5 +199,19 @@ namespace QLVT
                 }
             }
         }
+
+        private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(Frpt_Hoat_Dong_Nhan_Vien));
+            {
+                if (form != null) form.Activate();
+                else
+                {
+                    Frpt_Hoat_Dong_Nhan_Vien f = new Frpt_Hoat_Dong_Nhan_Vien();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+            }
+        }
     }
 }
