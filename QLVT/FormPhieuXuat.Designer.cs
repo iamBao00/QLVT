@@ -420,7 +420,7 @@
             this.bar2.DockCol = 0;
             this.bar2.DockRow = 0;
             this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar2.FloatLocation = new System.Drawing.Point(589, 133);
+            this.bar2.FloatLocation = new System.Drawing.Point(417, 137);
             this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThemPX, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnXoaPX, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
@@ -431,7 +431,6 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnReloadPX, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThoatPX, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonPX, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
-            this.bar2.Offset = 7;
             this.bar2.Text = "Tools";
             // 
             // btnThemPX
@@ -1061,6 +1060,7 @@
             this.MAPX.Properties.ReadOnly = true;
             this.MAPX.Size = new System.Drawing.Size(125, 22);
             this.MAPX.TabIndex = 1;
+            this.MAPX.EditValueChanged += new System.EventHandler(this.MAPX_EditValueChanged);
             // 
             // thongTinKhoTableAdapter
             // 

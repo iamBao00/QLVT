@@ -215,6 +215,7 @@
             this.barButtonItem10.Id = 29;
             this.barButtonItem10.ImageOptions.SvgImage = global::QLVT.Properties.Resources.paste3;
             this.barButtonItem10.Name = "barButtonItem10";
+            this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
             // 
             // barButtonItem11
             // 

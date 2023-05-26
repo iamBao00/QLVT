@@ -213,5 +213,20 @@ namespace QLVT
                 }
             }
         }
+
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(FormPhieuNhap));
+
+            {
+                if (form != null) form.Activate();
+                else
+                {
+                    FormPhieuNhap f = new FormPhieuNhap();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+            }
+        }
     }
 }

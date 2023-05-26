@@ -727,5 +727,10 @@ namespace QLVT
             }
             catch { }
         }
+
+        private void MAPX_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

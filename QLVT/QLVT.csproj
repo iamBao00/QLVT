@@ -88,6 +88,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSKHO1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DSPHIEUNHAP.cs">
+      <DependentUpon>DSPHIEUNHAP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSPHIEUNHAP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPHIEUNHAP.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DSPHIEUXUAT.cs">
       <DependentUpon>DSPHIEUXUAT.xsd</DependentUpon>
     </Compile>
@@ -95,6 +103,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DSPHIEUXUAT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhieuNhap.Designer.cs">
+      <DependentUpon>FormPhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="Frpt_Hoat_Dong_Nhan_Vien.cs">
       <SubType>Form</SubType>
@@ -167,6 +181,9 @@
     <EmbeddedResource Include="FormNhanVien.resx">
       <DependentUpon>FormNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPhieuNhap.resx">
+      <DependentUpon>FormPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPhieuXuat.resx">
       <DependentUpon>FormPhieuXuat.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -222,6 +239,17 @@
     </None>
     <None Include="DSKHO1.xss">
       <DependentUpon>DSKHO1.xsd</DependentUpon>
+    </None>
+    <None Include="DSPHIEUNHAP.xsc">
+      <DependentUpon>DSPHIEUNHAP.xsd</DependentUpon>
+    </None>
+    <None Include="DSPHIEUNHAP.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPHIEUNHAP.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSPHIEUNHAP.xss">
+      <DependentUpon>DSPHIEUNHAP.xsd</DependentUpon>
     </None>
     <None Include="DSPHIEUXUAT.xsc">
       <DependentUpon>DSPHIEUXUAT.xsd</DependentUpon>
