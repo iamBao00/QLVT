@@ -163,7 +163,16 @@ namespace QLVT
 
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            Form form = this.CheckExists(typeof(FormVatTu));
+            {
+                if (form != null) form.Activate();
+                else
+                {
+                    FormVatTu f = new FormVatTu();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+            }
         }
 
         private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
