@@ -551,7 +551,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 30);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1631, 94);
+            this.panelControl1.Size = new System.Drawing.Size(1631, 60);
             this.panelControl1.TabIndex = 18;
             // 
             // cbChiNhanh
@@ -626,6 +626,7 @@
             this.colMAPX.FieldName = "MAPX";
             this.colMAPX.MinWidth = 25;
             this.colMAPX.Name = "colMAPX";
+            this.colMAPX.OptionsColumn.ReadOnly = true;
             this.colMAPX.Visible = true;
             this.colMAPX.VisibleIndex = 0;
             this.colMAPX.Width = 93;
@@ -636,6 +637,7 @@
             this.colNGAY.FieldName = "NGAY";
             this.colNGAY.MinWidth = 25;
             this.colNGAY.Name = "colNGAY";
+            this.colNGAY.OptionsColumn.ReadOnly = true;
             this.colNGAY.Visible = true;
             this.colNGAY.VisibleIndex = 1;
             this.colNGAY.Width = 93;
@@ -646,6 +648,7 @@
             this.colHOTENKH.FieldName = "HOTENKH";
             this.colHOTENKH.MinWidth = 25;
             this.colHOTENKH.Name = "colHOTENKH";
+            this.colHOTENKH.OptionsColumn.ReadOnly = true;
             this.colHOTENKH.Visible = true;
             this.colHOTENKH.VisibleIndex = 2;
             this.colHOTENKH.Width = 93;
@@ -656,6 +659,7 @@
             this.colMANV1.FieldName = "MANV";
             this.colMANV1.MinWidth = 25;
             this.colMANV1.Name = "colMANV1";
+            this.colMANV1.OptionsColumn.ReadOnly = true;
             this.colMANV1.Visible = true;
             this.colMANV1.VisibleIndex = 3;
             this.colMANV1.Width = 93;
@@ -666,6 +670,7 @@
             this.colMAKHO.FieldName = "MAKHO";
             this.colMAKHO.MinWidth = 25;
             this.colMAKHO.Name = "colMAKHO";
+            this.colMAKHO.OptionsColumn.ReadOnly = true;
             this.colMAKHO.Visible = true;
             this.colMAKHO.VisibleIndex = 4;
             this.colMAKHO.Width = 93;
@@ -675,7 +680,7 @@
             this.phieuXuatGridControl.DataSource = this.phieuXuatBindingSource;
             this.phieuXuatGridControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.phieuXuatGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.phieuXuatGridControl.Location = new System.Drawing.Point(0, 124);
+            this.phieuXuatGridControl.Location = new System.Drawing.Point(0, 90);
             this.phieuXuatGridControl.MainView = this.gridView2;
             this.phieuXuatGridControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.phieuXuatGridControl.MenuManager = this.barManager1;
@@ -700,10 +705,10 @@
             this.panelControl4.Controls.Add(this.panelControl3);
             this.panelControl4.Controls.Add(this.panelControl2);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl4.Location = new System.Drawing.Point(0, 376);
+            this.panelControl4.Location = new System.Drawing.Point(0, 342);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1631, 425);
+            this.panelControl4.Size = new System.Drawing.Size(1631, 459);
             this.panelControl4.TabIndex = 49;
             this.panelControl4.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl4_Paint);
             // 
@@ -715,7 +720,7 @@
             this.panelControl3.Location = new System.Drawing.Point(733, 2);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(896, 421);
+            this.panelControl3.Size = new System.Drawing.Size(896, 455);
             this.panelControl3.TabIndex = 31;
             // 
             // cTPXGridControl
@@ -729,7 +734,7 @@
             this.cTPXGridControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cTPXGridControl.MenuManager = this.barManager1;
             this.cTPXGridControl.Name = "cTPXGridControl";
-            this.cTPXGridControl.Size = new System.Drawing.Size(892, 355);
+            this.cTPXGridControl.Size = new System.Drawing.Size(892, 389);
             this.cTPXGridControl.TabIndex = 1;
             this.cTPXGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -750,6 +755,7 @@
             this.colMAPX1.FieldName = "MAPX";
             this.colMAPX1.MinWidth = 25;
             this.colMAPX1.Name = "colMAPX1";
+            this.colMAPX1.OptionsColumn.ReadOnly = true;
             this.colMAPX1.Visible = true;
             this.colMAPX1.VisibleIndex = 0;
             this.colMAPX1.Width = 93;
@@ -760,6 +766,7 @@
             this.colMAVT.FieldName = "MAVT";
             this.colMAVT.MinWidth = 25;
             this.colMAVT.Name = "colMAVT";
+            this.colMAVT.OptionsColumn.ReadOnly = true;
             this.colMAVT.Visible = true;
             this.colMAVT.VisibleIndex = 1;
             this.colMAVT.Width = 93;
@@ -770,6 +777,7 @@
             this.colSOLUONG.FieldName = "SOLUONG";
             this.colSOLUONG.MinWidth = 25;
             this.colSOLUONG.Name = "colSOLUONG";
+            this.colSOLUONG.OptionsColumn.ReadOnly = true;
             this.colSOLUONG.Visible = true;
             this.colSOLUONG.VisibleIndex = 2;
             this.colSOLUONG.Width = 93;
@@ -780,6 +788,7 @@
             this.colDONGIA.FieldName = "DONGIA";
             this.colDONGIA.MinWidth = 25;
             this.colDONGIA.Name = "colDONGIA";
+            this.colDONGIA.OptionsColumn.ReadOnly = true;
             this.colDONGIA.Visible = true;
             this.colDONGIA.VisibleIndex = 3;
             this.colDONGIA.Width = 93;
@@ -831,7 +840,7 @@
             this.panelControl2.Location = new System.Drawing.Point(2, 2);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(731, 421);
+            this.panelControl2.Size = new System.Drawing.Size(731, 455);
             this.panelControl2.TabIndex = 30;
             // 
             // ttvtComboBox
@@ -1089,7 +1098,7 @@
             this.Controls.Add(this.barDockControl2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormPhieuXuat";
-            this.Text = "FormPhieuXuat";
+            this.Text = "Phiếu xuất";
             this.Load += new System.EventHandler(this.FormPhieuXuat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

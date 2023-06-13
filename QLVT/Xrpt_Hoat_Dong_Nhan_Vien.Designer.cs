@@ -33,11 +33,11 @@
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary3 = new DevExpress.XtraReports.UI.XRSummary();
+            DevExpress.XtraReports.UI.XRSummary xrSummary4 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.XtraReports.UI.XRSummary xrSummary4 = new DevExpress.XtraReports.UI.XRSummary();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.pageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
@@ -82,10 +82,11 @@
             this.label3 = new DevExpress.XtraReports.UI.XRLabel();
             this.label4 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
-            this.panel2 = new DevExpress.XtraReports.UI.XRPanel();
-            this.Xrpt_lbtTienChu = new DevExpress.XtraReports.UI.XRLabel();
-            this.label6 = new DevExpress.XtraReports.UI.XRLabel();
             this.Xrpt_Sum_Tien_Gia = new DevExpress.XtraReports.UI.XRLabel();
+            this.panel2 = new DevExpress.XtraReports.UI.XRPanel();
+            this.Xrpt_Sum_Tien = new DevExpress.XtraReports.UI.XRLabel();
+            this.Xrpt_lbTienChu = new DevExpress.XtraReports.UI.XRLabel();
+            this.label6 = new DevExpress.XtraReports.UI.XRLabel();
             this.sqlDS_Hoat_Dong_Nhan_Vien = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Title = new DevExpress.XtraReports.UI.XRControlStyle();
             this.GroupCaption1 = new DevExpress.XtraReports.UI.XRControlStyle();
@@ -101,7 +102,6 @@
             this.GrandTotalData1 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.GrandTotalBackground1 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.PageInfo = new DevExpress.XtraReports.UI.XRControlStyle();
-            this.Xrpt_Sum_Tien = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Xrpt_lbTenNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
@@ -581,7 +581,7 @@
             this.xrLabel2.CanGrow = false;
             this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([SOLUONG] * [DONGIA])")});
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(753.742F, 10F);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(731.242F, 10F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.SizeF = new System.Drawing.SizeF(146.258F, 14.88444F);
             this.xrLabel2.StyleName = "TotalData1";
@@ -638,47 +638,6 @@
             this.ReportFooter.HeightF = 91.05109F;
             this.ReportFooter.Name = "ReportFooter";
             // 
-            // panel2
-            // 
-            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
-            this.panel2.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.panel2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.Xrpt_Sum_Tien,
-            this.Xrpt_lbtTienChu,
-            this.label6});
-            this.panel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 49.16667F);
-            this.panel2.Name = "panel2";
-            this.panel2.SizeF = new System.Drawing.SizeF(900F, 41.88441F);
-            this.panel2.StyleName = "GrandTotalBackground1";
-            this.panel2.StylePriority.UseBorderColor = false;
-            this.panel2.StylePriority.UseBorderDashStyle = false;
-            this.panel2.StylePriority.UseBorders = false;
-            // 
-            // Xrpt_lbtTienChu
-            // 
-            this.Xrpt_lbtTienChu.LocationFloat = new DevExpress.Utils.PointFloat(462.1064F, 9.999996F);
-            this.Xrpt_lbtTienChu.Name = "Xrpt_lbtTienChu";
-            this.Xrpt_lbtTienChu.SizeF = new System.Drawing.SizeF(249.1356F, 21.88441F);
-            this.Xrpt_lbtTienChu.StyleName = "GrandTotalCaption1";
-            this.Xrpt_lbtTienChu.StylePriority.UseTextAlignment = false;
-            this.Xrpt_lbtTienChu.Text = "(bằng chữ)";
-            this.Xrpt_lbtTienChu.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.Font = new DevExpress.Drawing.DXFont("Arial", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.label6.LocationFloat = new DevExpress.Utils.PointFloat(213.1238F, 9.999996F);
-            this.label6.Name = "label6";
-            this.label6.SizeF = new System.Drawing.SizeF(87.18361F, 21.88441F);
-            this.label6.StyleName = "GrandTotalCaption1";
-            this.label6.StylePriority.UseFont = false;
-            this.label6.StylePriority.UseTextAlignment = false;
-            this.label6.Text = "Tổng cộng:";
-            this.label6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
             // Xrpt_Sum_Tien_Gia
             // 
             this.Xrpt_Sum_Tien_Gia.AutoWidth = true;
@@ -697,6 +656,68 @@
             this.Xrpt_Sum_Tien_Gia.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.Xrpt_Sum_Tien_Gia.Visible = false;
             this.Xrpt_Sum_Tien_Gia.WordWrap = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.panel2.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.panel2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.Xrpt_Sum_Tien,
+            this.Xrpt_lbTienChu,
+            this.label6});
+            this.panel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 49.16667F);
+            this.panel2.Name = "panel2";
+            this.panel2.SizeF = new System.Drawing.SizeF(900F, 41.88441F);
+            this.panel2.StyleName = "GrandTotalBackground1";
+            this.panel2.StylePriority.UseBorderColor = false;
+            this.panel2.StylePriority.UseBorderDashStyle = false;
+            this.panel2.StylePriority.UseBorders = false;
+            // 
+            // Xrpt_Sum_Tien
+            // 
+            this.Xrpt_Sum_Tien.AutoWidth = true;
+            this.Xrpt_Sum_Tien.CanGrow = false;
+            this.Xrpt_Sum_Tien.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([SOLUONG] * [DONGIA])")});
+            this.Xrpt_Sum_Tien.Font = new DevExpress.Drawing.DXFont("Arial", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Xrpt_Sum_Tien.LocationFloat = new DevExpress.Utils.PointFloat(205.3074F, 9.999996F);
+            this.Xrpt_Sum_Tien.Name = "Xrpt_Sum_Tien";
+            this.Xrpt_Sum_Tien.SizeF = new System.Drawing.SizeF(150.1323F, 21.88441F);
+            this.Xrpt_Sum_Tien.StyleName = "GrandTotalData1";
+            this.Xrpt_Sum_Tien.StylePriority.UseFont = false;
+            this.Xrpt_Sum_Tien.StylePriority.UseTextAlignment = false;
+            xrSummary4.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
+            this.Xrpt_Sum_Tien.Summary = xrSummary4;
+            this.Xrpt_Sum_Tien.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.Xrpt_Sum_Tien.TextFormatString = "{0:#,#}";
+            this.Xrpt_Sum_Tien.WordWrap = false;
+            this.Xrpt_Sum_Tien.SummaryCalculated += new DevExpress.XtraReports.UI.TextFormatEventHandler(this.Xrpt_Sum_Tien_SummaryCalculated);
+            // 
+            // Xrpt_lbTienChu
+            // 
+            this.Xrpt_lbTienChu.LocationFloat = new DevExpress.Utils.PointFloat(422.1064F, 9.999996F);
+            this.Xrpt_lbTienChu.Name = "Xrpt_lbTienChu";
+            this.Xrpt_lbTienChu.SizeF = new System.Drawing.SizeF(467.8936F, 21.88441F);
+            this.Xrpt_lbTienChu.StyleName = "GrandTotalCaption1";
+            this.Xrpt_lbTienChu.StylePriority.UseTextAlignment = false;
+            this.Xrpt_lbTienChu.Text = "(bằng chữ)";
+            this.Xrpt_lbTienChu.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.Xrpt_lbTienChu.PrintOnPage += new DevExpress.XtraReports.UI.PrintOnPageEventHandler(this.Xrpt_lbTienChu_PrintOnPage);
+            // 
+            // label6
+            // 
+            this.label6.Font = new DevExpress.Drawing.DXFont("Arial", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.label6.LocationFloat = new DevExpress.Utils.PointFloat(118.1238F, 9.999996F);
+            this.label6.Name = "label6";
+            this.label6.SizeF = new System.Drawing.SizeF(87.18361F, 21.88441F);
+            this.label6.StyleName = "GrandTotalCaption1";
+            this.label6.StylePriority.UseFont = false;
+            this.label6.StylePriority.UseTextAlignment = false;
+            this.label6.Text = "Tổng cộng:";
+            this.label6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // sqlDS_Hoat_Dong_Nhan_Vien
             // 
@@ -862,25 +883,6 @@
             this.PageInfo.Name = "PageInfo";
             this.PageInfo.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 6, 0, 0, 100F);
             // 
-            // Xrpt_Sum_Tien
-            // 
-            this.Xrpt_Sum_Tien.AutoWidth = true;
-            this.Xrpt_Sum_Tien.CanGrow = false;
-            this.Xrpt_Sum_Tien.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([SOLUONG] * [DONGIA])")});
-            this.Xrpt_Sum_Tien.Font = new DevExpress.Drawing.DXFont("Arial", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.Xrpt_Sum_Tien.LocationFloat = new DevExpress.Utils.PointFloat(300.3074F, 9.999996F);
-            this.Xrpt_Sum_Tien.Name = "Xrpt_Sum_Tien";
-            this.Xrpt_Sum_Tien.SizeF = new System.Drawing.SizeF(150.1323F, 21.88441F);
-            this.Xrpt_Sum_Tien.StyleName = "GrandTotalData1";
-            this.Xrpt_Sum_Tien.StylePriority.UseFont = false;
-            this.Xrpt_Sum_Tien.StylePriority.UseTextAlignment = false;
-            xrSummary4.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
-            this.Xrpt_Sum_Tien.Summary = xrSummary4;
-            this.Xrpt_Sum_Tien.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.Xrpt_Sum_Tien.TextFormatString = "{0:#,#}";
-            this.Xrpt_Sum_Tien.WordWrap = false;
-            // 
             // Xrpt_Hoat_Dong_Nhan_Vien
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -990,7 +992,7 @@
         public DevExpress.DataAccess.Sql.SqlDataSource sqlDS_Hoat_Dong_Nhan_Vien;
         public DevExpress.XtraReports.UI.XRLabel Xrpt_lbThoiGian;
         public DevExpress.XtraReports.UI.XRRichText Xrpt_lbTenNV;
-        public DevExpress.XtraReports.UI.XRLabel Xrpt_lbtTienChu;
+        public DevExpress.XtraReports.UI.XRLabel Xrpt_lbTienChu;
         public DevExpress.XtraReports.UI.XRLabel Xrpt_Sum_Tien_Gia;
         public DevExpress.XtraReports.UI.XRLabel Xrpt_Sum_Tien;
     }

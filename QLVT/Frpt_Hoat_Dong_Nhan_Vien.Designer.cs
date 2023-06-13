@@ -33,6 +33,8 @@
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label3;
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.denngayde = new DevExpress.XtraEditors.DateEdit();
+            this.tungayde = new DevExpress.XtraEditors.DateEdit();
             this.cmbHoTen = new System.Windows.Forms.ComboBox();
             this.thongTinNhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DS1 = new QLVT.DS1();
@@ -44,20 +46,18 @@
             this.tableAdapterManager = new QLVT.DS1TableAdapters.TableAdapterManager();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.thongTinNhanVienTableAdapter = new QLVT.DS1TableAdapters.ThongTinNhanVienTableAdapter();
-            this.tungayde = new DevExpress.XtraEditors.DateEdit();
-            this.denngayde = new DevExpress.XtraEditors.DateEdit();
             hOTENLabel = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.denngayde.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.denngayde.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tungayde.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tungayde.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thongTinNhanVienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tungayde.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tungayde.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.denngayde.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.denngayde.Properties.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
             // 
             // hOTENLabel
@@ -68,6 +68,24 @@
             hOTENLabel.Size = new System.Drawing.Size(68, 16);
             hOTENLabel.TabIndex = 3;
             hOTENLabel.Text = "Nhân viên:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(259, 126);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(59, 16);
+            label2.TabIndex = 9;
+            label2.Text = "Từ ngày:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(470, 126);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(66, 16);
+            label3.TabIndex = 10;
+            label3.Text = "Đến ngày:";
             // 
             // panelControl1
             // 
@@ -86,6 +104,30 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(800, 284);
             this.panelControl1.TabIndex = 6;
+            // 
+            // denngayde
+            // 
+            this.denngayde.EditValue = new System.DateTime(2023, 5, 25, 17, 2, 0, 0);
+            this.denngayde.Location = new System.Drawing.Point(473, 145);
+            this.denngayde.Name = "denngayde";
+            this.denngayde.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.denngayde.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.denngayde.Size = new System.Drawing.Size(125, 22);
+            this.denngayde.TabIndex = 8;
+            // 
+            // tungayde
+            // 
+            this.tungayde.EditValue = new System.DateTime(2023, 5, 25, 17, 1, 55, 0);
+            this.tungayde.Location = new System.Drawing.Point(262, 145);
+            this.tungayde.Name = "tungayde";
+            this.tungayde.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.tungayde.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.tungayde.Size = new System.Drawing.Size(125, 22);
+            this.tungayde.TabIndex = 7;
             // 
             // cmbHoTen
             // 
@@ -169,48 +211,6 @@
             // 
             this.thongTinNhanVienTableAdapter.ClearBeforeFill = true;
             // 
-            // tungayde
-            // 
-            this.tungayde.EditValue = new System.DateTime(2023, 5, 25, 17, 1, 55, 0);
-            this.tungayde.Location = new System.Drawing.Point(262, 145);
-            this.tungayde.Name = "tungayde";
-            this.tungayde.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.tungayde.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.tungayde.Size = new System.Drawing.Size(125, 22);
-            this.tungayde.TabIndex = 7;
-            // 
-            // denngayde
-            // 
-            this.denngayde.EditValue = new System.DateTime(2023, 5, 25, 17, 2, 0, 0);
-            this.denngayde.Location = new System.Drawing.Point(473, 145);
-            this.denngayde.Name = "denngayde";
-            this.denngayde.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.denngayde.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.denngayde.Size = new System.Drawing.Size(125, 22);
-            this.denngayde.TabIndex = 8;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(259, 126);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(59, 16);
-            label2.TabIndex = 9;
-            label2.Text = "Từ ngày:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(470, 126);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(66, 16);
-            label3.TabIndex = 10;
-            label3.Text = "Đến ngày:";
-            // 
             // Frpt_Hoat_Dong_Nhan_Vien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -218,18 +218,18 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelControl1);
             this.Name = "Frpt_Hoat_Dong_Nhan_Vien";
-            this.Text = "Frpt_Hoat_Dong_Nhan_Vien";
+            this.Text = "Xem hoạt động nhân viên";
             this.Load += new System.EventHandler(this.Frpt_Hoat_Dong_Nhan_Vien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.denngayde.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.denngayde.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tungayde.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tungayde.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.thongTinNhanVienBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tungayde.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tungayde.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.denngayde.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.denngayde.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

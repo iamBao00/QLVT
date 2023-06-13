@@ -418,6 +418,7 @@
             this.tableAdapterManager.NhanVienTableAdapter = this.nhanVienTableAdapter;
             this.tableAdapterManager.PhieuNhapTableAdapter = null;
             this.tableAdapterManager.PhieuXuatTableAdapter = null;
+            this.tableAdapterManager.ThongTinNhanVienTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QLVT.DS1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // nhanVienTableAdapter
@@ -488,7 +489,7 @@
             this.TRANGTHAIXOA.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.TRANGTHAIXOA.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.nhanVienBindingSource, "TrangThaiXoa", true));
             this.TRANGTHAIXOA.Location = new System.Drawing.Point(1033, 25);
-            this.TRANGTHAIXOA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TRANGTHAIXOA.Margin = new System.Windows.Forms.Padding(4);
             this.TRANGTHAIXOA.MenuManager = this.barManager1;
             this.TRANGTHAIXOA.Name = "TRANGTHAIXOA";
             this.TRANGTHAIXOA.Properties.Caption = "";
@@ -500,6 +501,7 @@
             // 
             this.GROUPP.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.GROUPP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gROUPBindingSource, "name", true));
+            this.GROUPP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.GROUPP.Enabled = false;
             this.GROUPP.FormattingEnabled = true;
             this.GROUPP.Location = new System.Drawing.Point(733, 64);
@@ -601,7 +603,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormTaoTaiKhoan";
-            this.Text = "FormTaoTaiKhoan";
+            this.Text = "Tạo tài khoản";
             this.Load += new System.EventHandler(this.FormTaoTaiKhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS1)).EndInit();

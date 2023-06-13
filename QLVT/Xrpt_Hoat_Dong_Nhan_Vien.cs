@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraEditors.Filtering.Templates;
+﻿using DevExpress.CodeParser;
+using DevExpress.XtraEditors.Filtering.Templates;
 using DevExpress.XtraReports.UI;
 using System;
 using System.Collections;
@@ -14,22 +15,23 @@ namespace QLVT
         {
     
         }
-        public static string NumberToText(int inputNumber, bool suffix = true)
+
+        int sum = 0;
+        public static string NumberToText(int number)
         {
             string[] unitNumbers = new string[] { "không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín" };
             string[] placeValues = new string[] { "", "nghìn", "triệu", "tỷ" };
-            bool isNegative = false;
 
             // -12345678.3445435 => "-12345678"
-            string sNumber = inputNumber.ToString("#");
-            int number = Convert.ToInt32(sNumber);
-            if (number < 0)
-            {
-                number = -number;
-                sNumber = number.ToString();
-                isNegative = true;
-            }
+            //int number = Convert.ToInt32(inputNumber);
+            //if (number < 0)
+            //{
+            //    number = -number;
+            //    sNumber = number.ToString();
+            //    isNegative = true;
+            //}
 
+            String sNumber = number.ToString();
 
             int ones, tens, hundreds;
 
@@ -38,8 +40,8 @@ namespace QLVT
             string result = " ";
 
 
-            if (positionDigit == 0)
-                result = unitNumbers[0] + result;
+            if (number == 0)
+                result = unitNumbers[0];
             else
             {
                 // 0:       ###
@@ -47,7 +49,6 @@ namespace QLVT
                 // 2: triệu ###,###,###
                 // 3: tỷ    ###,###,###,###
                 int placeValue = 0;
-
                 while (positionDigit > 0)
                 {
                     // Check last 3 digits remain ### (hundreds tens ones)
@@ -98,8 +99,12 @@ namespace QLVT
                 }
             }
             result = result.Trim();
-            if (isNegative) result = "Âm " + result;
-            return result + (suffix ? " đồng" : "");
+            if (result != "")
+            {
+                result = result.Substring(0, 1).ToUpper() + result.Substring(1, result.Length - 1);
+            }
+            
+            return "(" + result + " đồng).";
         }
         public Xrpt_Hoat_Dong_Nhan_Vien(int manv, DateTime batdau, DateTime ketthuc)
         {
@@ -109,11 +114,21 @@ namespace QLVT
             this.sqlDS_Hoat_Dong_Nhan_Vien.Queries[0].Parameters[1].Value = batdau;
             this.sqlDS_Hoat_Dong_Nhan_Vien.Queries[0].Parameters[2].Value = ketthuc;
             this.sqlDS_Hoat_Dong_Nhan_Vien.Fill();
-            Console.WriteLine(this.Xrpt_Sum_Tien_Gia.Text.ToString());
-            Console.WriteLine(this.Xrpt_Sum_Tien.Text.ToString());
+        }
 
-            // this.Xrpt_lbtTienChu.Text = NumberToText(int.Parse(this.Xrpt_Sum_Tien_Gia.Text.ToString()));
+        private void Xrpt_Sum_Tien_SummaryCalculated(object sender, TextFormatEventArgs e)
+        {
+            if (e.Value != null)
+            {
+                sum = int.Parse(e.Value.ToString());
+            }
 
+        }
+
+        private void Xrpt_lbTienChu_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            Console.WriteLine(sum);
+            ((XRLabel)sender).Text = NumberToText(sum);
         }
     }
 }

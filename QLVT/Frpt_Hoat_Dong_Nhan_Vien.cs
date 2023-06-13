@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraReports.UI;
+﻿using DevExpress.XtraEditors;
+using DevExpress.XtraReports.UI;
 using QLVT.Properties;
 using System;
 using System.Collections.Generic;
@@ -60,6 +61,7 @@ namespace QLVT
         private void Frpt_Hoat_Dong_Nhan_Vien_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'DS1.ThongTinNhanVien' table. You can move, or remove it, as needed.
+            
             this.thongTinNhanVienTableAdapter.Connection.ConnectionString = Program.connstr;
             this.thongTinNhanVienTableAdapter.Fill(this.DS1.ThongTinNhanVien);
      
@@ -77,6 +79,9 @@ namespace QLVT
 
                 cbChiNhanh.Enabled = false;
             }
+
+            tungayde.DateTime  = DateTime.Now;
+            denngayde.DateTime = DateTime.Now;
         }
 
         private void cmbHoTen_SelectedIndexChanged(object sender, EventArgs e)
@@ -123,7 +128,7 @@ namespace QLVT
             print.ShowPreviewDialog();
             Console.WriteLine(rpt.Xrpt_lbThoiGian.Text + "Tien");
             Console.WriteLine(rpt.Xrpt_Sum_Tien.Text + "Tie2n");
-
+            Console.WriteLine(rpt.Xrpt_Sum_Tien.Value + "Tie3n");
 
         }
     }

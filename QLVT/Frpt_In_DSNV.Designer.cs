@@ -107,6 +107,7 @@
             this.tableAdapterManager.NhanVienTableAdapter = this.nhanVienTableAdapter;
             this.tableAdapterManager.PhieuNhapTableAdapter = null;
             this.tableAdapterManager.PhieuXuatTableAdapter = null;
+            this.tableAdapterManager.ThongTinNhanVienTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QLVT.DS1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // ribbonPage2
@@ -121,7 +122,7 @@
             this.ClientSize = new System.Drawing.Size(800, 253);
             this.Controls.Add(this.panelControl1);
             this.Name = "Frpt_In_DSNV";
-            this.Text = "In danh sách nhân viên";
+            this.Text = "Xen danh sách nhân viên";
             this.Load += new System.EventHandler(this.Frpt_In_DSNV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
