@@ -376,6 +376,11 @@ namespace QLVT
             dangThemMoi = false;
         }
 
+        private void cbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void mACNLabel_Click(object sender, EventArgs e)
         {
 

@@ -93,7 +93,8 @@
             // mAKHOLabel
             // 
             mAKHOLabel.AutoSize = true;
-            mAKHOLabel.Location = new System.Drawing.Point(77, 54);
+            mAKHOLabel.Location = new System.Drawing.Point(96, 68);
+            mAKHOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             mAKHOLabel.Name = "mAKHOLabel";
             mAKHOLabel.Size = new System.Drawing.Size(54, 16);
             mAKHOLabel.TabIndex = 0;
@@ -103,7 +104,8 @@
             // tENKHOLabel
             // 
             tENKHOLabel.AutoSize = true;
-            tENKHOLabel.Location = new System.Drawing.Point(314, 118);
+            tENKHOLabel.Location = new System.Drawing.Point(392, 148);
+            tENKHOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             tENKHOLabel.Name = "tENKHOLabel";
             tENKHOLabel.Size = new System.Drawing.Size(59, 16);
             tENKHOLabel.TabIndex = 2;
@@ -112,7 +114,8 @@
             // dIACHILabel
             // 
             dIACHILabel.AutoSize = true;
-            dIACHILabel.Location = new System.Drawing.Point(321, 54);
+            dIACHILabel.Location = new System.Drawing.Point(401, 68);
+            dIACHILabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             dIACHILabel.Name = "dIACHILabel";
             dIACHILabel.Size = new System.Drawing.Size(53, 16);
             dIACHILabel.TabIndex = 4;
@@ -121,7 +124,8 @@
             // mACNLabel
             // 
             mACNLabel.AutoSize = true;
-            mACNLabel.Location = new System.Drawing.Point(61, 118);
+            mACNLabel.Location = new System.Drawing.Point(76, 148);
+            mACNLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             mACNLabel.Name = "mACNLabel";
             mACNLabel.Size = new System.Drawing.Size(70, 16);
             mACNLabel.TabIndex = 6;
@@ -268,22 +272,26 @@
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 30);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1000, 66);
+            this.panelControl1.Size = new System.Drawing.Size(1000, 82);
             this.panelControl1.TabIndex = 5;
             // 
             // cbChiNhanh
             // 
             this.cbChiNhanh.FormattingEnabled = true;
-            this.cbChiNhanh.Location = new System.Drawing.Point(204, 14);
+            this.cbChiNhanh.Location = new System.Drawing.Point(255, 18);
+            this.cbChiNhanh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbChiNhanh.Name = "cbChiNhanh";
-            this.cbChiNhanh.Size = new System.Drawing.Size(336, 24);
+            this.cbChiNhanh.Size = new System.Drawing.Size(419, 24);
             this.cbChiNhanh.TabIndex = 1;
+            this.cbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cbChiNhanh_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 17);
+            this.label1.Location = new System.Drawing.Point(39, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 16);
             this.label1.TabIndex = 0;
@@ -328,11 +336,13 @@
             // 
             this.khoGridControl.DataSource = this.bds_Kho;
             this.khoGridControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.khoGridControl.Location = new System.Drawing.Point(0, 96);
+            this.khoGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.khoGridControl.Location = new System.Drawing.Point(0, 112);
             this.khoGridControl.MainView = this.gridView1;
+            this.khoGridControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.khoGridControl.MenuManager = this.barManager1;
             this.khoGridControl.Name = "khoGridControl";
-            this.khoGridControl.Size = new System.Drawing.Size(1000, 220);
+            this.khoGridControl.Size = new System.Drawing.Size(1000, 275);
             this.khoGridControl.TabIndex = 6;
             this.khoGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -344,44 +354,45 @@
             this.colTENKHO,
             this.colDIACHI,
             this.colMACN});
+            this.gridView1.DetailHeight = 437;
             this.gridView1.GridControl = this.khoGridControl;
             this.gridView1.Name = "gridView1";
             // 
             // colMAKHO
             // 
             this.colMAKHO.FieldName = "MAKHO";
-            this.colMAKHO.MinWidth = 25;
+            this.colMAKHO.MinWidth = 31;
             this.colMAKHO.Name = "colMAKHO";
             this.colMAKHO.Visible = true;
             this.colMAKHO.VisibleIndex = 0;
-            this.colMAKHO.Width = 94;
+            this.colMAKHO.Width = 117;
             // 
             // colTENKHO
             // 
             this.colTENKHO.FieldName = "TENKHO";
-            this.colTENKHO.MinWidth = 25;
+            this.colTENKHO.MinWidth = 31;
             this.colTENKHO.Name = "colTENKHO";
             this.colTENKHO.Visible = true;
             this.colTENKHO.VisibleIndex = 1;
-            this.colTENKHO.Width = 94;
+            this.colTENKHO.Width = 117;
             // 
             // colDIACHI
             // 
             this.colDIACHI.FieldName = "DIACHI";
-            this.colDIACHI.MinWidth = 25;
+            this.colDIACHI.MinWidth = 31;
             this.colDIACHI.Name = "colDIACHI";
             this.colDIACHI.Visible = true;
             this.colDIACHI.VisibleIndex = 2;
-            this.colDIACHI.Width = 94;
+            this.colDIACHI.Width = 117;
             // 
             // colMACN
             // 
             this.colMACN.FieldName = "MACN";
-            this.colMACN.MinWidth = 25;
+            this.colMACN.MinWidth = 31;
             this.colMACN.Name = "colMACN";
             this.colMACN.Visible = true;
             this.colMACN.VisibleIndex = 3;
-            this.colMACN.Width = 94;
+            this.colMACN.Width = 117;
             // 
             // panelControl2
             // 
@@ -394,19 +405,21 @@
             this.panelControl2.Controls.Add(mAKHOLabel);
             this.panelControl2.Controls.Add(this.txtMaKho);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl2.Location = new System.Drawing.Point(0, 316);
+            this.panelControl2.Location = new System.Drawing.Point(0, 387);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1000, 246);
+            this.panelControl2.Size = new System.Drawing.Size(1000, 175);
             this.panelControl2.TabIndex = 7;
             this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
             // 
             // txtMaCN
             // 
             this.txtMaCN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bds_Kho, "MACN", true));
-            this.txtMaCN.Location = new System.Drawing.Point(137, 115);
+            this.txtMaCN.Location = new System.Drawing.Point(171, 144);
+            this.txtMaCN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaCN.Name = "txtMaCN";
             this.txtMaCN.ReadOnly = true;
-            this.txtMaCN.Size = new System.Drawing.Size(100, 23);
+            this.txtMaCN.Size = new System.Drawing.Size(124, 23);
             this.txtMaCN.TabIndex = 7;
             this.txtMaCN.TextChanged += new System.EventHandler(this.mACNTextBox_TextChanged);
             // 
@@ -414,26 +427,29 @@
             // 
             this.txtDiaChi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bds_Kho, "DIACHI", true));
             this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(379, 51);
+            this.txtDiaChi.Location = new System.Drawing.Point(474, 64);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(400, 22);
+            this.txtDiaChi.Size = new System.Drawing.Size(499, 22);
             this.txtDiaChi.TabIndex = 5;
             // 
             // txtTenKho
             // 
             this.txtTenKho.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bds_Kho, "TENKHO", true));
             this.txtTenKho.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenKho.Location = new System.Drawing.Point(379, 115);
+            this.txtTenKho.Location = new System.Drawing.Point(474, 144);
+            this.txtTenKho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenKho.Name = "txtTenKho";
-            this.txtTenKho.Size = new System.Drawing.Size(400, 22);
+            this.txtTenKho.Size = new System.Drawing.Size(499, 22);
             this.txtTenKho.TabIndex = 3;
             // 
             // txtMaKho
             // 
             this.txtMaKho.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bds_Kho, "MAKHO", true));
-            this.txtMaKho.Location = new System.Drawing.Point(137, 51);
+            this.txtMaKho.Location = new System.Drawing.Point(171, 64);
+            this.txtMaKho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaKho.Name = "txtMaKho";
-            this.txtMaKho.Size = new System.Drawing.Size(100, 23);
+            this.txtMaKho.Size = new System.Drawing.Size(124, 23);
             this.txtMaKho.TabIndex = 1;
             // 
             // bds_DatHang

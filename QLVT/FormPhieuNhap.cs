@@ -514,7 +514,7 @@ namespace QLVT
                         return;
                     }
                     String checkvt =
-                      "EXEC [dbo].[sp_Check_Exists_CT_Id_Char] 'CTPN', 'MAVT' ,'" + txtMAVT.Text.Trim() + "','MAPN','" + txtMAPN.Text.Trim() + "'";
+                      "EXEC [dbo].[sp_Check_Exists_CT_Id_Char] 'Vattu', 'MAVT' ,'" + txtMAVT.Text.Trim() + "','MAPN','" + txtMAPN.Text.Trim() + "'";
                     Console.WriteLine(checkvt);
                     try
                     {
@@ -630,7 +630,7 @@ namespace QLVT
 
                 this.phieuNhapTableAdapter.Fill(this.DSPHIEUNHAP.PhieuNhap);
 
-                phieuNhapGridControl.Enabled = true;
+               
                 btnThemPN.Enabled = btnXoaPN.Enabled = btnSuaPN.Enabled = btnReloadPN.Enabled = btnThoatPN.Enabled = btnPhucHoiPN.Enabled = true;
                 btnGhiPN.Enabled = btnHuyPN.Enabled = false;
                 phieuNhapGridControl.Enabled = true;
