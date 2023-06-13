@@ -395,6 +395,9 @@ namespace QLVT
                 {
                     String checkpn =
                       "EXEC [dbo].[sp_Check_Exists_Id_Char] 'PHIEUNHAP', 'MAPN' ,'" + txtMAPN.Text.Trim() + "'";
+                    String checkddh =
+                     "EXEC [dbo].[sp_Check_Exists_Id_Char] 'PHIEUNHAP', 'MasoDDH' ,'" + txtDDH.Text.Trim() + "'";
+
                     // string getMaxIdQuery = "EXEC [dbo].[sp_Get_Max_Id_Char] 'PHIEUXUAT', 'MAPX'";
                     Console.WriteLine(checkpn);
                     try
@@ -407,6 +410,31 @@ namespace QLVT
 
                             txtMAPN.Text = tuDongTangMa(txtMAPN.Text.Trim(), 2);
                             MessageBox.Show("Mã đã tồn tại! Hệ thống đã tự động đổi mã cho bạn rồi, vui lòng xác nhận lại!", "Thông báo", MessageBoxButtons.OK);
+                            Program.myReader.Close();
+                            return;
+                        }
+                        else
+                        {
+                            Program.myReader.Close();
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi kết nối! " + ex.Message, "Thông báo", MessageBoxButtons.OK);
+                        return;
+                    }
+
+                  
+                    try
+                    {
+                        Program.myReader = Program.ExecSqlDataReader(checkddh);
+                        if (Program.myReader == null) { return; }
+                        Program.myReader.Read();
+                        if (Program.myReader.GetInt32(0) == 1)
+                        {
+                            MessageBox.Show("Đơn đặt hàng đã tồn tại phiếu nhập khác!", "Thông báo", MessageBoxButtons.OK);
+                            txtDDH.Focus();
                             Program.myReader.Close();
                             return;
                         }
