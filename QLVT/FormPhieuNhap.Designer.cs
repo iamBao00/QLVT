@@ -32,8 +32,8 @@
             System.Windows.Forms.Label tTKHOLabel;
             System.Windows.Forms.Label mAPNLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPhieuNhap));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.barDockControl2 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
             this.btnThemPX = new DevExpress.XtraBars.BarButtonItem();
@@ -413,9 +413,9 @@
             this.phieuNhapGridControl.DataSource = this.phieuNhapBindingSource;
             this.phieuNhapGridControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.phieuNhapGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6);
-            gridLevelNode3.RelationName = "FK_CTPN_PhieuNhap";
+            gridLevelNode1.RelationName = "FK_CTPN_PhieuNhap";
             this.phieuNhapGridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode3});
+            gridLevelNode1});
             this.phieuNhapGridControl.Location = new System.Drawing.Point(0, 142);
             this.phieuNhapGridControl.MainView = this.gridView1;
             this.phieuNhapGridControl.Margin = new System.Windows.Forms.Padding(6);
@@ -796,9 +796,9 @@
             this.cTPNGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cTPNGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6);
             this.cTPNGridControl.Enabled = false;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.cTPNGridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.cTPNGridControl.Location = new System.Drawing.Point(781, 426);
             this.cTPNGridControl.MainView = this.gridView2;
             this.cTPNGridControl.Margin = new System.Windows.Forms.Padding(6);

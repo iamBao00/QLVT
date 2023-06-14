@@ -397,6 +397,8 @@ namespace QLVT
                       "EXEC [dbo].[sp_Check_Exists_Id_Char] 'PHIEUNHAP', 'MAPN' ,'" + txtMAPN.Text.Trim() + "'";
                     String checkddh =
                      "EXEC [dbo].[sp_Check_Exists_Id_Char] 'PHIEUNHAP', 'MasoDDH' ,'" + txtDDH.Text.Trim() + "'";
+                    String checkddh1 =
+                    "EXEC [dbo].[sp_Check_Exists_Id_Char] 'DatHang', 'MasoDDH' ,'" + txtDDH.Text.Trim() + "'";
 
                     // string getMaxIdQuery = "EXEC [dbo].[sp_Get_Max_Id_Char] 'PHIEUXUAT', 'MAPX'";
                     Console.WriteLine(checkpn);
@@ -425,7 +427,31 @@ namespace QLVT
                         return;
                     }
 
-                  
+                    try
+                    {
+                        Program.myReader = Program.ExecSqlDataReader(checkddh1);
+                        if (Program.myReader == null) { return; }
+                        Program.myReader.Read();
+                        if (Program.myReader.GetInt32(0) == 0)
+                        {
+                            MessageBox.Show("Đơn đặt hàng này không tồn lại!", "Thông báo", MessageBoxButtons.OK);
+                            txtDDH.Focus();
+                            Program.myReader.Close();
+                            return;
+                        }
+                        else
+                        {
+                            Program.myReader.Close();
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi kết nối! " + ex.Message, "Thông báo", MessageBoxButtons.OK);
+                        return;
+                    }
+
+
                     try
                     {
                         Program.myReader = Program.ExecSqlDataReader(checkddh);
