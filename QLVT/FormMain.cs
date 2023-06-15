@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraReports.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -232,6 +233,21 @@ namespace QLVT
                 else
                 {
                     FormPhieuNhap f = new FormPhieuNhap();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+            }
+        }
+
+        private void barButtonItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(Frpt_Don_Dat_Hang_Khong_Phieu_Nhap));
+
+            {
+                if (form != null) form.Activate();
+                else
+                {
+                    Frpt_Don_Dat_Hang_Khong_Phieu_Nhap f = new Frpt_Don_Dat_Hang_Khong_Phieu_Nhap();
                     f.MdiParent = this;
                     f.Show();
                 }

@@ -121,6 +121,12 @@
     <Compile Include="FormVatTu.Designer.cs">
       <DependentUpon>FormVatTu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frpt_Don_Dat_Hang_Khong_Phieu_Nhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frpt_Don_Dat_Hang_Khong_Phieu_Nhap.Designer.cs">
+      <DependentUpon>Frpt_Don_Dat_Hang_Khong_Phieu_Nhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frpt_Hoat_Dong_Nhan_Vien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,12 @@
     <Compile Include="Properties\XrptIn_DSNV.Designer.cs">
       <DependentUpon>XrptIn_DSNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Xrpt_Don_Dat_Hang_Khong_Phieu_Nhap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Xrpt_Don_Dat_Hang_Khong_Phieu_Nhap.Designer.cs">
+      <DependentUpon>Xrpt_Don_Dat_Hang_Khong_Phieu_Nhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Xrpt_Hoat_Dong_Nhan_Vien.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -205,6 +217,9 @@
     <EmbeddedResource Include="FormVatTu.resx">
       <DependentUpon>FormVatTu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frpt_Don_Dat_Hang_Khong_Phieu_Nhap.resx">
+      <DependentUpon>Frpt_Don_Dat_Hang_Khong_Phieu_Nhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frpt_Hoat_Dong_Nhan_Vien.resx">
       <DependentUpon>Frpt_Hoat_Dong_Nhan_Vien.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\XrptIn_DSNV.resx">
       <DependentUpon>XrptIn_DSNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xrpt_Don_Dat_Hang_Khong_Phieu_Nhap.resx">
+      <DependentUpon>Xrpt_Don_Dat_Hang_Khong_Phieu_Nhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Xrpt_Hoat_Dong_Nhan_Vien.resx">
       <DependentUpon>Xrpt_Hoat_Dong_Nhan_Vien.cs</DependentUpon>
