@@ -253,5 +253,20 @@ namespace QLVT
                 }
             }
         }
+
+        private void barButtonItem15_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(Frpt_JobChiTietNhapXuat));
+
+            {
+                if (form != null) form.Activate();
+                else
+                {
+                    Frpt_JobChiTietNhapXuat f = new Frpt_JobChiTietNhapXuat();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+            }
+        }
     }
 }
