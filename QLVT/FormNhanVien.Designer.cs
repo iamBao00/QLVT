@@ -90,6 +90,7 @@
             this.phieuXuatTableAdapter = new QLVT.DS1TableAdapters.PhieuXuatTableAdapter();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userTableAdapter = new QLVT.DS1TableAdapters.USERTableAdapter();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             mANVLabel = new System.Windows.Forms.Label();
             hOLabel = new System.Windows.Forms.Label();
             tENLabel = new System.Windows.Forms.Label();
@@ -121,6 +122,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.phieuNhapBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phieuXuatBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // mANVLabel
@@ -386,6 +388,7 @@
             this.label1.Size = new System.Drawing.Size(71, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "CHI NHÁNH";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // DS1
             // 
@@ -408,6 +411,7 @@
             this.tableAdapterManager.NhanVienTableAdapter = this.nhanVienTableAdapter;
             this.tableAdapterManager.PhieuNhapTableAdapter = null;
             this.tableAdapterManager.PhieuXuatTableAdapter = null;
+            this.tableAdapterManager.ThongTinNhanVienTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QLVT.DS1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // gridView1
@@ -519,6 +523,7 @@
             this.colTrangThaiXoa.FieldName = "TrangThaiXoa";
             this.colTrangThaiXoa.MinWidth = 25;
             this.colTrangThaiXoa.Name = "colTrangThaiXoa";
+            this.colTrangThaiXoa.OptionsFilter.AllowFilter = false;
             this.colTrangThaiXoa.Visible = true;
             this.colTrangThaiXoa.VisibleIndex = 8;
             this.colTrangThaiXoa.Width = 93;
@@ -722,7 +727,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormNhanVien";
-            this.Text = "FormNhanVien";
+            this.Text = "Nhân viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
@@ -749,6 +754,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.phieuNhapBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phieuXuatBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -807,5 +813,6 @@
         private System.Windows.Forms.BindingSource userBindingSource;
         private DS1TableAdapters.USERTableAdapter userTableAdapter;
         private DevExpress.XtraBars.BarButtonItem btnChuyenChiNhanh;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
     }
 }

@@ -49,12 +49,14 @@
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageNhapXuat = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageNghiepVu = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageBaoCao = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -64,7 +66,10 @@
             this.HOTEN = new System.Windows.Forms.ToolStripStatusLabel();
             this.NHOM = new System.Windows.Forms.ToolStripStatusLabel();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+
             this.btnDanhMucVatTu = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
+
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
@@ -100,9 +105,17 @@
             this.barButtonItem11,
             this.barButtonItem12,
             this.barButtonItem13,
+            this.barButtonItem14,
+            this.barButtonItem15,
+
             this.btnDanhMucVatTu});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+
+            
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5);
+
             this.ribbonControl1.MaxItemId = 35;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 481;
@@ -243,6 +256,16 @@
             this.barButtonItem13.ImageOptions.SvgImage = global::QLVT.Properties.Resources.bo_appearance;
             this.barButtonItem13.Name = "barButtonItem13";
             this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
+
+            // 
+            // barButtonItem14
+            // 
+            this.barButtonItem14.Caption = "Đơn đặt hàng chưa có phiếu nhập";
+            this.barButtonItem14.Id = 33;
+            this.barButtonItem14.ImageOptions.SvgImage = global::QLVT.Properties.Resources.singlepageview;
+            this.barButtonItem14.Name = "barButtonItem14";
+            this.barButtonItem14.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem14_ItemClick);
+
             // 
             // ribbonPageNhapXuat
             // 
@@ -277,7 +300,8 @@
             // ribbonPageBaoCao
             // 
             this.ribbonPageBaoCao.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2});
+            this.ribbonPageGroup2,
+            this.ribbonPageGroup6});
             this.ribbonPageBaoCao.Name = "ribbonPageBaoCao";
             this.ribbonPageBaoCao.Text = "BÁO CÁO";
             this.ribbonPageBaoCao.Visible = false;
@@ -288,6 +312,12 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem13);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnDanhMucVatTu);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            // 
+            // ribbonPageGroup6
+            // 
+            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem14);
+            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem15);
+            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             // 
             // ribbonPageHeThong
             // 
@@ -350,6 +380,7 @@
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+
             // btnDanhMucVatTu
             // 
             this.btnDanhMucVatTu.Caption = "Xem Danh Mục Vật Tư";
@@ -358,6 +389,15 @@
             this.btnDanhMucVatTu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDanhMucVatTu.ImageOptions.LargeImage")));
             this.btnDanhMucVatTu.Name = "btnDanhMucVatTu";
             this.btnDanhMucVatTu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDanhMucVatTu_ItemClick);
+
+            // barButtonItem15
+            // 
+            this.barButtonItem15.Caption = "Bảng kê chi tiết số lượng – trị giá hàng";
+            this.barButtonItem15.Id = 34;
+            this.barButtonItem15.ImageOptions.SvgImage = global::QLVT.Properties.Resources.singlepageview;
+            this.barButtonItem15.Name = "barButtonItem15";
+            this.barButtonItem15.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem15_ItemClick);
+
             // 
             // FormMain
             // 
@@ -420,6 +460,11 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem12;
         private DevExpress.XtraBars.BarButtonItem barButtonItem13;
         private DevExpress.XtraBars.BarButtonItem btnDanhMucVatTu;
+
+        private DevExpress.XtraBars.BarButtonItem barButtonItem14;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem15;
+
     }
 }
 

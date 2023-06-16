@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraRichEdit.Fields;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -97,17 +98,7 @@ namespace QLVT
 
         private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //Form form = this.CheckExists(typeof(FormCTPhieuXuat));
-            //{
-            //    if (form != null) form.Activate();
-            //    else
-            //    {
-            //        FormCTPhieuXuat f = new FormCTPhieuXuat();
-            //        f.MdiParent = (FormMain)this.ParentForm;
-            //        f.Show();
-            //    }
-            //}
-    
+           
             if (Program.mGroup != "CONGTY")
             {
                 btnThemPX.Enabled = btnXoaPX.Enabled = btnSuaPX.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = true;
@@ -122,8 +113,7 @@ namespace QLVT
             barButtonPX.ItemAppearance.Normal.BackColor = MANV.Visible == true ? Color.Pink : Color.Tan;
             panelControl2.Enabled = false;
             barButtonPX.Caption = MANV.Visible == true ? "Chi tiết phiếu xuất" : "Phiếu xuất";
-           // this.CTPXTableAdapter.Fill(this.DSPHIEUXUAT.CTPX);
-           // this.phieuXuatTableAdapter.Fill(this.DSPHIEUXUAT.PhieuXuat);
+
         }
 
         private void panelControl2_Paint(object sender, PaintEventArgs e)
@@ -265,8 +255,14 @@ namespace QLVT
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+              
             if (barButtonPX.Caption == "Chi tiết phiếu xuất")
             {
+                if (phieuXuatBindingSource.Count == 0)
+                {
+                    MessageBox.Show("Danh sách phiếu xuất trống!", "", MessageBoxButtons.OK);
+                    return;
+                }
                 vitri = phieuXuatBindingSource.Position;
                 DataRowView dt = ((DataRowView)phieuXuatBindingSource[phieuXuatBindingSource.Position]);
                 mapx = dt["MAPX"].ToString();
@@ -283,6 +279,11 @@ namespace QLVT
             }
             else
             {
+                if (CTPXBindingSource.Count == 0)
+                {
+                    MessageBox.Show("Danh sách chi tiết phiếu xuất trống!", "", MessageBoxButtons.OK);
+                    return;
+                }
                 vitri = CTPXBindingSource.Position;
                 DataRowView dt = ((DataRowView)CTPXBindingSource[CTPXBindingSource.Position]);
                 mapx = dt["MAPX"].ToString();
@@ -302,6 +303,11 @@ namespace QLVT
         {
             if (barButtonPX.Caption == "Chi tiết phiếu xuất")
             {
+                if (phieuXuatBindingSource.Count == 0)
+                {
+                    MessageBox.Show("Danh sách phiếu xuất trống!", "", MessageBoxButtons.OK);
+                    return;
+                }
                 if (CTPXBindingSource.Count > 0)
 
                 {
@@ -345,7 +351,11 @@ namespace QLVT
             }
         else
             {
-
+                if (CTPXBindingSource.Count == 0)
+                {
+                    MessageBox.Show("Danh sách chi tiết phiếu xuất trống!", "", MessageBoxButtons.OK);
+                    return;
+                }
                 if (MessageBox.Show("Bạn có thực sự muốn xóa chi tiết phiếu xuất này!", "Xác nhận", MessageBoxButtons.OKCancel)
                    == DialogResult.OK)
                 {
@@ -502,11 +512,10 @@ namespace QLVT
             }
             else
             {
-                if (check_them == true)
-                {
+   
                     if (MAVT.Text.Trim() == "")
                     {
-                        MessageBox.Show("Ngày tạp phiếu xuất không được để trống!", "Thông báo", MessageBoxButtons.OK);
+                        MessageBox.Show("Ngày lạp phiếu xuất không được để trống!", "Thông báo", MessageBoxButtons.OK);
                         MAVT.Focus();
                         return;
                     }
@@ -549,8 +558,11 @@ namespace QLVT
                         DONGIA.Focus();
                         return;
                     }
+
+                if (check_them == true || mavattu != MAVT.Text.ToString())
+                {
                     String checkvt =
-                      "EXEC [dbo].[sp_Check_Exists_CT_Id_Char] 'CTPX', 'MAVT' ,'" + MAVT.Text.Trim() + "','MAPX','" + MAPX.Text.Trim() + "'"  ;
+                      "EXEC [dbo].[sp_Check_Exists_CT_Id_Char] 'CTPX', 'MAVT' ,'" + MAVT.Text.Trim() + "','MAPX','" + MAPX.Text.Trim() + "'";
                     Console.WriteLine(checkvt);
                     try
                     {
@@ -578,6 +590,8 @@ namespace QLVT
 
 
                 }
+
+
 
                 try
                 {
@@ -726,7 +740,8 @@ namespace QLVT
             catch { }
         }
 
-        private void panelControl2_Paint_1(object sender, PaintEventArgs e)
+
+        private void MAPX_EditValueChanged(object sender, EventArgs e)
         {
 
         }

@@ -17,6 +17,7 @@ namespace QLVT
         public static SqlDataAdapter da;
         public static SqlDataReader myReader;
         public static String servername = "GIABAO";
+
         public static String username = "";
         public static String password = "";
         public static String database = "QLVT_DATHANG";

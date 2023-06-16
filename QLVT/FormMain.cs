@@ -164,7 +164,16 @@ namespace QLVT
 
         private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            Form form = this.CheckExists(typeof(FormVatTu));
+            {
+                if (form != null) form.Activate();
+                else
+                {
+                    FormVatTu f = new FormVatTu();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+            }
         }
 
         private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -201,36 +210,86 @@ namespace QLVT
             }
         }
 
-        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
-        }
 
         private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Form form = this.CheckExists(typeof(FormDatHang));
+            if (form != null) form.Activate();
+            else
+            {
+                FormDatHang f = new FormDatHang();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+
+        private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(Frpt_Hoat_Dong_Nhan_Vien));
+
             {
                 if (form != null) form.Activate();
                 else
-                {
-                    FormDatHang f = new FormDatHang();
+                { 
+                    Frpt_Hoat_Dong_Nhan_Vien f = new Frpt_Hoat_Dong_Nhan_Vien();
                     f.MdiParent = this;
                     f.Show();
                 }
             }
         }
 
-        private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
-        }
 
         private void btnDanhMucVatTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Xrpt_DanhMucVatTu rpt = new Xrpt_DanhMucVatTu();
-            
+
             ReportPrintTool print = new ReportPrintTool(rpt);
             print.ShowPreviewDialog();
+        }
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(FormPhieuNhap));
+
+            {
+                if (form != null) form.Activate();
+                else
+                {
+                    FormPhieuNhap f = new FormPhieuNhap();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+            }
+        }
+
+        private void barButtonItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(Frpt_Don_Dat_Hang_Khong_Phieu_Nhap));
+
+            {
+                if (form != null) form.Activate();
+                else
+                {
+                    Frpt_Don_Dat_Hang_Khong_Phieu_Nhap f = new Frpt_Don_Dat_Hang_Khong_Phieu_Nhap();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+            }
+        }
+
+        private void barButtonItem15_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(Frpt_JobChiTietNhapXuat));
+
+            {
+                if (form != null) form.Activate();
+                else
+                {
+                    Frpt_JobChiTietNhapXuat f = new Frpt_JobChiTietNhapXuat();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+            }
         }
     }
 }
