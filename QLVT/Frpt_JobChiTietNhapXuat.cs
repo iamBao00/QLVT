@@ -80,7 +80,7 @@ namespace QLVT
 
             // Xrpt_Hoat_Dong_Nhan_Vien rpt = new Xrpt_Hoat_Dong_Nhan_Vien(manv, batdau, ketthuc);
             rpt.sqlDataSource1.Connection.ConnectionString = Program.connstr;
-            rpt.lbTieuDe.Text = "Bảng kê chi tiết số lượng – trị giá hàng " + cmbLoai.Text;
+            rpt.lbTieuDe.Text = "Bảng kê chi tiết số lượng – trị giá hàng " + cmbLoai.Text.ToLower();
             // rpt.Xrpt_lbThoiGian.Text = "Từ ngày : " + batdau.ToString("dd/MM/yyyy") + " đến ngày : " + ketthuc.ToString("dd/MM/yyyy");
             rpt.lbThoiGian.Text = "Từ ngày : " + txtTuThang.DateTime.ToString("MM/yyyy") + " đến tháng : " + txtDenThang.DateTime.ToString("MM/yyyy");
             ReportPrintTool print = new ReportPrintTool(rpt);

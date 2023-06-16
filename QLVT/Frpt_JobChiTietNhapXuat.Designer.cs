@@ -45,6 +45,7 @@
             // 
             // cmbLoai
             // 
+            this.cmbLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLoai.FormattingEnabled = true;
             this.cmbLoai.Items.AddRange(new object[] {
             "Nhập",
@@ -57,7 +58,7 @@
             // txtTuThang
             // 
             this.txtTuThang.EditValue = new System.DateTime(2023, 5, 25, 17, 1, 55, 0);
-            this.txtTuThang.Location = new System.Drawing.Point(205, 178);
+            this.txtTuThang.Location = new System.Drawing.Point(205, 181);
             this.txtTuThang.Name = "txtTuThang";
             this.txtTuThang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -80,7 +81,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(113, 181);
+            this.label2.Location = new System.Drawing.Point(113, 184);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 16);
             this.label2.TabIndex = 11;
@@ -89,16 +90,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(387, 181);
+            this.label3.Location = new System.Drawing.Point(394, 187);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 16);
+            this.label3.Size = new System.Drawing.Size(70, 16);
             this.label3.TabIndex = 12;
-            this.label3.Text = "đến tháng";
+            this.label3.Text = "Đến tháng:";
             // 
             // txtDenThang
             // 
             this.txtDenThang.EditValue = new System.DateTime(2023, 5, 25, 17, 1, 55, 0);
-            this.txtDenThang.Location = new System.Drawing.Point(469, 178);
+            this.txtDenThang.Location = new System.Drawing.Point(482, 184);
             this.txtDenThang.Name = "txtDenThang";
             this.txtDenThang.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -111,7 +112,7 @@
             // 
             // btPreview
             // 
-            this.btPreview.Location = new System.Drawing.Point(285, 253);
+            this.btPreview.Location = new System.Drawing.Point(297, 259);
             this.btPreview.Name = "btPreview";
             this.btPreview.Size = new System.Drawing.Size(139, 38);
             this.btPreview.TabIndex = 14;

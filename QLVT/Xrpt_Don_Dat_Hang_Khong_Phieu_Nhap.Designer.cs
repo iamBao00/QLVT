@@ -153,7 +153,9 @@
             this.tableCell1.StyleName = "DetailCaption1";
             this.tableCell1.StylePriority.UseBorders = false;
             this.tableCell1.StylePriority.UseBorderWidth = false;
+            this.tableCell1.StylePriority.UseTextAlignment = false;
             this.tableCell1.Text = "MSĐĐH";
+            this.tableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell1.Weight = 0.10884260989458139D;
             // 
             // tableCell2
@@ -166,7 +168,9 @@
             this.tableCell2.StyleName = "DetailCaption1";
             this.tableCell2.StylePriority.UseBorders = false;
             this.tableCell2.StylePriority.UseBorderWidth = false;
+            this.tableCell2.StylePriority.UseTextAlignment = false;
             this.tableCell2.Text = "Ngày lập";
+            this.tableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell2.Weight = 0.10223926252255976D;
             // 
             // tableCell3
@@ -179,7 +183,9 @@
             this.tableCell3.StyleName = "DetailCaption1";
             this.tableCell3.StylePriority.UseBorders = false;
             this.tableCell3.StylePriority.UseBorderWidth = false;
+            this.tableCell3.StylePriority.UseTextAlignment = false;
             this.tableCell3.Text = "Nhà cung cấp";
+            this.tableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell3.Weight = 0.14662827699800496D;
             // 
             // tableCell4
@@ -192,7 +198,9 @@
             this.tableCell4.StyleName = "DetailCaption1";
             this.tableCell4.StylePriority.UseBorders = false;
             this.tableCell4.StylePriority.UseBorderWidth = false;
+            this.tableCell4.StylePriority.UseTextAlignment = false;
             this.tableCell4.Text = "Họ tên nhân viên";
+            this.tableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell4.Weight = 0.17049499467985205D;
             // 
             // tableCell5
@@ -205,7 +213,9 @@
             this.tableCell5.StyleName = "DetailCaption1";
             this.tableCell5.StylePriority.UseBorders = false;
             this.tableCell5.StylePriority.UseBorderWidth = false;
+            this.tableCell5.StylePriority.UseTextAlignment = false;
             this.tableCell5.Text = "Tên vật tư";
+            this.tableCell5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell5.Weight = 0.18715239234130621D;
             // 
             // tableCell6
@@ -220,7 +230,7 @@
             this.tableCell6.StylePriority.UseBorderWidth = false;
             this.tableCell6.StylePriority.UseTextAlignment = false;
             this.tableCell6.Text = "Số lượng đặt";
-            this.tableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.tableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell6.Weight = 0.13732032235651415D;
             // 
             // tableCell7
@@ -235,7 +245,7 @@
             this.tableCell7.StylePriority.UseBorderWidth = false;
             this.tableCell7.StylePriority.UseTextAlignment = false;
             this.tableCell7.Text = "Đơn giá";
-            this.tableCell7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.tableCell7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell7.Weight = 0.14732212946965145D;
             // 
             // Detail

@@ -553,7 +553,7 @@
             // txtDONGIA
             // 
             this.txtDONGIA.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.CTPNBindingSource, "DONGIA", true));
-            this.txtDONGIA.Location = new System.Drawing.Point(444, 225);
+            this.txtDONGIA.Location = new System.Drawing.Point(496, 225);
             this.txtDONGIA.Margin = new System.Windows.Forms.Padding(6);
             this.txtDONGIA.Name = "txtDONGIA";
             this.txtDONGIA.Properties.DisplayFormat.FormatString = "n0";
@@ -572,7 +572,7 @@
             // txtSOLUONG
             // 
             this.txtSOLUONG.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.CTPNBindingSource, "SOLUONG", true));
-            this.txtSOLUONG.Location = new System.Drawing.Point(444, 173);
+            this.txtSOLUONG.Location = new System.Drawing.Point(496, 173);
             this.txtSOLUONG.Margin = new System.Windows.Forms.Padding(6);
             this.txtSOLUONG.Name = "txtSOLUONG";
             this.txtSOLUONG.Properties.DisplayFormat.FormatString = "n0";
@@ -588,7 +588,8 @@
             this.TTVTComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.CTPNBindingSource, "MAVT", true));
             this.TTVTComboBox.DataSource = this.TTVTBindingSource;
             this.TTVTComboBox.DisplayMember = "TTVT";
-            this.TTVTComboBox.Location = new System.Drawing.Point(355, 116);
+            this.TTVTComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TTVTComboBox.Location = new System.Drawing.Point(411, 113);
             this.TTVTComboBox.Margin = new System.Windows.Forms.Padding(6);
             this.TTVTComboBox.Name = "TTVTComboBox";
             this.TTVTComboBox.Size = new System.Drawing.Size(284, 24);
@@ -600,7 +601,7 @@
             // txtMAVT
             // 
             this.txtMAVT.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.CTPNBindingSource, "MAVT", true));
-            this.txtMAVT.Location = new System.Drawing.Point(444, 61);
+            this.txtMAVT.Location = new System.Drawing.Point(496, 67);
             this.txtMAVT.Margin = new System.Windows.Forms.Padding(6);
             this.txtMAVT.Name = "txtMAVT";
             this.txtMAVT.Size = new System.Drawing.Size(156, 22);
@@ -612,7 +613,8 @@
             this.TTKHOComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.phieuNhapBindingSource, "MAKHO", true));
             this.TTKHOComboBox.DataSource = this.TTKHOBindingSource;
             this.TTKHOComboBox.DisplayMember = "TTKHO";
-            this.TTKHOComboBox.Location = new System.Drawing.Point(285, 282);
+            this.TTKHOComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TTKHOComboBox.Location = new System.Drawing.Point(306, 282);
             this.TTKHOComboBox.Margin = new System.Windows.Forms.Padding(6);
             this.TTKHOComboBox.Name = "TTKHOComboBox";
             this.TTKHOComboBox.Size = new System.Drawing.Size(428, 24);
@@ -623,7 +625,8 @@
             // txtMAKHO
             // 
             this.txtMAKHO.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.phieuNhapBindingSource, "MAKHO", true));
-            this.txtMAKHO.Location = new System.Drawing.Point(138, 282);
+            this.txtMAKHO.Enabled = false;
+            this.txtMAKHO.Location = new System.Drawing.Point(152, 282);
             this.txtMAKHO.Margin = new System.Windows.Forms.Padding(6);
             this.txtMAKHO.Name = "txtMAKHO";
             this.txtMAKHO.Size = new System.Drawing.Size(122, 22);
@@ -633,7 +636,7 @@
             // 
             this.txtMANV.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.phieuNhapBindingSource, "MANV", true));
             this.txtMANV.Enabled = false;
-            this.txtMANV.Location = new System.Drawing.Point(138, 222);
+            this.txtMANV.Location = new System.Drawing.Point(152, 225);
             this.txtMANV.Margin = new System.Windows.Forms.Padding(6);
             this.txtMANV.Name = "txtMANV";
             this.txtMANV.Size = new System.Drawing.Size(182, 22);
@@ -642,7 +645,7 @@
             // txtDDH
             // 
             this.txtDDH.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.phieuNhapBindingSource, "MasoDDH", true));
-            this.txtDDH.Location = new System.Drawing.Point(139, 170);
+            this.txtDDH.Location = new System.Drawing.Point(152, 173);
             this.txtDDH.Margin = new System.Windows.Forms.Padding(6);
             this.txtDDH.Name = "txtDDH";
             this.txtDDH.Size = new System.Drawing.Size(139, 22);
@@ -652,7 +655,7 @@
             // 
             this.txtNGAY.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.phieuNhapBindingSource, "NGAY", true));
             this.txtNGAY.EditValue = null;
-            this.txtNGAY.Location = new System.Drawing.Point(138, 118);
+            this.txtNGAY.Location = new System.Drawing.Point(152, 118);
             this.txtNGAY.Margin = new System.Windows.Forms.Padding(6);
             this.txtNGAY.Name = "txtNGAY";
             this.txtNGAY.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -666,7 +669,7 @@
             // 
             this.txtMAPN.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.phieuNhapBindingSource, "MAPN", true));
             this.txtMAPN.Enabled = false;
-            this.txtMAPN.Location = new System.Drawing.Point(138, 64);
+            this.txtMAPN.Location = new System.Drawing.Point(152, 64);
             this.txtMAPN.Margin = new System.Windows.Forms.Padding(6);
             this.txtMAPN.Name = "txtMAPN";
             this.txtMAPN.Size = new System.Drawing.Size(153, 22);
@@ -675,7 +678,7 @@
             // lbDONGIA
             // 
             this.lbDONGIA.AutoSize = true;
-            this.lbDONGIA.Location = new System.Drawing.Point(352, 231);
+            this.lbDONGIA.Location = new System.Drawing.Point(418, 225);
             this.lbDONGIA.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbDONGIA.Name = "lbDONGIA";
             this.lbDONGIA.Size = new System.Drawing.Size(56, 16);
@@ -686,7 +689,7 @@
             // lbSOLUONG
             // 
             this.lbSOLUONG.AutoSize = true;
-            this.lbSOLUONG.Location = new System.Drawing.Point(352, 179);
+            this.lbSOLUONG.Location = new System.Drawing.Point(411, 173);
             this.lbSOLUONG.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbSOLUONG.Name = "lbSOLUONG";
             this.lbSOLUONG.Size = new System.Drawing.Size(63, 16);
@@ -698,7 +701,7 @@
             // 
             this.lbMAVT.AutoEllipsis = true;
             this.lbMAVT.AutoSize = true;
-            this.lbMAVT.Location = new System.Drawing.Point(352, 64);
+            this.lbMAVT.Location = new System.Drawing.Point(408, 70);
             this.lbMAVT.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbMAVT.Name = "lbMAVT";
             this.lbMAVT.Size = new System.Drawing.Size(66, 16);
@@ -709,7 +712,7 @@
             // lbMAKHO
             // 
             this.lbMAKHO.AutoSize = true;
-            this.lbMAKHO.Location = new System.Drawing.Point(62, 285);
+            this.lbMAKHO.Location = new System.Drawing.Point(70, 285);
             this.lbMAKHO.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbMAKHO.Name = "lbMAKHO";
             this.lbMAKHO.Size = new System.Drawing.Size(57, 16);
@@ -719,7 +722,7 @@
             // lbMANV
             // 
             this.lbMANV.AutoSize = true;
-            this.lbMANV.Location = new System.Drawing.Point(27, 228);
+            this.lbMANV.Location = new System.Drawing.Point(35, 228);
             this.lbMANV.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbMANV.Name = "lbMANV";
             this.lbMANV.Size = new System.Drawing.Size(92, 16);
@@ -739,7 +742,7 @@
             // lbNGAY
             // 
             this.lbNGAY.AutoSize = true;
-            this.lbNGAY.Location = new System.Drawing.Point(82, 121);
+            this.lbNGAY.Location = new System.Drawing.Point(83, 121);
             this.lbNGAY.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lbNGAY.Name = "lbNGAY";
             this.lbNGAY.Size = new System.Drawing.Size(44, 16);
