@@ -130,14 +130,14 @@
   <data name="editquery" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\editquery.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="bo_address" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bo_address.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="paste1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\paste1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="highimportance" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\highimportance.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="actions_database" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\actions_database.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="travel_walk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\travel_walk.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="paste" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paste.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
@@ -145,37 +145,52 @@
   <data name="bo_department" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bo_department.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="singlepageview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\singlepageview.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="tablelayout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tablelayout.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="bo_person" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bo_person.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="reviewers" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\reviewers.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="pastespecial" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pastespecial.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="actions_database1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\actions_database1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="pastespecial2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pastespecial2.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="paste1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\paste1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="bo_department1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bo_department1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="paste3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paste3.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="actions_database1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\actions_database1.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="singlepageview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\singlepageview.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="bo_person" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bo_person.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="tablelayout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tablelayout.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="bo_address" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bo_address.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="bo_contact" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bo_contact.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="pastespecial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pastespecial.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="actions_database" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\actions_database.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="bo_appointment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bo_appointment.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="pastespecial2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pastespecial2.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="reviewers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reviewers.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="bo_lead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bo_lead.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="bo_customer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bo_customer.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="travel_walk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\travel_walk.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="bo_appearance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bo_appearance.svg;DevExpress.Utils.Svg.SvgImage, DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
 </root>

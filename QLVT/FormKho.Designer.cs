@@ -279,6 +279,7 @@
             this.cbChiNhanh.Name = "cbChiNhanh";
             this.cbChiNhanh.Size = new System.Drawing.Size(336, 24);
             this.cbChiNhanh.TabIndex = 1;
+            this.cbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cbChiNhanh_SelectedIndexChanged);
             // 
             // label1
             // 

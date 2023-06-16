@@ -122,8 +122,8 @@ namespace QLVT
             barButtonPX.ItemAppearance.Normal.BackColor = MANV.Visible == true ? Color.Pink : Color.Tan;
             panelControl2.Enabled = false;
             barButtonPX.Caption = MANV.Visible == true ? "Chi tiết phiếu xuất" : "Phiếu xuất";
-            this.CTPXTableAdapter.Fill(this.DSPHIEUXUAT.CTPX);
-            this.phieuXuatTableAdapter.Fill(this.DSPHIEUXUAT.PhieuXuat);
+           // this.CTPXTableAdapter.Fill(this.DSPHIEUXUAT.CTPX);
+           // this.phieuXuatTableAdapter.Fill(this.DSPHIEUXUAT.PhieuXuat);
         }
 
         private void panelControl2_Paint(object sender, PaintEventArgs e)
@@ -381,106 +381,51 @@ namespace QLVT
             }    
      }
 
-        private void validatePhieuXuat()
-        {
-            if (NGAY.Text.Trim() == "")
-            {
-                MessageBox.Show("Ngày tạp phiếu xuất không được để trống!", "Thông báo", MessageBoxButtons.OK);
-                NGAY.Focus();
-                return;
-            }
-            if (HOTEN.Text.Trim() == "")
-            {
-                MessageBox.Show("Họ tên khách hàng không được để trống!", "Thông báo", MessageBoxButtons.OK);
-                HOTEN.Focus();
-                return;
-            }
-            if (HOTEN.Text.Length > 100)
-            {
-                MessageBox.Show("Họ tên khách hàng không thể lớn hơn 100 kí tự", "Thông báo", MessageBoxButtons.OK);
-                HOTEN.Focus();
-                return;
-            }
-
-            if (Regex.IsMatch(HOTEN.Text, @"^[a-zA-Z ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễếệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$") == false)
-            {
-                MessageBox.Show("Họ chỉ có chữ cái và khoảng trắng", "Thông báo", MessageBoxButtons.OK);
-                HOTEN.Focus();
-                return;
-            }
-
-            if (MAKHO.Text.Trim() == "")
-            {
-                MessageBox.Show("Mã kho không được để trống!", "Thông báo", MessageBoxButtons.OK);
-                MAKHO.Focus();
-                return;
-            }
-
-
-            if (MAKHO.Text.Length > 4)
-            {
-                MessageBox.Show("Mã kho không thể lớn hơn 4 kí tự", "Thông báo", MessageBoxButtons.OK);
-                MAKHO.Focus();
-                return;
-            }
-
-        }
-
-        private void validateCTPhieuXuat()
-        {
-            if (MAVT.Text.Trim() == "")
-            {
-                MessageBox.Show("Ngày tạp phiếu xuất không được để trống!", "Thông báo", MessageBoxButtons.OK);
-                MAVT.Focus();
-                return;
-            }
-            if (SOLUONG.Text.Trim() == "")
-            {
-                MessageBox.Show("Số lượng không được để trống!", "Thông báo", MessageBoxButtons.OK);
-                SOLUONG.Focus();
-                return;
-            }
-            if (DONGIA.Text.Trim() == "")
-            {
-                MessageBox.Show("Đơn giá không được để trống!", "Thông báo", MessageBoxButtons.OK);
-                HOTEN.Focus();
-                return;
-            }
-
-            if (Regex.IsMatch(SOLUONG.Text, @"^[0-9]+$") == false)
-            {
-                MessageBox.Show("Số lượng chỉ bao gồm chữ số!", "Thông báo", MessageBoxButtons.OK);
-                SOLUONG.Focus();
-                return;
-            }
-
-            if (Regex.IsMatch(DONGIA.Text, @"^[0-9]+$") == false)
-            {
-                MessageBox.Show("Đơn giá chỉ bao gồm chữ số!", "Thông báo", MessageBoxButtons.OK);
-                DONGIA.Focus();
-                return;
-            }
-
-            if (int.Parse(SOLUONG.EditValue.ToString()) > 0)
-            {
-                MessageBox.Show("Số lượng phải >0!", "Thông báo", MessageBoxButtons.OK);
-                SOLUONG.Focus();
-                return;
-            }
-            if (int.Parse(DONGIA.EditValue.ToString()) > 0)
-            {
-                MessageBox.Show("Đơn giá phải >0!", "Thông báo", MessageBoxButtons.OK);
-                DONGIA.Focus();
-                return;
-            }
-
-        }
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (barButtonPX.Caption == "Chi tiết phiếu xuất")
             {
+                if (NGAY.Text.Trim() == "")
+                {
+                    MessageBox.Show("Ngày tạp phiếu xuất không được để trống!", "Thông báo", MessageBoxButtons.OK);
+                    NGAY.Focus();
+                    return;
+                }
+                if (HOTEN.Text.Trim() == "")
+                {
+                    MessageBox.Show("Họ tên khách hàng không được để trống!", "Thông báo", MessageBoxButtons.OK);
+                    HOTEN.Focus();
+                    return;
+                }
+                if (HOTEN.Text.Length > 100)
+                {
+                    MessageBox.Show("Họ tên khách hàng không thể lớn hơn 100 kí tự", "Thông báo", MessageBoxButtons.OK);
+                    HOTEN.Focus();
+                    return;
+                }
 
-                validatePhieuXuat();
+                if (Regex.IsMatch(HOTEN.Text, @"^[a-zA-Z ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễếệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$") == false)
+                {
+                    MessageBox.Show("Họ chỉ có chữ cái và khoảng trắng", "Thông báo", MessageBoxButtons.OK);
+                    HOTEN.Focus();
+                    return;
+                }
+
+                if (MAKHO.Text.Trim() == "")
+                {
+                    MessageBox.Show("Mã kho không được để trống!", "Thông báo", MessageBoxButtons.OK);
+                    MAKHO.Focus();
+                    return;
+                }
+
+
+                if (MAKHO.Text.Length > 4)
+                {
+                    MessageBox.Show("Mã kho không thể lớn hơn 4 kí tự", "Thông báo", MessageBoxButtons.OK);
+                    MAKHO.Focus();
+                    return;
+                }
+
 
                 if (check_them == true)
                 {
@@ -559,20 +504,63 @@ namespace QLVT
             {
                 if (check_them == true)
                 {
-                    validateCTPhieuXuat();
+                    if (MAVT.Text.Trim() == "")
+                    {
+                        MessageBox.Show("Ngày tạp phiếu xuất không được để trống!", "Thông báo", MessageBoxButtons.OK);
+                        MAVT.Focus();
+                        return;
+                    }
+                    if (SOLUONG.Text.Trim() == "")
+                    {
+                        MessageBox.Show("Số lượng không được để trống!", "Thông báo", MessageBoxButtons.OK);
+                        SOLUONG.Focus();
+                        return;
+                    }
+                    if (DONGIA.Text.Trim() == "")
+                    {
+                        MessageBox.Show("Đơn giá không được để trống!", "Thông báo", MessageBoxButtons.OK);
+                        HOTEN.Focus();
+                        return;
+                    }
+
+                    if (Regex.IsMatch(SOLUONG.Text, @"^[0-9]+$") == false)
+                    {
+                        MessageBox.Show("Số lượng chỉ bao gồm chữ số!", "Thông báo", MessageBoxButtons.OK);
+                        SOLUONG.Focus();
+                        return;
+                    }
+
+                    if (Regex.IsMatch(DONGIA.Text, @"^[0-9]+$") == false)
+                    {
+                        MessageBox.Show("Đơn giá chỉ bao gồm chữ số!", "Thông báo", MessageBoxButtons.OK);
+                        DONGIA.Focus();
+                        return;
+                    }
+
+                    if (int.Parse(SOLUONG.EditValue.ToString()) <= 0)
+                    {
+                        MessageBox.Show("Số lượng phải >0!", "Thông báo", MessageBoxButtons.OK);
+                        SOLUONG.Focus();
+                        return;
+                    }
+                    if (int.Parse(DONGIA.EditValue.ToString()) <= 0)
+                    {
+                        MessageBox.Show("Đơn giá phải >0!", "Thông báo", MessageBoxButtons.OK);
+                        DONGIA.Focus();
+                        return;
+                    }
                     String checkvt =
-                      "EXEC [dbo].[sp_Check_Exists_Id_Char] 'VATTU', 'MAVT' ,'" + MAVT.Text.Trim() + "'";
-                    // string getMaxIdQuery = "EXEC [dbo].[sp_Get_Max_Id_Char] 'PHIEUXUAT', 'MAPX'";
+                      "EXEC [dbo].[sp_Check_Exists_CT_Id_Char] 'CTPX', 'MAVT' ,'" + MAVT.Text.Trim() + "','MAPX','" + MAPX.Text.Trim() + "'"  ;
                     Console.WriteLine(checkvt);
                     try
                     {
                         Program.myReader = Program.ExecSqlDataReader(checkvt);
                         if (Program.myReader == null) { return; }
                         Program.myReader.Read();
-                        if (Program.myReader.GetInt32(0) == 0)
+                        if (Program.myReader.GetInt32(0) == 1)
                         {
 
-                            MessageBox.Show("Mã vật tư không tồn tại ", "Thông báo", MessageBoxButtons.OK);
+                            MessageBox.Show("Mã vật tư đã tồn tại ", "Thông báo", MessageBoxButtons.OK);
                             Program.myReader.Close();
                             return;
                         }
@@ -736,6 +724,11 @@ namespace QLVT
 
             }
             catch { }
+        }
+
+        private void panelControl2_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

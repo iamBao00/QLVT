@@ -595,6 +595,7 @@
             // ceTTX
             // 
             this.ceTTX.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.nhanVienBindingSource, "TrangThaiXoa", true));
+            this.ceTTX.EditValue = true;
             this.ceTTX.Location = new System.Drawing.Point(204, 261);
             this.ceTTX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ceTTX.MenuManager = this.barManager1;

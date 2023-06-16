@@ -47,6 +47,8 @@
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageNhapXuat = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageNghiepVu = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -62,6 +64,7 @@
             this.HOTEN = new System.Windows.Forms.ToolStripStatusLabel();
             this.NHOM = new System.Windows.Forms.ToolStripStatusLabel();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.btnDanhMucVatTu = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
@@ -75,7 +78,7 @@
             // 
             // ribbonControl1
             // 
-            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 37, 35, 37);
+            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(44, 46, 44, 46);
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
@@ -94,12 +97,15 @@
             this.barButtonItem8,
             this.barButtonItem9,
             this.barButtonItem10,
-            this.barButtonItem11});
+            this.barButtonItem11,
+            this.barButtonItem12,
+            this.barButtonItem13,
+            this.btnDanhMucVatTu});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonControl1.MaxItemId = 31;
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ribbonControl1.MaxItemId = 35;
             this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.OptionsMenuMinWidth = 385;
+            this.ribbonControl1.OptionsMenuMinWidth = 481;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageNhapXuat,
             this.ribbonPageNghiepVu,
@@ -204,6 +210,7 @@
             this.barButtonItem9.Id = 27;
             this.barButtonItem9.ImageOptions.SvgImage = global::QLVT.Properties.Resources.singlepageview;
             this.barButtonItem9.Name = "barButtonItem9";
+            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
             // 
             // barButtonItem10
             // 
@@ -211,6 +218,7 @@
             this.barButtonItem10.Id = 29;
             this.barButtonItem10.ImageOptions.SvgImage = global::QLVT.Properties.Resources.paste3;
             this.barButtonItem10.Name = "barButtonItem10";
+            this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
             // 
             // barButtonItem11
             // 
@@ -219,6 +227,22 @@
             this.barButtonItem11.ImageOptions.SvgImage = global::QLVT.Properties.Resources.pastespecial2;
             this.barButtonItem11.Name = "barButtonItem11";
             this.barButtonItem11.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem11_ItemClick);
+            // 
+            // barButtonItem12
+            // 
+            this.barButtonItem12.Caption = "In danh sách nhân viên";
+            this.barButtonItem12.Id = 31;
+            this.barButtonItem12.ImageOptions.SvgImage = global::QLVT.Properties.Resources.bo_department1;
+            this.barButtonItem12.Name = "barButtonItem12";
+            this.barButtonItem12.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem12_ItemClick_1);
+            // 
+            // barButtonItem13
+            // 
+            this.barButtonItem13.Caption = "In hoạt động nhân viên";
+            this.barButtonItem13.Id = 32;
+            this.barButtonItem13.ImageOptions.SvgImage = global::QLVT.Properties.Resources.bo_appearance;
+            this.barButtonItem13.Name = "barButtonItem13";
+            this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
             // 
             // ribbonPageNhapXuat
             // 
@@ -260,8 +284,10 @@
             // 
             // ribbonPageGroup2
             // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem12);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem13);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnDanhMucVatTu);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
             // 
             // ribbonPageHeThong
             // 
@@ -324,6 +350,15 @@
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // btnDanhMucVatTu
+            // 
+            this.btnDanhMucVatTu.Caption = "Xem Danh Mục Vật Tư";
+            this.btnDanhMucVatTu.Id = 33;
+            this.btnDanhMucVatTu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDanhMucVatTu.ImageOptions.Image")));
+            this.btnDanhMucVatTu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDanhMucVatTu.ImageOptions.LargeImage")));
+            this.btnDanhMucVatTu.Name = "btnDanhMucVatTu";
+            this.btnDanhMucVatTu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDanhMucVatTu_ItemClick);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -382,6 +417,9 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem13;
+        private DevExpress.XtraBars.BarButtonItem btnDanhMucVatTu;
     }
 }
 

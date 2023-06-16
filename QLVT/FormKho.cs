@@ -77,7 +77,7 @@ namespace QLVT
                 return;
 
             }
-            if (MessageBox.Show("Bạn có thực sự muốn xóa nhân viên này!", "Xác nhận", MessageBoxButtons.OKCancel)
+            if (MessageBox.Show("Bạn có thực sự muốn xóa kho này!", "Xác nhận", MessageBoxButtons.OKCancel)
                 == DialogResult.OK)
             {
                 try
@@ -101,6 +101,7 @@ namespace QLVT
 
                     Console.WriteLine(query);
                     stack.Push(query);
+                    btnPhucHoi.Enabled = true;
                 }
                 catch (Exception ex)
                 {
@@ -235,6 +236,7 @@ namespace QLVT
             btnGhi.Enabled = false;
             btnHuy.Enabled = false;
             panelControl2.Enabled = false;
+            
         }
 
         private void mACNTextBox_TextChanged(object sender, EventArgs e)
@@ -302,7 +304,7 @@ namespace QLVT
                     Program.myReader.Read();
                     if (Program.myReader.GetInt32(0) == 1)
                     {
-                        MessageBox.Show("Nhân viên đã tồn tại!", "Thông báo", MessageBoxButtons.OK);
+                        MessageBox.Show("Kho đã tồn tại!", "Thông báo", MessageBoxButtons.OK);
                         txtMaKho.Focus();
                         Program.myReader.Close();
                         return;
@@ -375,6 +377,54 @@ namespace QLVT
             khoGridControl.Enabled = false;
             dangThemMoi = false;
         }
+
+        private void cbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine(cbChiNhanh.SelectedValue.ToString());
+
+            if (cbChiNhanh.SelectedValue.ToString() == "System.Data.DataRowView")
+                return;
+            Program.servername = cbChiNhanh.SelectedValue.ToString();
+
+            if (cbChiNhanh.SelectedIndex != Program.mChinhNhanh)
+            {
+                Program.mlogin = Program.remotelogin;
+                Program.password = Program.remotepassword;
+
+            }
+            else
+            {
+                Program.mlogin = Program.mloginDN;
+                Program.password = Program.passwordDN;
+
+            }
+
+            if (Program.KetNoi() == 0)
+            {
+                MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);
+
+            }
+
+            else
+            {
+                /*this.khoGridControl.Enabled = false;*/
+
+                this.khoTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.khoTableAdapter.Fill(this.DSKHO.Kho);
+
+                this.datHangTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.datHangTableAdapter.Fill(this.DSKHO.DatHang);
+
+                this.phieuNhapTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.phieuNhapTableAdapter.Fill(this.DSKHO.PhieuNhap);
+
+                this.phieuXuatTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.phieuXuatTableAdapter.Fill(this.DSKHO.PhieuXuat);
+
+                this.khoGridControl.Enabled = true;
+            }
+        }
+    
 
         private void mACNLabel_Click(object sender, EventArgs e)
         {

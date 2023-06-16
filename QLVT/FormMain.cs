@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraReports.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -183,6 +184,53 @@ namespace QLVT
                     f.Show();
                 }
             }
+        }
+
+        private void barButtonItem12_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            Form form = this.CheckExists(typeof(Frpt_In_DSNV));
+            {
+                if (form != null) form.Activate();
+                else
+                {
+                    Frpt_In_DSNV f = new Frpt_In_DSNV();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+            }
+        }
+
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(FormDatHang));
+            {
+                if (form != null) form.Activate();
+                else
+                {
+                    FormDatHang f = new FormDatHang();
+                    f.MdiParent = this;
+                    f.Show();
+                }
+            }
+        }
+
+        private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnDanhMucVatTu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Xrpt_DanhMucVatTu rpt = new Xrpt_DanhMucVatTu();
+            
+            ReportPrintTool print = new ReportPrintTool(rpt);
+            print.ShowPreviewDialog();
         }
     }
 }
