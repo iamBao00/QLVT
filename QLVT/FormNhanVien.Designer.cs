@@ -200,7 +200,7 @@
             // lUONGLabel
             // 
             lUONGLabel.AutoSize = true;
-            lUONGLabel.Location = new System.Drawing.Point(789, 124);
+            lUONGLabel.Location = new System.Drawing.Point(797, 124);
             lUONGLabel.Name = "lUONGLabel";
             lUONGLabel.Size = new System.Drawing.Size(47, 16);
             lUONGLabel.TabIndex = 17;
