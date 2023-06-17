@@ -224,6 +224,7 @@ namespace QLVT
                 btnGhiPN.Enabled = btnHuyPN.Enabled = true;
                 check_them = true;
                 vitri = CTPNBindingSource.Position;
+                txtMAVT.Enabled = true;
                 panelControl2.Enabled = true;
                 cTPNGridControl.Enabled = false;
                 barButtonPN.Enabled = false;
@@ -293,14 +294,14 @@ namespace QLVT
                         CTPNBindingSource.RemoveCurrent();
                         this.CTPNTableAdapter.Connection.ConnectionString = Program.connstr;
                         this.CTPNTableAdapter.Update(this.DSPHIEUNHAP.CTPN);
-                        String query = string.Format("INSERT INTO DBO.CTPX(MAPN,MAVT,SOLUONG,DONGIA) " +
+                        String query = string.Format("INSERT INTO DBO.CTPN(MAPN,MAVT,SOLUONG,DONGIA) " +
                                                     " VALUES('{0}','{1}',{2},{3})", mapn, mavattu, soluong, dongia);
                         Console.WriteLine(query);
                         stack2.Push(query);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Lỗi xóa chi tiết phiếu xuất. Bạn hãy xóa lại \n" + ex.Message, "", MessageBoxButtons.OK);
+                        MessageBox.Show("Lỗi xóa chi tiết phiếu nhập. Bạn hãy xóa lại \n" + ex.Message, "", MessageBoxButtons.OK);
                         this.CTPNTableAdapter.Fill(this.DSPHIEUNHAP.CTPN);
                         this.CTPNTableAdapter.Fill(this.DSPHIEUNHAP.CTPN);
                         return;
@@ -401,7 +402,7 @@ namespace QLVT
                     "EXEC [dbo].[sp_Check_Exists_Id_Char] 'DatHang', 'MasoDDH' ,'" + txtDDH.Text.Trim() + "'";
                     String checkngay =
                    "EXEC [dbo].[sp_KiemTraNgayNhap] '" + txtDDH.Text.Trim() + "'" + ",'" + txtNGAY.Text + "'";
-                    // string getMaxIdQuery = "EXEC [dbo].[sp_Get_Max_Id_Char] 'PHIEUXUAT', 'MAPX'";
+                   
                     Console.WriteLine(checkpn);
                     try
                     {
@@ -595,7 +596,7 @@ namespace QLVT
 
 
 
-                    // string getMaxIdQuery = "EXEC [dbo].[sp_Get_Max_Id_Char] 'PHIEUXUAT', 'MAPX'";
+                    
                     String query = "";
                     phieuNhapBindingSource.EndEdit();
                     phieuNhapBindingSource.ResetCurrentItem();
@@ -684,7 +685,7 @@ namespace QLVT
                         return;
                     }
                     String checkvt =
-                      "EXEC [dbo].[sp_Check_Exists_CT_Id_Char] 'Vattu', 'MAVT' ,'" + txtMAVT.Text.Trim() + "','MAPN','" + txtMAPN.Text.Trim() + "'";
+                      "EXEC [dbo].[sp_Check_Exists_CT_Id_Char] 'CTPN', 'MAVT' ,'" + txtMAVT.Text.Trim() + "','MAPN','" + txtMAPN.Text.Trim() + "'";
                     Console.WriteLine(checkvt);
                     try
                     {
@@ -712,13 +713,18 @@ namespace QLVT
 
 
                 }
-
+               
                 try
                 {
+                    Console.WriteLine(234);
+                    Console.WriteLine(mapn);
+                    Console.WriteLine(txtMAPN.Text);
                     String query = "";
                     CTPNBindingSource.EndEdit();
                     CTPNBindingSource.ResetCurrentItem();
                     this.CTPNTableAdapter.Update(this.DSPHIEUNHAP.CTPN);
+                   
+
 
                     if (check_them)
                     {
@@ -728,7 +734,7 @@ namespace QLVT
                     }
                     else
                     {
-                        query = "UPDATE DBO.CTPX " +
+                        query = "UPDATE DBO.CTPN " +
                                "SET " +
                                "MAPN = '" + mapn + "'," +
                                "MAVT = '" + mavattu + "'," +
@@ -737,6 +743,7 @@ namespace QLVT
                                "WHERE MAPN = '" + txtMAPN.Text.Trim() + "' AND MAVT = '" + txtMAVT.Text.ToString() + "'";
 
                     }
+                   
                     Console.WriteLine(query);
 
                     stack2.Push(query);

@@ -32,8 +32,8 @@
             System.Windows.Forms.Label tTKHOLabel;
             System.Windows.Forms.Label mAPNLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPhieuNhap));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             this.barDockControl2 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
             this.btnThemPX = new DevExpress.XtraBars.BarButtonItem();
@@ -414,9 +414,9 @@
             this.phieuNhapGridControl.DataSource = this.phieuNhapBindingSource;
             this.phieuNhapGridControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.phieuNhapGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6);
-            gridLevelNode1.RelationName = "FK_CTPN_PhieuNhap";
+            gridLevelNode2.RelationName = "FK_CTPN_PhieuNhap";
             this.phieuNhapGridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.phieuNhapGridControl.Location = new System.Drawing.Point(0, 142);
             this.phieuNhapGridControl.MainView = this.gridView1;
             this.phieuNhapGridControl.Margin = new System.Windows.Forms.Padding(6);
@@ -567,9 +567,7 @@
             this.txtDONGIA.Location = new System.Drawing.Point(496, 225);
             this.txtDONGIA.Margin = new System.Windows.Forms.Padding(6);
             this.txtDONGIA.Name = "txtDONGIA";
-            this.txtDONGIA.Properties.DisplayFormat.FormatString = "n0";
             this.txtDONGIA.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtDONGIA.Properties.EditFormat.FormatString = "n0";
             this.txtDONGIA.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtDONGIA.Size = new System.Drawing.Size(183, 22);
             this.txtDONGIA.TabIndex = 43;
@@ -586,9 +584,7 @@
             this.txtSOLUONG.Location = new System.Drawing.Point(496, 173);
             this.txtSOLUONG.Margin = new System.Windows.Forms.Padding(6);
             this.txtSOLUONG.Name = "txtSOLUONG";
-            this.txtSOLUONG.Properties.DisplayFormat.FormatString = "n0";
             this.txtSOLUONG.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtSOLUONG.Properties.EditFormat.FormatString = "n0";
             this.txtSOLUONG.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtSOLUONG.Size = new System.Drawing.Size(183, 22);
             this.txtSOLUONG.TabIndex = 42;
@@ -813,9 +809,9 @@
             this.cTPNGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cTPNGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6);
             this.cTPNGridControl.Enabled = false;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode3.RelationName = "Level1";
             this.cTPNGridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode3});
             this.cTPNGridControl.Location = new System.Drawing.Point(781, 426);
             this.cTPNGridControl.MainView = this.gridView2;
             this.cTPNGridControl.Margin = new System.Windows.Forms.Padding(6);
