@@ -116,7 +116,7 @@
             this.btPreview.Name = "btPreview";
             this.btPreview.Size = new System.Drawing.Size(139, 38);
             this.btPreview.TabIndex = 14;
-            this.btPreview.Text = "preview";
+            this.btPreview.Text = "PREVIEW";
             this.btPreview.UseVisualStyleBackColor = true;
             this.btPreview.Click += new System.EventHandler(this.btPreview_Click);
             // 
@@ -152,7 +152,7 @@
             this.Controls.Add(this.txtTuThang);
             this.Controls.Add(this.cmbLoai);
             this.Name = "Frpt_JobChiTietNhapXuat";
-            this.Text = "Frpt_JobChiTietNhapXuat";
+            this.Text = "Xem chi tiết số lượng - trị giá nhập xuất";
             this.Load += new System.EventHandler(this.Frpt_JobChiTietNhapXuat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtTuThang.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTuThang.Properties)).EndInit();

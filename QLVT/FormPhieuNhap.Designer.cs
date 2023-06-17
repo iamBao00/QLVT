@@ -1151,7 +1151,7 @@
             this.Controls.Add(this.barDockControl5);
             this.Controls.Add(this.barDockControl4);
             this.Name = "FormPhieuNhap";
-            this.Text = "FormPhieuNhap";
+            this.Text = "Phiếu nhập";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormPhieuNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
