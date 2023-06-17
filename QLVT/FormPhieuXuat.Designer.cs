@@ -87,17 +87,17 @@
             this.colDONGIA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CTPXBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.phieuXuatGridControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMAPX2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNGAY = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colHOTENKH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMANV1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMAKHO = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.cbChiNhanh = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.cTPXGridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colMAPX = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMAVT1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSOLUONG1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDONGIA1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.label4 = new System.Windows.Forms.Label();
             this.lbDONGIA = new System.Windows.Forms.Label();
             this.lbSOLUONG = new System.Windows.Forms.Label();
             this.lbMAVT = new System.Windows.Forms.Label();
@@ -116,20 +116,20 @@
             this.HOTEN1 = new DevExpress.XtraEditors.TextEdit();
             this.NGAY1 = new DevExpress.XtraEditors.DateEdit();
             this.MAPX1 = new DevExpress.XtraEditors.TextEdit();
-            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.phieuXuatGridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colMAPX2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNGAY = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHOTENKH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMANV1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMAKHO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.cbChiNhanh = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dSPHIEUNHAP = new QLVT.DSPHIEUNHAP();
             this.cTPNBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cTPNTableAdapter = new QLVT.DSPHIEUNHAPTableAdapters.CTPNTableAdapter();
             this.tableAdapterManager1 = new QLVT.DSPHIEUNHAPTableAdapters.TableAdapterManager();
-            this.cTPXGridControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMAPX = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMAVT1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSOLUONG1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDONGIA1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -141,10 +141,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CTPXBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.phieuXuatGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cTPXGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DONGIA1.Properties)).BeginInit();
@@ -156,14 +158,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.NGAY1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NGAY1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MAPX1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
-            this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
-            this.panelControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.phieuXuatGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dSPHIEUNHAP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cTPNBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cTPXGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnThem
@@ -495,9 +495,7 @@
             this.barDockControl5.Location = new System.Drawing.Point(1665, 30);
             this.barDockControl5.Manager = this.barManager2;
             this.barDockControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-
             this.barDockControl5.Size = new System.Drawing.Size(0, 737);
-
             // 
             // DSPHIEUXUAT
             // 
@@ -596,7 +594,6 @@
             // 
             this.CTPXTableAdapter.ClearBeforeFill = true;
             // 
-
             // nhanVienBindingSource
             // 
             this.nhanVienBindingSource.DataMember = "NhanVien";
@@ -606,7 +603,6 @@
             // 
             this.nhanVienTableAdapter.ClearBeforeFill = true;
             // 
-
             // colMAPX1
             // 
             this.colMAPX1.Caption = "Mã phiếu xuất";
@@ -653,14 +649,11 @@
             // 
             // CTPXBindingSource
             // 
-
             this.CTPXBindingSource.DataMember = "FK_CTPX_PX";
             this.CTPXBindingSource.DataSource = this.phieuXuatBindingSource;
-
             // 
             // panel1
             // 
-
             this.panel1.Controls.Add(this.panelControl3);
             this.panel1.Controls.Add(this.panelControl2);
             this.panel1.Controls.Add(this.phieuXuatGridControl);
@@ -671,116 +664,104 @@
             this.panel1.Size = new System.Drawing.Size(1665, 737);
             this.panel1.TabIndex = 59;
             // 
-            // phieuXuatGridControl
+            // panelControl3
             // 
-            this.phieuXuatGridControl.DataSource = this.phieuXuatBindingSource;
-            this.phieuXuatGridControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.phieuXuatGridControl.Location = new System.Drawing.Point(0, 60);
-            this.phieuXuatGridControl.MainView = this.gridView2;
-            this.phieuXuatGridControl.MenuManager = this.barManager1;
-            this.phieuXuatGridControl.Name = "phieuXuatGridControl";
-            this.phieuXuatGridControl.Size = new System.Drawing.Size(1665, 220);
-            this.phieuXuatGridControl.TabIndex = 19;
-            this.phieuXuatGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
+            this.panelControl3.Controls.Add(this.cTPXGridControl);
+            this.panelControl3.Controls.Add(this.panelControl4);
+            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl3.Location = new System.Drawing.Point(875, 280);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(790, 457);
+            this.panelControl3.TabIndex = 21;
             // 
-            // gridView2
+            // cTPXGridControl
             // 
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMAPX2,
-            this.colNGAY,
-            this.colHOTENKH,
-            this.colMANV1,
-            this.colMAKHO});
-            this.gridView2.GridControl = this.phieuXuatGridControl;
-            this.gridView2.Name = "gridView2";
+            this.cTPXGridControl.DataSource = this.CTPXBindingSource;
+            this.cTPXGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cTPXGridControl.Enabled = false;
+            this.cTPXGridControl.Location = new System.Drawing.Point(2, 76);
+            this.cTPXGridControl.MainView = this.gridView3;
+            this.cTPXGridControl.MenuManager = this.barManager1;
+            this.cTPXGridControl.Name = "cTPXGridControl";
+            this.cTPXGridControl.Size = new System.Drawing.Size(786, 379);
+            this.cTPXGridControl.TabIndex = 1;
+            this.cTPXGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
             // 
-            // colMAPX2
+            // gridView3
             // 
-            this.colMAPX2.Caption = "Mã phiếu xuất";
-            this.colMAPX2.FieldName = "MAPX";
-            this.colMAPX2.MinWidth = 25;
-            this.colMAPX2.Name = "colMAPX2";
-            this.colMAPX2.OptionsColumn.ReadOnly = true;
-            this.colMAPX2.Visible = true;
-            this.colMAPX2.VisibleIndex = 0;
-            this.colMAPX2.Width = 94;
+            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colMAPX,
+            this.colMAVT1,
+            this.colSOLUONG1,
+            this.colDONGIA1});
+            this.gridView3.GridControl = this.cTPXGridControl;
+            this.gridView3.Name = "gridView3";
             // 
-            // colNGAY
+            // colMAPX
             // 
-            this.colNGAY.Caption = "Ngày";
-            this.colNGAY.FieldName = "NGAY";
-            this.colNGAY.MinWidth = 25;
-            this.colNGAY.Name = "colNGAY";
-            this.colNGAY.OptionsColumn.ReadOnly = true;
-            this.colNGAY.Visible = true;
-            this.colNGAY.VisibleIndex = 1;
-            this.colNGAY.Width = 94;
+            this.colMAPX.Caption = "Mã phiếu xuất";
+            this.colMAPX.FieldName = "MAPX";
+            this.colMAPX.MinWidth = 25;
+            this.colMAPX.Name = "colMAPX";
+            this.colMAPX.OptionsColumn.ReadOnly = true;
+            this.colMAPX.Visible = true;
+            this.colMAPX.VisibleIndex = 0;
+            this.colMAPX.Width = 94;
             // 
-            // colHOTENKH
+            // colMAVT1
             // 
-            this.colHOTENKH.Caption = "Họ tên khách hàng";
-            this.colHOTENKH.FieldName = "HOTENKH";
-            this.colHOTENKH.MinWidth = 25;
-            this.colHOTENKH.Name = "colHOTENKH";
-            this.colHOTENKH.OptionsColumn.ReadOnly = true;
-            this.colHOTENKH.Visible = true;
-            this.colHOTENKH.VisibleIndex = 2;
-            this.colHOTENKH.Width = 94;
+            this.colMAVT1.Caption = "Mã vật tư";
+            this.colMAVT1.FieldName = "MAVT";
+            this.colMAVT1.MinWidth = 25;
+            this.colMAVT1.Name = "colMAVT1";
+            this.colMAVT1.OptionsColumn.ReadOnly = true;
+            this.colMAVT1.Visible = true;
+            this.colMAVT1.VisibleIndex = 1;
+            this.colMAVT1.Width = 94;
             // 
-            // colMANV1
+            // colSOLUONG1
             // 
-            this.colMANV1.Caption = "Mã nhân viên";
-            this.colMANV1.FieldName = "MANV";
-            this.colMANV1.MinWidth = 25;
-            this.colMANV1.Name = "colMANV1";
-            this.colMANV1.OptionsColumn.ReadOnly = true;
-            this.colMANV1.Visible = true;
-            this.colMANV1.VisibleIndex = 3;
-            this.colMANV1.Width = 94;
+            this.colSOLUONG1.Caption = "Số lượng";
+            this.colSOLUONG1.FieldName = "SOLUONG";
+            this.colSOLUONG1.MinWidth = 25;
+            this.colSOLUONG1.Name = "colSOLUONG1";
+            this.colSOLUONG1.OptionsColumn.ReadOnly = true;
+            this.colSOLUONG1.Visible = true;
+            this.colSOLUONG1.VisibleIndex = 2;
+            this.colSOLUONG1.Width = 94;
             // 
-            // colMAKHO
+            // colDONGIA1
             // 
-            this.colMAKHO.Caption = "Mã kho";
-            this.colMAKHO.FieldName = "MAKHO";
-            this.colMAKHO.MinWidth = 25;
-            this.colMAKHO.Name = "colMAKHO";
-            this.colMAKHO.OptionsColumn.ReadOnly = true;
-            this.colMAKHO.Visible = true;
-            this.colMAKHO.VisibleIndex = 4;
-            this.colMAKHO.Width = 94;
+            this.colDONGIA1.Caption = "Đơn giá";
+            this.colDONGIA1.FieldName = "DONGIA";
+            this.colDONGIA1.MinWidth = 25;
+            this.colDONGIA1.Name = "colDONGIA1";
+            this.colDONGIA1.OptionsColumn.ReadOnly = true;
+            this.colDONGIA1.Visible = true;
+            this.colDONGIA1.VisibleIndex = 3;
+            this.colDONGIA1.Width = 94;
             // 
-            // panelControl1
+            // panelControl4
             // 
-            this.panelControl1.Controls.Add(this.cbChiNhanh);
-            this.panelControl1.Controls.Add(this.label1);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1665, 60);
-            this.panelControl1.TabIndex = 19;
+            this.panelControl4.Controls.Add(this.label2);
+            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl4.Location = new System.Drawing.Point(2, 2);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(786, 74);
+            this.panelControl4.TabIndex = 0;
             // 
-            // cbChiNhanh
+            // label2
             // 
-            this.cbChiNhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbChiNhanh.FormattingEnabled = true;
-            this.cbChiNhanh.Location = new System.Drawing.Point(255, 18);
-            this.cbChiNhanh.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.cbChiNhanh.Name = "cbChiNhanh";
-            this.cbChiNhanh.Size = new System.Drawing.Size(419, 24);
-            this.cbChiNhanh.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 21);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CHI NHÁNH";
-
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.label2.Location = new System.Drawing.Point(304, 25);
+            this.label2.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(174, 24);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Chi tiết phiếu xuất";
             // 
             // panelControl2
             // 
@@ -807,10 +788,19 @@
             this.panelControl2.Enabled = false;
             this.panelControl2.Location = new System.Drawing.Point(0, 280);
             this.panelControl2.Name = "panelControl2";
-
             this.panelControl2.Size = new System.Drawing.Size(875, 457);
             this.panelControl2.TabIndex = 20;
-
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.label4.Location = new System.Drawing.Point(406, 35);
+            this.label4.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 24);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "Hiệu Chỉnh";
             // 
             // lbDONGIA
             // 
@@ -1008,24 +998,116 @@
             this.MAPX1.Size = new System.Drawing.Size(71, 22);
             this.MAPX1.TabIndex = 26;
             // 
-            // panelControl3
+            // phieuXuatGridControl
             // 
-            this.panelControl3.Controls.Add(this.cTPXGridControl);
-            this.panelControl3.Controls.Add(this.panelControl4);
-            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl3.Location = new System.Drawing.Point(875, 280);
-            this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(790, 457);
-            this.panelControl3.TabIndex = 21;
+            this.phieuXuatGridControl.DataSource = this.phieuXuatBindingSource;
+            this.phieuXuatGridControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.phieuXuatGridControl.Location = new System.Drawing.Point(0, 60);
+            this.phieuXuatGridControl.MainView = this.gridView2;
+            this.phieuXuatGridControl.MenuManager = this.barManager1;
+            this.phieuXuatGridControl.Name = "phieuXuatGridControl";
+            this.phieuXuatGridControl.Size = new System.Drawing.Size(1665, 220);
+            this.phieuXuatGridControl.TabIndex = 19;
+            this.phieuXuatGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
             // 
-            // panelControl4
+            // gridView2
             // 
-            this.panelControl4.Controls.Add(this.label2);
-            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl4.Location = new System.Drawing.Point(2, 2);
-            this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(786, 74);
-            this.panelControl4.TabIndex = 0;
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colMAPX2,
+            this.colNGAY,
+            this.colHOTENKH,
+            this.colMANV1,
+            this.colMAKHO});
+            this.gridView2.GridControl = this.phieuXuatGridControl;
+            this.gridView2.Name = "gridView2";
+            // 
+            // colMAPX2
+            // 
+            this.colMAPX2.Caption = "Mã phiếu xuất";
+            this.colMAPX2.FieldName = "MAPX";
+            this.colMAPX2.MinWidth = 25;
+            this.colMAPX2.Name = "colMAPX2";
+            this.colMAPX2.OptionsColumn.ReadOnly = true;
+            this.colMAPX2.Visible = true;
+            this.colMAPX2.VisibleIndex = 0;
+            this.colMAPX2.Width = 94;
+            // 
+            // colNGAY
+            // 
+            this.colNGAY.Caption = "Ngày";
+            this.colNGAY.FieldName = "NGAY";
+            this.colNGAY.MinWidth = 25;
+            this.colNGAY.Name = "colNGAY";
+            this.colNGAY.OptionsColumn.ReadOnly = true;
+            this.colNGAY.Visible = true;
+            this.colNGAY.VisibleIndex = 1;
+            this.colNGAY.Width = 94;
+            // 
+            // colHOTENKH
+            // 
+            this.colHOTENKH.Caption = "Họ tên khách hàng";
+            this.colHOTENKH.FieldName = "HOTENKH";
+            this.colHOTENKH.MinWidth = 25;
+            this.colHOTENKH.Name = "colHOTENKH";
+            this.colHOTENKH.OptionsColumn.ReadOnly = true;
+            this.colHOTENKH.Visible = true;
+            this.colHOTENKH.VisibleIndex = 2;
+            this.colHOTENKH.Width = 94;
+            // 
+            // colMANV1
+            // 
+            this.colMANV1.Caption = "Mã nhân viên";
+            this.colMANV1.FieldName = "MANV";
+            this.colMANV1.MinWidth = 25;
+            this.colMANV1.Name = "colMANV1";
+            this.colMANV1.OptionsColumn.ReadOnly = true;
+            this.colMANV1.Visible = true;
+            this.colMANV1.VisibleIndex = 3;
+            this.colMANV1.Width = 94;
+            // 
+            // colMAKHO
+            // 
+            this.colMAKHO.Caption = "Mã kho";
+            this.colMAKHO.FieldName = "MAKHO";
+            this.colMAKHO.MinWidth = 25;
+            this.colMAKHO.Name = "colMAKHO";
+            this.colMAKHO.OptionsColumn.ReadOnly = true;
+            this.colMAKHO.Visible = true;
+            this.colMAKHO.VisibleIndex = 4;
+            this.colMAKHO.Width = 94;
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.cbChiNhanh);
+            this.panelControl1.Controls.Add(this.label1);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl1.Location = new System.Drawing.Point(0, 0);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(1665, 60);
+            this.panelControl1.TabIndex = 19;
+            // 
+            // cbChiNhanh
+            // 
+            this.cbChiNhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbChiNhanh.FormattingEnabled = true;
+            this.cbChiNhanh.Location = new System.Drawing.Point(255, 18);
+            this.cbChiNhanh.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.cbChiNhanh.Name = "cbChiNhanh";
+            this.cbChiNhanh.Size = new System.Drawing.Size(419, 24);
+            this.cbChiNhanh.TabIndex = 1;
+            this.cbChiNhanh.SelectedIndexChanged += new System.EventHandler(this.cbChiNhanh_SelectedIndexChanged_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(39, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "CHI NHÁNH";
             // 
             // dSPHIEUNHAP
             // 
@@ -1052,97 +1134,6 @@
             this.tableAdapterManager1.TTVTTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = QLVT.DSPHIEUNHAPTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager1.VattuTableAdapter = null;
-            // 
-            // cTPXGridControl
-            // 
-            this.cTPXGridControl.DataSource = this.CTPXBindingSource;
-            this.cTPXGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cTPXGridControl.Enabled = false;
-            this.cTPXGridControl.Location = new System.Drawing.Point(2, 76);
-            this.cTPXGridControl.MainView = this.gridView3;
-            this.cTPXGridControl.MenuManager = this.barManager1;
-            this.cTPXGridControl.Name = "cTPXGridControl";
-            this.cTPXGridControl.Size = new System.Drawing.Size(786, 379);
-            this.cTPXGridControl.TabIndex = 1;
-            this.cTPXGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView3});
-            // 
-            // gridView3
-            // 
-            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMAPX,
-            this.colMAVT1,
-            this.colSOLUONG1,
-            this.colDONGIA1});
-            this.gridView3.GridControl = this.cTPXGridControl;
-            this.gridView3.Name = "gridView3";
-            // 
-            // colMAPX
-            // 
-            this.colMAPX.Caption = "Mã phiếu xuất";
-            this.colMAPX.FieldName = "MAPX";
-            this.colMAPX.MinWidth = 25;
-            this.colMAPX.Name = "colMAPX";
-            this.colMAPX.OptionsColumn.ReadOnly = true;
-            this.colMAPX.Visible = true;
-            this.colMAPX.VisibleIndex = 0;
-            this.colMAPX.Width = 94;
-            // 
-            // colMAVT1
-            // 
-            this.colMAVT1.Caption = "Mã vật tư";
-            this.colMAVT1.FieldName = "MAVT";
-            this.colMAVT1.MinWidth = 25;
-            this.colMAVT1.Name = "colMAVT1";
-            this.colMAVT1.OptionsColumn.ReadOnly = true;
-            this.colMAVT1.Visible = true;
-            this.colMAVT1.VisibleIndex = 1;
-            this.colMAVT1.Width = 94;
-            // 
-            // colSOLUONG1
-            // 
-            this.colSOLUONG1.Caption = "Số lượng";
-            this.colSOLUONG1.FieldName = "SOLUONG";
-            this.colSOLUONG1.MinWidth = 25;
-            this.colSOLUONG1.Name = "colSOLUONG1";
-            this.colSOLUONG1.OptionsColumn.ReadOnly = true;
-            this.colSOLUONG1.Visible = true;
-            this.colSOLUONG1.VisibleIndex = 2;
-            this.colSOLUONG1.Width = 94;
-            // 
-            // colDONGIA1
-            // 
-            this.colDONGIA1.Caption = "Đơn giá";
-            this.colDONGIA1.FieldName = "DONGIA";
-            this.colDONGIA1.MinWidth = 25;
-            this.colDONGIA1.Name = "colDONGIA1";
-            this.colDONGIA1.OptionsColumn.ReadOnly = true;
-            this.colDONGIA1.Visible = true;
-            this.colDONGIA1.VisibleIndex = 3;
-            this.colDONGIA1.Width = 94;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label4.Location = new System.Drawing.Point(406, 35);
-            this.label4.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 24);
-            this.label4.TabIndex = 44;
-            this.label4.Text = "Hiệu Chỉnh";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label2.Location = new System.Drawing.Point(304, 25);
-            this.label2.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 24);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Chi tiết phiếu xuất";
             // 
             // FormPhieuXuat
             // 
@@ -1175,11 +1166,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.nhanVienBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CTPXBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.phieuXuatGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            this.panelControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cTPXGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            this.panelControl4.ResumeLayout(false);
+            this.panelControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
@@ -1192,15 +1185,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.NGAY1.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NGAY1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MAPX1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
-            this.panelControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
-            this.panelControl4.ResumeLayout(false);
-            this.panelControl4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.phieuXuatGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dSPHIEUNHAP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cTPNBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cTPXGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

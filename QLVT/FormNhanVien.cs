@@ -21,7 +21,7 @@ namespace QLVT
 
         bool check_them = true;
 
-        Stack<string> stack = new Stack<string>();
+        Stack<String> stack = new Stack<String>();
 
         int manv;
         String ho = "";
@@ -41,7 +41,7 @@ namespace QLVT
         {
 
         }
-        private string ToString(DateTime? dt, string format)
+        private String ToString(DateTime? dt, String format)
         {
             return dt == null ? "NULL" : "'" +((DateTime)dt).ToString(format) +"'";
         }
@@ -150,7 +150,7 @@ namespace QLVT
             teMaCN.Text = macn;
             deNgaySinh.EditValue = "";
             btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled =
-                btnReload.Enabled = btnThoat.Enabled = btnPhucHoi.Enabled= false;
+            btnReload.Enabled = btnThoat.Enabled = btnPhucHoi.Enabled= false;
             btnGhi.Enabled = btnHuy.Enabled = true;
             nhanVienGridControl.Enabled = false;
             check_them = true;
@@ -436,12 +436,6 @@ namespace QLVT
                 return;
             }
 
-            if (teLuong.EditValue.ToString().Length > 11)
-            {
-                MessageBox.Show("Lương nhập vào quá lớn!", "Thông báo", MessageBoxButtons.OK);
-                teLuong.Focus();
-                return;
-            }
 
             if (int.Parse(teLuong.EditValue.ToString()) < 4000000)
             {
@@ -457,7 +451,7 @@ namespace QLVT
                 MessageBox.Show("Không sửa trạng thái là đã xóa nhân viên này vì đã có tài khoản!", "", MessageBoxButtons.OK);
                 return;
             }
-            Console.WriteLine(teLuong.Text.ToString());
+           // Console.WriteLine(teLuong.Text.ToString());
 
 
             //Console.WriteLine(cmnd.ToString());

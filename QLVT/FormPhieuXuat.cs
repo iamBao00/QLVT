@@ -678,47 +678,47 @@ namespace QLVT
             }    
         }
 
-        private void cbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        //private void cbChiNhanh_SelectedIndexChanged(object sender, EventArgs e)
+        //{
 
-            Console.WriteLine(cbChiNhanh.SelectedValue.ToString());
+        //    Console.WriteLine(cbChiNhanh.SelectedValue.ToString());
 
-            if (cbChiNhanh.SelectedValue.ToString() == "System.Data.DataRowView")
-                return;
-            Program.servername = cbChiNhanh.SelectedValue.ToString();
+        //    if (cbChiNhanh.SelectedValue.ToString() == "System.Data.DataRowView")
+        //        return;
+        //    Program.servername = cbChiNhanh.SelectedValue.ToString();
 
-            if (cbChiNhanh.SelectedIndex != Program.mChinhNhanh)
-            {
-                Program.mlogin = Program.remotelogin;
-                Program.password = Program.remotepassword;
+        //    if (cbChiNhanh.SelectedIndex != Program.mChinhNhanh)
+        //    {
+        //        Program.mlogin = Program.remotelogin;
+        //        Program.password = Program.remotepassword;
 
-            }
-            else
-            {
-                Program.mlogin = Program.mloginDN;
-                Program.password = Program.passwordDN;
+        //    }
+        //    else
+        //    {
+        //        Program.mlogin = Program.mloginDN;
+        //        Program.password = Program.passwordDN;
 
-            }
+        //    }
 
-            if (Program.KetNoi() == 0)
-            {
-                MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);
+        //    if (Program.KetNoi() == 0)
+        //    {
+        //        MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);
 
-            }
+        //    }
 
-            else
-            {
-                this.phieuXuatGridControl.Enabled = false;
-                this.phieuXuatTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.phieuXuatTableAdapter.Fill(this.DSPHIEUXUAT.PhieuXuat);
-                this.CTPXTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.CTPXTableAdapter.Fill(this.DSPHIEUXUAT.CTPX);
-                this.nhanVienTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.nhanVienTableAdapter.Fill(this.DSPHIEUXUAT.NhanVien);
-                this.phieuXuatGridControl.Enabled = true;
+        //    else
+        //    {
+        //        this.phieuXuatGridControl.Enabled = false;
+        //        this.phieuXuatTableAdapter.Connection.ConnectionString = Program.connstr;
+        //        this.phieuXuatTableAdapter.Fill(this.DSPHIEUXUAT.PhieuXuat);
+        //        this.CTPXTableAdapter.Connection.ConnectionString = Program.connstr;
+        //        this.CTPXTableAdapter.Fill(this.DSPHIEUXUAT.CTPX);
+        //        this.nhanVienTableAdapter.Connection.ConnectionString = Program.connstr;
+        //        this.nhanVienTableAdapter.Fill(this.DSPHIEUXUAT.NhanVien);
+        //        this.phieuXuatGridControl.Enabled = true;
 
-            }
-        }
+        //    }
+        //}
 
         private void tTKHOComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -764,6 +764,47 @@ namespace QLVT
 
             }
             catch { }
+        }
+
+        private void cbChiNhanh_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            Console.WriteLine(cbChiNhanh.SelectedValue.ToString());
+
+            if (cbChiNhanh.SelectedValue.ToString() == "System.Data.DataRowView")
+                return;
+            Program.servername = cbChiNhanh.SelectedValue.ToString();
+
+            if (cbChiNhanh.SelectedIndex != Program.mChinhNhanh)
+            {
+                Program.mlogin = Program.remotelogin;
+                Program.password = Program.remotepassword;
+
+            }
+            else
+            {
+                Program.mlogin = Program.mloginDN;
+                Program.password = Program.passwordDN;
+
+            }
+
+            if (Program.KetNoi() == 0)
+            {
+                MessageBox.Show("Lỗi kết nối về chi nhánh mới", "", MessageBoxButtons.OK);
+
+            }
+
+            else
+            {
+                this.phieuXuatGridControl.Enabled = false;
+                this.phieuXuatTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.phieuXuatTableAdapter.Fill(this.DSPHIEUXUAT.PhieuXuat);
+                this.CTPXTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.CTPXTableAdapter.Fill(this.DSPHIEUXUAT.CTPX);
+                this.nhanVienTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.nhanVienTableAdapter.Fill(this.DSPHIEUXUAT.NhanVien);
+                this.phieuXuatGridControl.Enabled = true;
+
+            }
         }
     }
 }

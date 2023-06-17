@@ -279,6 +279,7 @@
             // 
             // cbChiNhanh
             // 
+            this.cbChiNhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbChiNhanh.FormattingEnabled = true;
             this.cbChiNhanh.Location = new System.Drawing.Point(255, 18);
             this.cbChiNhanh.Margin = new System.Windows.Forms.Padding(4);
@@ -360,36 +361,44 @@
             // 
             // colMAKHO
             // 
+            this.colMAKHO.Caption = "Mã kho";
             this.colMAKHO.FieldName = "MAKHO";
             this.colMAKHO.MinWidth = 31;
             this.colMAKHO.Name = "colMAKHO";
+            this.colMAKHO.OptionsColumn.ReadOnly = true;
             this.colMAKHO.Visible = true;
             this.colMAKHO.VisibleIndex = 0;
             this.colMAKHO.Width = 117;
             // 
             // colTENKHO
             // 
+            this.colTENKHO.Caption = "Tên kho";
             this.colTENKHO.FieldName = "TENKHO";
             this.colTENKHO.MinWidth = 31;
             this.colTENKHO.Name = "colTENKHO";
+            this.colTENKHO.OptionsColumn.ReadOnly = true;
             this.colTENKHO.Visible = true;
             this.colTENKHO.VisibleIndex = 1;
             this.colTENKHO.Width = 117;
             // 
             // colDIACHI
             // 
+            this.colDIACHI.Caption = "Địa chỉ";
             this.colDIACHI.FieldName = "DIACHI";
             this.colDIACHI.MinWidth = 31;
             this.colDIACHI.Name = "colDIACHI";
+            this.colDIACHI.OptionsColumn.ReadOnly = true;
             this.colDIACHI.Visible = true;
             this.colDIACHI.VisibleIndex = 2;
             this.colDIACHI.Width = 117;
             // 
             // colMACN
             // 
+            this.colMACN.Caption = "Mã chi nhánh";
             this.colMACN.FieldName = "MACN";
             this.colMACN.MinWidth = 31;
             this.colMACN.Name = "colMACN";
+            this.colMACN.OptionsColumn.ReadOnly = true;
             this.colMACN.Visible = true;
             this.colMACN.VisibleIndex = 3;
             this.colMACN.Width = 117;

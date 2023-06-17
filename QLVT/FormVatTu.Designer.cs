@@ -414,7 +414,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 30);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(6);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1123, 156);
+            this.panelControl1.Size = new System.Drawing.Size(1123, 108);
             this.panelControl1.TabIndex = 8;
             // 
             // label1
@@ -465,7 +465,7 @@
             this.vattuGridControl.DataSource = this.bdsVATTU;
             this.vattuGridControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.vattuGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6);
-            this.vattuGridControl.Location = new System.Drawing.Point(0, 186);
+            this.vattuGridControl.Location = new System.Drawing.Point(0, 138);
             this.vattuGridControl.MainView = this.gridView1;
             this.vattuGridControl.Margin = new System.Windows.Forms.Padding(6);
             this.vattuGridControl.MenuManager = this.barManager2;
@@ -542,10 +542,10 @@
             this.panelControl2.Controls.Add(this.txtMAVT);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Enabled = false;
-            this.panelControl2.Location = new System.Drawing.Point(0, 445);
+            this.panelControl2.Location = new System.Drawing.Point(0, 397);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(6);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1123, 315);
+            this.panelControl2.Size = new System.Drawing.Size(1123, 363);
             this.panelControl2.TabIndex = 11;
             // 
             // txtSOLUONGTON
