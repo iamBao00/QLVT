@@ -56,6 +56,7 @@ namespace QLVT
 
         private void FormDangNhap_Load(object sender, EventArgs e)
         {
+            Console.WriteLine(Program.connstr_publisher);
             if (KetNoi_CSDLGOC() == 0) return;
             LayDSPM("SELECT * FROM Get_Subscribes");
             cbChiNhanh.SelectedIndex = 0;

@@ -163,7 +163,9 @@
             this.tableCell1.StylePriority.UseBorderColor = false;
             this.tableCell1.StylePriority.UseBorders = false;
             this.tableCell1.StylePriority.UseBorderWidth = false;
+            this.tableCell1.StylePriority.UseTextAlignment = false;
             this.tableCell1.Text = "Tháng/Năm";
+            this.tableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell1.Weight = 0.31425332876352163D;
             // 
             // tableCell2
@@ -178,7 +180,9 @@
             this.tableCell2.StylePriority.UseBorderColor = false;
             this.tableCell2.StylePriority.UseBorders = false;
             this.tableCell2.StylePriority.UseBorderWidth = false;
+            this.tableCell2.StylePriority.UseTextAlignment = false;
             this.tableCell2.Text = "Tên vật tư";
+            this.tableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell2.Weight = 0.20056598369891826D;
             // 
             // tableCell3
@@ -195,7 +199,7 @@
             this.tableCell3.StylePriority.UseBorderWidth = false;
             this.tableCell3.StylePriority.UseTextAlignment = false;
             this.tableCell3.Text = "Số lượng";
-            this.tableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.tableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell3.Weight = 0.279682124211238D;
             // 
             // tableCell4
@@ -212,7 +216,7 @@
             this.tableCell4.StylePriority.UseBorderWidth = false;
             this.tableCell4.StylePriority.UseTextAlignment = false;
             this.tableCell4.Text = "Trị Giá";
-            this.tableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.tableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.tableCell4.Weight = 0.20549851637620192D;
             // 
             // Detail

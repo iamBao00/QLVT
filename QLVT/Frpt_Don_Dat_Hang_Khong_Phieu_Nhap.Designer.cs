@@ -37,7 +37,7 @@
             // 
             this.cbChiNhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbChiNhanh.FormattingEnabled = true;
-            this.cbChiNhanh.Location = new System.Drawing.Point(260, 55);
+            this.cbChiNhanh.Location = new System.Drawing.Point(209, 55);
             this.cbChiNhanh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbChiNhanh.Name = "cbChiNhanh";
             this.cbChiNhanh.Size = new System.Drawing.Size(336, 24);
@@ -49,9 +49,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(87, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 16);
+            this.label1.Size = new System.Drawing.Size(84, 16);
             this.label1.TabIndex = 2;
-            this.label1.Text = "CHI NHÁNH";
+            this.label1.Text = "CHI NHÁNH:";
             // 
             // btPreview
             // 

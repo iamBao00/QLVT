@@ -53,6 +53,7 @@ namespace QLVT
         //}
         private void FormPhieuXuat_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dSPHIEUNHAP.CTPN' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'DSPHIEUXUAT.ThongTinVatTu' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'DSPHIEUXUAT.ThongTinKho' table. You can move, or remove it, as needed.
             // TODO: This line of code loads data into the 'DSPHIEUXUAT.NhanVien' table. You can move, or remove it, as needed.
@@ -103,16 +104,16 @@ namespace QLVT
             {
                 btnThemPX.Enabled = btnXoaPX.Enabled = btnSuaPX.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = true;
                 btnGhiPX.Enabled = btnHuyPX.Enabled = false;
-                NGAY.Visible = HOTEN.Visible = MANV.Visible = MAKHO.Visible =  !MAKHO.Visible;
+                NGAY1.Visible = HOTEN1.Visible = MANV1.Visible = MAKHO1.Visible =  !MAKHO1.Visible;
                 lbNGAY.Visible = lbHOTEN.Visible = lbMANV.Visible = lbMAKHO.Visible = ttkComboBox.Visible = !lbMAKHO.Visible;
-                MAVT.Visible = SOLUONG.Visible = DONGIA.Visible = ttvtComboBox.Visible = !DONGIA.Visible;
+                MAVT1.Visible = SOLUONG1.Visible = DONGIA1.Visible = ttvtComboBox.Visible = !DONGIA1.Visible;
                 lbMAVT.Visible = lbSOLUONG.Visible = lbDONGIA.Visible = !lbDONGIA.Visible;
             }
             cTPXGridControl.Enabled = !cTPXGridControl.Enabled;
             phieuXuatGridControl.Enabled = !phieuXuatGridControl.Enabled; 
-            barButtonPX.ItemAppearance.Normal.BackColor = MANV.Visible == true ? Color.Pink : Color.Tan;
+            barButtonPX.ItemAppearance.Normal.BackColor = MANV1.Visible == true ? Color.Pink : Color.Tan;
             panelControl2.Enabled = false;
-            barButtonPX.Caption = MANV.Visible == true ? "Chi tiết phiếu xuất" : "Phiếu xuất";
+            barButtonPX.Caption = MANV1.Visible == true ? "Chi tiết phiếu xuất" : "Phiếu xuất";
 
         }
 
@@ -152,11 +153,10 @@ namespace QLVT
                 panelControl2.Enabled = true;
                 vitri = phieuXuatBindingSource.Position;
                 barButtonPX.Enabled = false;
-                panelControl2.Enabled = true;
                 phieuXuatBindingSource.AddNew();
                 string getMaxIdQuery = "EXEC [dbo].[sp_Get_Max_Id] 'PHIEUXUAT', 'MAPX'";
                 string maphieuxxuat = "";
-                MANV.Text = Program.username.ToString();
+                MANV1.Text = Program.username.ToString();
                 Console.WriteLine(getMaxIdQuery);
                 try
                 {
@@ -165,13 +165,13 @@ namespace QLVT
                     Program.myReader.Read();
                     if (Program.myReader.GetString(0) == "NULL")
                     {
-                        MAPX.Text = "PX01";
+                        MAPX1.Text = "PX01";
                         Program.myReader.Close();
                     }
                     else
                     {
                         maphieuxxuat = tuDongTangMa(Program.myReader.GetString(0), 2);
-                        MAPX.Text = maphieuxxuat;
+                        MAPX1.Text = maphieuxxuat;
                         Program.myReader.Close();
                     }
 
@@ -395,44 +395,44 @@ namespace QLVT
         {
             if (barButtonPX.Caption == "Chi tiết phiếu xuất")
             {
-                if (NGAY.Text.Trim() == "")
+                if (NGAY1.Text.Trim() == "")
                 {
                     MessageBox.Show("Ngày tạp phiếu xuất không được để trống!", "Thông báo", MessageBoxButtons.OK);
-                    NGAY.Focus();
+                    NGAY1.Focus();
                     return;
                 }
-                if (HOTEN.Text.Trim() == "")
+                if (HOTEN1.Text.Trim() == "")
                 {
                     MessageBox.Show("Họ tên khách hàng không được để trống!", "Thông báo", MessageBoxButtons.OK);
-                    HOTEN.Focus();
+                    HOTEN1.Focus();
                     return;
                 }
-                if (HOTEN.Text.Length > 100)
+                if (HOTEN1.Text.Length > 100)
                 {
                     MessageBox.Show("Họ tên khách hàng không thể lớn hơn 100 kí tự", "Thông báo", MessageBoxButtons.OK);
-                    HOTEN.Focus();
+                    HOTEN1.Focus();
                     return;
                 }
 
-                if (Regex.IsMatch(HOTEN.Text, @"^[a-zA-Z ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễếệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$") == false)
+                if (Regex.IsMatch(HOTEN1.Text, @"^[a-zA-Z ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễếệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$") == false)
                 {
                     MessageBox.Show("Họ chỉ có chữ cái và khoảng trắng", "Thông báo", MessageBoxButtons.OK);
-                    HOTEN.Focus();
+                    HOTEN1.Focus();
                     return;
                 }
 
-                if (MAKHO.Text.Trim() == "")
+                if (MAKHO1.Text.Trim() == "")
                 {
                     MessageBox.Show("Mã kho không được để trống!", "Thông báo", MessageBoxButtons.OK);
-                    MAKHO.Focus();
+                    MAKHO1.Focus();
                     return;
                 }
 
 
-                if (MAKHO.Text.Length > 4)
+                if (MAKHO1.Text.Length > 4)
                 {
                     MessageBox.Show("Mã kho không thể lớn hơn 4 kí tự", "Thông báo", MessageBoxButtons.OK);
-                    MAKHO.Focus();
+                    MAKHO1.Focus();
                     return;
                 }
 
@@ -440,7 +440,7 @@ namespace QLVT
                 if (check_them == true)
                 {
                     String checkpx =
-                      "EXEC [dbo].[sp_Check_Exists_Id_Char] 'PHIEUXUAT', 'MAPX' ,'" + MAPX.Text.Trim() + "'";
+                      "EXEC [dbo].[sp_Check_Exists_Id_Char] 'PHIEUXUAT', 'MAPX' ,'" + MAPX1.Text.Trim() + "'";
                     // string getMaxIdQuery = "EXEC [dbo].[sp_Get_Max_Id_Char] 'PHIEUXUAT', 'MAPX'";
                     Console.WriteLine(checkpx);
                     try
@@ -451,7 +451,7 @@ namespace QLVT
                         if (Program.myReader.GetInt32(0) == 1)
                         {
 
-                            MAPX.Text = tuDongTangMa(MAPX.Text.Trim(), 2);
+                            MAPX1.Text = tuDongTangMa(MAPX1.Text.Trim(), 2);
                             MessageBox.Show("Mã đã tồn tại! Hệ thống đã tự động đổi mã cho bạn rồi, vui lòng xác nhận lại!", "Thông báo", MessageBoxButtons.OK);
                             Program.myReader.Close();
                             return;
@@ -480,7 +480,7 @@ namespace QLVT
                     if (check_them)
                     {
 
-                        query = "DELETE DBO.PHIEUXUAT WHERE MAPX = '" + MAPX.Text.Trim() + "'";
+                        query = "DELETE DBO.PHIEUXUAT WHERE MAPX = '" + MAPX1.Text.Trim() + "'";
 
                     }
                     else
@@ -513,56 +513,56 @@ namespace QLVT
             else
             {
    
-                    if (MAVT.Text.Trim() == "")
+                    if (MAVT1.Text.Trim() == "")
                     {
                         MessageBox.Show("Ngày lạp phiếu xuất không được để trống!", "Thông báo", MessageBoxButtons.OK);
-                        MAVT.Focus();
+                        MAVT1.Focus();
                         return;
                     }
-                    if (SOLUONG.Text.Trim() == "")
+                    if (SOLUONG1.Text.Trim() == "")
                     {
                         MessageBox.Show("Số lượng không được để trống!", "Thông báo", MessageBoxButtons.OK);
-                        SOLUONG.Focus();
+                        SOLUONG1.Focus();
                         return;
                     }
-                    if (DONGIA.Text.Trim() == "")
+                    if (DONGIA1.Text.Trim() == "")
                     {
                         MessageBox.Show("Đơn giá không được để trống!", "Thông báo", MessageBoxButtons.OK);
-                        HOTEN.Focus();
+                        DONGIA1.Focus();
                         return;
                     }
 
-                    if (Regex.IsMatch(SOLUONG.Text, @"^[0-9]+$") == false)
+                    if (Regex.IsMatch(SOLUONG1.Text, @"^[0-9]+$") == false)
                     {
                         MessageBox.Show("Số lượng chỉ bao gồm chữ số!", "Thông báo", MessageBoxButtons.OK);
-                        SOLUONG.Focus();
+                        SOLUONG1.Focus();
                         return;
                     }
 
-                    if (Regex.IsMatch(DONGIA.Text, @"^[0-9]+$") == false)
+                    if (Regex.IsMatch(DONGIA1.Text, @"^[0-9]+$") == false)
                     {
                         MessageBox.Show("Đơn giá chỉ bao gồm chữ số!", "Thông báo", MessageBoxButtons.OK);
-                        DONGIA.Focus();
+                        DONGIA1.Focus();
                         return;
                     }
 
-                    if (int.Parse(SOLUONG.EditValue.ToString()) <= 0)
+                    if (int.Parse(SOLUONG1.EditValue.ToString()) <= 0)
                     {
                         MessageBox.Show("Số lượng phải >0!", "Thông báo", MessageBoxButtons.OK);
-                        SOLUONG.Focus();
+                        SOLUONG1.Focus();
                         return;
                     }
-                    if (int.Parse(DONGIA.EditValue.ToString()) <= 0)
+                    if (int.Parse(DONGIA1.EditValue.ToString()) <= 0)
                     {
                         MessageBox.Show("Đơn giá phải >0!", "Thông báo", MessageBoxButtons.OK);
-                        DONGIA.Focus();
+                        DONGIA1.Focus();
                         return;
                     }
 
-                if (check_them == true || mavattu != MAVT.Text.ToString())
+                if (check_them == true || mavattu != MAVT1.Text.ToString())
                 {
                     String checkvt =
-                      "EXEC [dbo].[sp_Check_Exists_CT_Id_Char] 'CTPX', 'MAVT' ,'" + MAVT.Text.Trim() + "','MAPX','" + MAPX.Text.Trim() + "'";
+                      "EXEC [dbo].[sp_Check_Exists_CT_Id_Char] 'CTPX', 'MAVT' ,'" + MAVT1.Text.Trim() + "','MAPX','" + MAPX1.Text.Trim() + "'";
                     Console.WriteLine(checkvt);
                     try
                     {
@@ -603,7 +603,7 @@ namespace QLVT
                     if (check_them)
                     {
 
-                        query = "DELETE DBO.CTPX WHERE MAPX = '" + MAPX.Text.Trim() + "' AND MAVT = '" + MAVT.Text.ToString() + "'";
+                        query = "DELETE DBO.CTPX WHERE MAPX = '" + MAPX1.Text.Trim() + "' AND MAVT = '" + MAVT1.Text.ToString() + "'";
 
                     }
                     else
@@ -614,7 +614,7 @@ namespace QLVT
                                "MAVT = '" + mavattu + "'," +
                                "SOLUONG = " + soluong + "," +
                                "DONGIA = " + dongia + " " +
-                               "WHERE MAPX = '" + MAPX.Text.Trim() + "' AND MAVT = '" + MAVT.Text.ToString() + "'";
+                               "WHERE MAPX = '" + MAPX1.Text.Trim() + "' AND MAVT = '" + MAVT1.Text.ToString() + "'";
 
                     }
                     Console.WriteLine(query);
@@ -724,7 +724,7 @@ namespace QLVT
         {
             try
             {
-                if (ttkComboBox.SelectedValue != null) MAKHO.Text = ttkComboBox.SelectedValue.ToString();
+                if (ttkComboBox.SelectedValue != null) MAKHO1.Text = ttkComboBox.SelectedValue.ToString();
 
             }
             catch { }
@@ -734,7 +734,7 @@ namespace QLVT
         {
             try
             {
-                if (ttvtComboBox.SelectedValue != null) MAVT.Text = ttvtComboBox.SelectedValue.ToString();
+                if (ttvtComboBox.SelectedValue != null) MAVT1.Text = ttvtComboBox.SelectedValue.ToString();
 
             }
             catch { }
@@ -744,6 +744,26 @@ namespace QLVT
         private void MAPX_EditValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ttkComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ttkComboBox.SelectedValue != null) MAKHO1.Text = ttkComboBox.SelectedValue.ToString();
+
+            }
+            catch { }
+        }
+
+        private void ttvtComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ttvtComboBox.SelectedValue != null) MAVT1.Text = ttvtComboBox.SelectedValue.ToString();
+
+            }
+            catch { }
         }
     }
 }

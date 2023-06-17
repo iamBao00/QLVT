@@ -13,11 +13,10 @@ namespace QLVT
     {
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
-        public static String connstr_publisher = "Data Source= GIABAO;Initial Catalog= QLVT_DATHANG; Integrated Security = True";     
+        public static String connstr_publisher = "Data Source=GIABAO; Initial Catalog=QLVT_DATHANG; Integrated Security = True";     
         public static SqlDataAdapter da;
         public static SqlDataReader myReader;
         public static String servername = "GIABAO";
-
         public static String username = "";
         public static String password = "";
         public static String database = "QLVT_DATHANG";

@@ -386,37 +386,37 @@ namespace QLVT
             }
             
 
-            if (teDiaChi.Text.Length > 0  && Regex.IsMatch(teDiaChi.Text, @"^[a-zA-Z0-9 ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễếệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$") == false)
+            if (teDiaChi.Text.Length > 0  && Regex.IsMatch(teDiaChi.Text, @"^[a-zA-Z0-9 ,/ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễếệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$") == false)
             {
-                MessageBox.Show("Địa chỉ chỉ chấp nhận chữ cái, số và khoảng trắng", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Địa chỉ chỉ chấp nhận chữ cái, số dấu ',' và '/' và khoảng trắng", "Thông báo", MessageBoxButtons.OK);
                 teDiaChi.Focus();
                 return;
             }
 
             if (teDiaChi.Text.Length > 100)
             {
-                MessageBox.Show("Độ dài tối đa địa chỉ 100 kí tự", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Độ dài tối đa địa chỉ 100 kí tự!", "Thông báo", MessageBoxButtons.OK);
                 teDiaChi.Focus();
                 return;
             }
 
             if(teCMND.Text == "")
             {
-                MessageBox.Show("Không bỏ trống số CMND", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Không bỏ trống số CMND!", "Thông báo", MessageBoxButtons.OK);
                 teCMND.Focus();
                 return;
             }
 
             if (Regex.IsMatch(teCMND.Text, @"^[0-9]+$") == false)
             {
-                MessageBox.Show("Địa chỉ chỉ chấp nhận số", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("CMND chỉ chấp nhận số!", "Thông báo", MessageBoxButtons.OK);
                 teCMND.Focus();
                 return;
             }
 
             if (teCMND.Text.Length > 20)
             {
-                MessageBox.Show("Độ dài tối đa CMND 20 kí tự", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Độ dài tối đa CMND 20 kí tự!", "Thông báo", MessageBoxButtons.OK);
                 teCMND.Focus();
                 return;
             }
@@ -432,6 +432,13 @@ namespace QLVT
             if (teLuong.Text.Length == 0)
             {
                 MessageBox.Show("Lương không được bỏ trống!", "Thông báo", MessageBoxButtons.OK);
+                teLuong.Focus();
+                return;
+            }
+
+            if (teLuong.EditValue.ToString().Length > 11)
+            {
+                MessageBox.Show("Lương nhập vào quá lớn!", "Thông báo", MessageBoxButtons.OK);
                 teLuong.Focus();
                 return;
             }
