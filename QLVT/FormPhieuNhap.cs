@@ -399,7 +399,8 @@ namespace QLVT
                      "EXEC [dbo].[sp_Check_Exists_Id_Char] 'PHIEUNHAP', 'MasoDDH' ,'" + txtDDH.Text.Trim() + "'";
                     String checkddh1 =
                     "EXEC [dbo].[sp_Check_Exists_Id_Char] 'DatHang', 'MasoDDH' ,'" + txtDDH.Text.Trim() + "'";
-
+                    String checkngay =
+                   "EXEC [dbo].[sp_KiemTraNgayNhap] '" + txtDDH.Text.Trim() + "'" + ",'" + txtNGAY.Text + "'";
                     // string getMaxIdQuery = "EXEC [dbo].[sp_Get_Max_Id_Char] 'PHIEUXUAT', 'MAPX'";
                     Console.WriteLine(checkpn);
                     try
@@ -475,11 +476,126 @@ namespace QLVT
                         MessageBox.Show("Lỗi kết nối! " + ex.Message, "Thông báo", MessageBoxButtons.OK);
                         return;
                     }
+                    try
+                    {
+                        Program.myReader = Program.ExecSqlDataReader(checkngay);
+                        if (Program.myReader == null) { return; }
+                        Program.myReader.Read();
+                        if (Program.myReader.GetInt32(0) <= 0)
+                        {
+                            MessageBox.Show("Ngày lập phiếu phải nhỏ hơn ngày lập đơn đặt hàng!", "Thông báo", MessageBoxButtons.OK);
+                            txtNGAY.Focus();
+                            Program.myReader.Close();
+                            return;
+                        }
+                        else
+                        {
+                            Program.myReader.Close();
+                        }
+
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi kết nối! " + ex.Message, "Thông báo", MessageBoxButtons.OK);
+                        return;
+                    }
 
                 }
 
                 try
                 {
+
+                    if (masoddh.ToLower().Trim() != txtDDH.Text.ToString().Trim().ToLower())
+                    {
+                        String checkddh =
+                        "EXEC [dbo].[sp_Check_Exists_Id_Char] 'PHIEUNHAP', 'MasoDDH' ,'" + txtDDH.Text.Trim() + "'";
+                        String checkddh1 =
+                        "EXEC [dbo].[sp_Check_Exists_Id_Char] 'DatHang', 'MasoDDH' ,'" + txtDDH.Text.Trim() + "'";
+                        try
+                        {
+                            Program.myReader = Program.ExecSqlDataReader(checkddh1);
+                            if (Program.myReader == null) { return; }
+                            Program.myReader.Read();
+                            if (Program.myReader.GetInt32(0) == 0)
+                            {
+                                MessageBox.Show("Đơn đặt hàng này không tồn lại!", "Thông báo", MessageBoxButtons.OK);
+                                txtDDH.Focus();
+                                Program.myReader.Close();
+                                return;
+                            }
+                            else
+                            {
+                                Program.myReader.Close();
+                            }
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Lỗi kết nối! " + ex.Message, "Thông báo", MessageBoxButtons.OK);
+                            return;
+                        }
+
+
+                        try
+                        {
+                            Program.myReader = Program.ExecSqlDataReader(checkddh);
+                            if (Program.myReader == null) { return; }
+                            Program.myReader.Read();
+                            if (Program.myReader.GetInt32(0) == 1)
+                            {
+                                MessageBox.Show("Đơn đặt hàng đã tồn tại phiếu nhập khác!", "Thông báo", MessageBoxButtons.OK);
+                                txtDDH.Focus();
+                                Program.myReader.Close();
+                                return;
+                            }
+                            else
+                            {
+                                Program.myReader.Close();
+                            }
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Lỗi kết nối! " + ex.Message, "Thông báo", MessageBoxButtons.OK);
+                            return;
+                        }
+                    };
+
+
+                    String checkngay =
+                  "EXEC [dbo].[sp_KiemTraNgayNhap] '" + txtDDH.Text.Trim() + "'" + ",'" + txtNGAY.Text + "'";
+                    try
+                    {
+                        Program.myReader = Program.ExecSqlDataReader(checkngay);
+                        if (Program.myReader == null) { return; }
+                        Program.myReader.Read();
+                        if (Program.myReader.GetInt32(0) <= 0)
+                        {
+                            MessageBox.Show("Ngày lập phiếu phải nhỏ hơn ngày lập đơn đặt hàng!", "Thông báo", MessageBoxButtons.OK);
+                            txtNGAY.Focus();
+                            Program.myReader.Close();
+                            return;
+                        }
+                        else
+                        {
+                            Program.myReader.Close();
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi kết nối! " + ex.Message, "Thông báo", MessageBoxButtons.OK);
+                        return;
+                    }
+
+
+
+
+
+
+                    // string getMaxIdQuery = "EXEC [dbo].[sp_Get_Max_Id_Char] 'PHIEUXUAT', 'MAPX'";
                     String query = "";
                     phieuNhapBindingSource.EndEdit();
                     phieuNhapBindingSource.ResetCurrentItem();
@@ -524,7 +640,7 @@ namespace QLVT
                 {
                     if (txtMAVT.Text.Trim() == "")
                     {
-                        MessageBox.Show("Ngày tạp phiếu xuất không được để trống!", "Thông báo", MessageBoxButtons.OK);
+                        MessageBox.Show("Mã vật tư không được để trống!", "Thông báo", MessageBoxButtons.OK);
                         txtMAVT.Focus();
                         return;
                     }
