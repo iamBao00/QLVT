@@ -59,12 +59,12 @@ namespace QLVT
             if (Program.mGroup == "CONGTY")
             {
                 cbChiNhanh.Enabled = true;
-                btnThemPX.Enabled = btnXoaPX.Enabled = btnSuaPX.Enabled = btnGhiPX.Enabled = btnHuyPX.Enabled = btnPhucHoiPX.Enabled = false;
+                btnThemPX.Enabled = btnXoa.Enabled = btnSua.Enabled = btnGhiPX.Enabled = btnHuyPX.Enabled = btnPhucHoiPX.Enabled = false;
                 btnReloadPX.Enabled = btnThoatPX.Enabled = true;
             }
             else
             {
-                btnThemPX.Enabled = btnXoaPX.Enabled = btnSuaPX.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = btnPhucHoiPX.Enabled = true;
+                btnThemPX.Enabled = btnXoa.Enabled = btnSua.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = btnPhucHoiPX.Enabled = true;
                 btnGhiPX.Enabled = btnHuyPX.Enabled = false;
                 cbChiNhanh.Enabled = false;
             }
@@ -121,7 +121,7 @@ namespace QLVT
         {
             if (Program.mGroup != "CONGTY")
             {
-                btnThemPX.Enabled = btnXoaPX.Enabled = btnSuaPX.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = true;
+                btnThemPX.Enabled = btnXoa.Enabled = btnSua.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = true;
                 btnGhiPX.Enabled = btnHuyPX.Enabled = false;
                 txtNgay.Visible = txtNhaCC.Visible = txtMaNV.Visible = txtMaKho.Visible = !txtMaKho.Visible;
                 lbNGAY.Visible = lbNhaCC.Visible = lbMANV.Visible = lbMAKHO.Visible = cbTTKho.Visible = !lbMAKHO.Visible;
@@ -169,7 +169,7 @@ namespace QLVT
         {
             if (barButtonDH.Caption == "Chi Tiết Đơn Đặt Hàng")
             {
-                btnThemPX.Enabled = btnXoaPX.Enabled = btnSuaPX.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = btnPhucHoiPX.Enabled = false;
+                btnThemPX.Enabled = btnXoa.Enabled = btnSua.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = btnPhucHoiPX.Enabled = false;
                 btnGhiPX.Enabled = btnHuyPX.Enabled = true;
                 datHangGridControl.Enabled = false;
                 dangThemMoi = true;
@@ -210,7 +210,7 @@ namespace QLVT
             }
             else
             {
-                btnThemPX.Enabled = btnXoaPX.Enabled = btnSuaPX.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = btnPhucHoiPX.Enabled = false;
+                btnThemPX.Enabled = btnXoa.Enabled = btnSua.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = btnPhucHoiPX.Enabled = false;
                 btnGhiPX.Enabled = btnHuyPX.Enabled = true;
                 dangThemMoi = true;
                 vitri = bds_CTDDH.Position;
@@ -312,7 +312,7 @@ namespace QLVT
                     MessageBox.Show("Lỗi ghi phiếu xuất \n" + ex.Message, "", MessageBoxButtons.OK);
                     return;
                 }
-                btnThemPX.Enabled = btnSuaPX.Enabled = btnXoaPX.Enabled = btnThoatPX.Enabled = btnReloadPX.Enabled = btnPhucHoiPX.Enabled = true;
+                btnThemPX.Enabled = btnSua.Enabled = btnXoa.Enabled = btnThoatPX.Enabled = btnReloadPX.Enabled = btnPhucHoiPX.Enabled = true;
                 btnGhiPX.Enabled = btnHuyPX.Enabled = false;
                 panelControl2.Enabled = false;
                 datHangGridControl.Enabled = true;
@@ -428,7 +428,7 @@ namespace QLVT
                     MessageBox.Show("Lỗi ghi chi tiết đơn đặt hàng \n" + ex.Message, "", MessageBoxButtons.OK);
                     return;
                 }
-                btnThemPX.Enabled = btnSuaPX.Enabled = btnXoaPX.Enabled = btnThoatPX.Enabled = btnReloadPX.Enabled = btnPhucHoiPX.Enabled = true;
+                btnThemPX.Enabled = btnSua.Enabled = btnXoa.Enabled = btnThoatPX.Enabled = btnReloadPX.Enabled = btnPhucHoiPX.Enabled = true;
                 btnGhiPX.Enabled = btnHuyPX.Enabled = false;
                 panelControl2.Enabled = false;
                 CTDDHGridControl.Enabled = true;
@@ -451,7 +451,7 @@ namespace QLVT
                 this.datHangTableAdapter.Fill(this.DSDATHANG.DatHang);
 
                 bds_DatHang.Position = vitri;
-                btnThemPX.Enabled = btnXoaPX.Enabled = btnSuaPX.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = true;
+                btnThemPX.Enabled = btnXoa.Enabled = btnSua.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = true;
                 btnGhiPX.Enabled = btnHuyPX.Enabled = false;
                 datHangGridControl.Enabled = true;
                 panelControl2.Enabled = false;
@@ -463,7 +463,7 @@ namespace QLVT
                 bds_CTDDH.CancelEdit();
                 this.CTDDHTableAdapter.Fill(this.DSDATHANG.CTDDH);
                 bds_CTDDH.Position = vitri;
-                btnThemPX.Enabled = btnXoaPX.Enabled = btnSuaPX.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = true;
+                btnThemPX.Enabled = btnXoa.Enabled = btnSua.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = true;
                 btnGhiPX.Enabled = btnHuyPX.Enabled = false;
                 CTDDHGridControl.Enabled = true;
                 panelControl2.Enabled = false;
@@ -476,6 +476,12 @@ namespace QLVT
         {
             if (barButtonDH.Caption == "Chi Tiết Đơn Đặt Hàng")
             {
+                if (bds_DatHang.Count == 0)
+                {
+                    MessageBox.Show("Danh sách đơn đặt hàng trống!", "", MessageBoxButtons.OK);
+                    btnSua.Enabled = false;
+                    return;
+                }
                 vitri = bds_DatHang.Position;
                 DataRowView dt = ((DataRowView)bds_DatHang[bds_DatHang.Position]);
                 maSoDDH = dt["MasoDDH"].ToString();
@@ -485,7 +491,7 @@ namespace QLVT
                 makho = dt["MAKHO"].ToString();
 
                 panelControl2.Enabled = true;
-                btnThemPX.Enabled = btnXoaPX.Enabled = btnSuaPX.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = btnPhucHoiPX.Enabled = false;
+                btnThemPX.Enabled = btnXoa.Enabled = btnSua.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = btnPhucHoiPX.Enabled = false;
                 btnGhiPX.Enabled = btnHuyPX.Enabled = true;
                 datHangGridControl.Enabled = false;
                 barButtonDH.Enabled = false;
@@ -493,6 +499,12 @@ namespace QLVT
             }
             else
             {
+                if (bds_CTDDH.Count == 0)
+                {
+                    MessageBox.Show("Danh sách chi tiết đơn đặt hàng trống!", "", MessageBoxButtons.OK);
+                    btnSua.Enabled = false;
+                    return;
+                }
                 vitri = bds_CTDDH.Position;
                 DataRowView dt = ((DataRowView)bds_CTDDH[bds_CTDDH.Position]);
                 maSoDDH = dt["MasoDDH"].ToString();
@@ -500,7 +512,7 @@ namespace QLVT
                 soluong = int.Parse(dt["SOLUONG"].ToString());
                 dongia = float.Parse(dt["DONGIA"].ToString());
                 panelControl2.Enabled = true;
-                btnThemPX.Enabled = btnXoaPX.Enabled = btnSuaPX.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = btnPhucHoiPX.Enabled = false;
+                btnThemPX.Enabled = btnXoa.Enabled = btnSua.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = btnPhucHoiPX.Enabled = false;
                 btnGhiPX.Enabled = btnHuyPX.Enabled = true;
                 CTDDHGridControl.Enabled = false;
                 barButtonDH.Enabled = false;
@@ -520,11 +532,16 @@ namespace QLVT
 
         private void btnXoaPX_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (bds_DatHang.Count == 0) btnXoaPX.Enabled = false;
+            
             if (barButtonDH.Caption == "Chi Tiết Đơn Đặt Hàng")
             {
+                if (bds_DatHang.Count == 0)
+                {
+                    MessageBox.Show("Danh sách đơn đặt hàng trống!", "", MessageBoxButtons.OK);
+                    btnXoa.Enabled = false;
+                    return;
+                }
                 if (bds_CTDDH.Count > 0)
-
                 {
                     MessageBox.Show("Không thể xóa DDH này vì đã có chi tiết DDH!", "", MessageBoxButtons.OK);
                     return;
@@ -565,11 +582,13 @@ namespace QLVT
                 }
                 btnGhiPX.Enabled = btnHuyPX.Enabled = false;
             }
-            else
+            else 
             {
                 if (bds_CTDDH.Count == 0)
                 {
-                    btnXoaPX.Enabled = false;  
+                    MessageBox.Show("Danh sách chi tiết đơn đặt hàng trống!", "", MessageBoxButtons.OK);
+                    btnXoa.Enabled = false;
+                    return;
                 }
                 if (MessageBox.Show("Bạn có thực sự muốn xóa chi tiết DDH này!", "Xác nhận", MessageBoxButtons.OKCancel)
                    == DialogResult.OK)
@@ -620,7 +639,7 @@ namespace QLVT
                 this.datHangTableAdapter.Fill(this.DSDATHANG.DatHang);
 
                 datHangGridControl.Enabled = true;
-                btnThemPX.Enabled = btnXoaPX.Enabled = btnSuaPX.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = btnPhucHoiPX.Enabled = true;
+                btnThemPX.Enabled = btnXoa.Enabled = btnSua.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = btnPhucHoiPX.Enabled = true;
                 btnGhiPX.Enabled = btnHuyPX.Enabled = false;
                 datHangGridControl.Enabled = true;
             }
@@ -638,7 +657,7 @@ namespace QLVT
 
                 this.CTDDHTableAdapter.Fill(this.DSDATHANG.CTDDH);
 
-                btnThemPX.Enabled = btnXoaPX.Enabled = btnSuaPX.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = btnPhucHoiPX.Enabled = true;
+                btnThemPX.Enabled = btnXoa.Enabled = btnSua.Enabled = btnReloadPX.Enabled = btnThoatPX.Enabled = btnPhucHoiPX.Enabled = true;
                 btnGhiPX.Enabled = btnHuyPX.Enabled = false;
                 CTDDHGridControl.Enabled = true;
             }

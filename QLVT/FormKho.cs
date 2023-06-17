@@ -52,7 +52,9 @@ namespace QLVT
         {
             if (bds_Kho.Count == 0)
             {
+                MessageBox.Show("Danh sách kho trống!", "", MessageBoxButtons.OK);
                 btnXoa.Enabled = false;
+                return;
             }
             if (bds_DatHang.Count > 0)
 
@@ -359,6 +361,12 @@ namespace QLVT
 
         private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (bds_Kho.Count == 0)
+            {
+                MessageBox.Show("Danh sách kho trống!", "", MessageBoxButtons.OK);
+                btnSua.Enabled = false;
+                return;
+            }
             txtMaKho.Enabled = false;
             txtMaCN.Enabled = false;
             vitri = bds_Kho.Position;

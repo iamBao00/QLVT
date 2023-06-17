@@ -34,8 +34,8 @@
             this.barManager2 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnThemPX = new DevExpress.XtraBars.BarButtonItem();
-            this.btnXoaPX = new DevExpress.XtraBars.BarButtonItem();
-            this.btnSuaPX = new DevExpress.XtraBars.BarButtonItem();
+            this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSua = new DevExpress.XtraBars.BarButtonItem();
             this.btnGhiPX = new DevExpress.XtraBars.BarButtonItem();
             this.btnHuyPX = new DevExpress.XtraBars.BarButtonItem();
             this.btnPhucHoiPX = new DevExpress.XtraBars.BarButtonItem();
@@ -144,8 +144,8 @@
             this.barManager2.Form = this;
             this.barManager2.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnThemPX,
-            this.btnXoaPX,
-            this.btnSuaPX,
+            this.btnXoa,
+            this.btnSua,
             this.btnGhiPX,
             this.btnPhucHoiPX,
             this.btnReloadPX,
@@ -165,8 +165,8 @@
             this.bar1.FloatLocation = new System.Drawing.Point(589, 133);
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThemPX, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnXoaPX, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnSuaPX, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnXoa, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnSua, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnGhiPX, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnHuyPX, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnPhucHoiPX, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
@@ -184,21 +184,21 @@
             this.btnThemPX.Name = "btnThemPX";
             this.btnThemPX.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThemPX_ItemClick);
             // 
-            // btnXoaPX
+            // btnXoa
             // 
-            this.btnXoaPX.Caption = "Xóa";
-            this.btnXoaPX.Id = 1;
-            this.btnXoaPX.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnXoaPX.ImageOptions.SvgImage")));
-            this.btnXoaPX.Name = "btnXoaPX";
-            this.btnXoaPX.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoaPX_ItemClick);
+            this.btnXoa.Caption = "Xóa";
+            this.btnXoa.Id = 1;
+            this.btnXoa.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnXoaPX.ImageOptions.SvgImage")));
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoaPX_ItemClick);
             // 
-            // btnSuaPX
+            // btnSua
             // 
-            this.btnSuaPX.Caption = "Sửa";
-            this.btnSuaPX.Id = 2;
-            this.btnSuaPX.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSuaPX.ImageOptions.SvgImage")));
-            this.btnSuaPX.Name = "btnSuaPX";
-            this.btnSuaPX.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSuaPX_ItemClick);
+            this.btnSua.Caption = "Sửa";
+            this.btnSua.Id = 2;
+            this.btnSua.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSuaPX.ImageOptions.SvgImage")));
+            this.btnSua.Name = "btnSua";
+            this.btnSua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSuaPX_ItemClick);
             // 
             // btnGhiPX
             // 
@@ -463,6 +463,7 @@
             this.txtMaKho.Location = new System.Drawing.Point(164, 277);
             this.txtMaKho.MenuManager = this.barManager2;
             this.txtMaKho.Name = "txtMaKho";
+            this.txtMaKho.Properties.ReadOnly = true;
             this.txtMaKho.Size = new System.Drawing.Size(208, 22);
             this.txtMaKho.TabIndex = 40;
             // 
@@ -472,6 +473,7 @@
             this.cbTTKho.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bds_DatHang, "MAKHO", true));
             this.cbTTKho.DataSource = this.bds_TTKho;
             this.cbTTKho.DisplayMember = "TTKHO";
+            this.cbTTKho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTTKho.FormattingEnabled = true;
             this.cbTTKho.Location = new System.Drawing.Point(167, 337);
             this.cbTTKho.Name = "cbTTKho";
@@ -507,6 +509,7 @@
             this.cbTTVT.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bds_CTDDH, "MAVT", true));
             this.cbTTVT.DataSource = this.thongTinVTBindingSource;
             this.cbTTVT.DisplayMember = "TTCVT";
+            this.cbTTVT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTTVT.FormattingEnabled = true;
             this.cbTTVT.Location = new System.Drawing.Point(551, 116);
             this.cbTTVT.Name = "cbTTVT";
@@ -810,8 +813,8 @@
         private DevExpress.XtraBars.BarManager barManager2;
         private DevExpress.XtraBars.Bar bar1;
         private DevExpress.XtraBars.BarButtonItem btnThemPX;
-        private DevExpress.XtraBars.BarButtonItem btnXoaPX;
-        private DevExpress.XtraBars.BarButtonItem btnSuaPX;
+        private DevExpress.XtraBars.BarButtonItem btnXoa;
+        private DevExpress.XtraBars.BarButtonItem btnSua;
         private DevExpress.XtraBars.BarButtonItem btnGhiPX;
         private DevExpress.XtraBars.BarButtonItem btnHuyPX;
         private DevExpress.XtraBars.BarButtonItem btnPhucHoiPX;

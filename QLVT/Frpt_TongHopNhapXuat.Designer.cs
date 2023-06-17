@@ -132,7 +132,7 @@
             this.Controls.Add(this.cbChiNhanh);
             this.Controls.Add(this.label1);
             this.Name = "Frpt_TongHopNhapXuat";
-            this.Text = "Frpt_TongHopNhapXuat";
+            this.Text = "Tổng Hợp Nhập Xuất";
             this.Load += new System.EventHandler(this.Frpt_TongHopNhapXuat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.end.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.end.Properties)).EndInit();

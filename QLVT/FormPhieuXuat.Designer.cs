@@ -551,9 +551,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 30);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panelControl1.Name = "panelControl1";
-
-            this.panelControl1.Size = new System.Drawing.Size(1631, 60);
-
+            this.panelControl1.Size = new System.Drawing.Size(1202, 60);
             this.panelControl1.TabIndex = 18;
             // 
             // cbChiNhanh
@@ -683,10 +681,8 @@
             // 
             this.phieuXuatGridControl.DataSource = this.phieuXuatBindingSource;
             this.phieuXuatGridControl.Dock = System.Windows.Forms.DockStyle.Top;
-
             this.phieuXuatGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.phieuXuatGridControl.Location = new System.Drawing.Point(0, 90);
-
             this.phieuXuatGridControl.MainView = this.gridView2;
             this.phieuXuatGridControl.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.phieuXuatGridControl.MenuManager = this.barManager1;
@@ -711,12 +707,10 @@
             this.panelControl4.Controls.Add(this.panelControl3);
             this.panelControl4.Controls.Add(this.panelControl2);
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-
-            this.panelControl4.Location = new System.Drawing.Point(0, 342);
+            this.panelControl4.Location = new System.Drawing.Point(0, 403);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1631, 459);
-
+            this.panelControl4.Size = new System.Drawing.Size(1202, 569);
             this.panelControl4.TabIndex = 49;
             this.panelControl4.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl4_Paint);
             // 
@@ -725,12 +719,10 @@
             this.panelControl3.Controls.Add(this.cTPXGridControl);
             this.panelControl3.Controls.Add(this.panelControl5);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl3.Location = new System.Drawing.Point(814, 2);
+            this.panelControl3.Location = new System.Drawing.Point(733, 2);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panelControl3.Name = "panelControl3";
-
-            this.panelControl3.Size = new System.Drawing.Size(896, 455);
-
+            this.panelControl3.Size = new System.Drawing.Size(467, 565);
             this.panelControl3.TabIndex = 31;
             // 
             // cTPXGridControl
@@ -744,9 +736,7 @@
             this.cTPXGridControl.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cTPXGridControl.MenuManager = this.barManager1;
             this.cTPXGridControl.Name = "cTPXGridControl";
-
-            this.cTPXGridControl.Size = new System.Drawing.Size(892, 389);
-
+            this.cTPXGridControl.Size = new System.Drawing.Size(463, 483);
             this.cTPXGridControl.TabIndex = 1;
             this.cTPXGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -813,7 +803,7 @@
             this.panelControl5.Location = new System.Drawing.Point(2, 2);
             this.panelControl5.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(382, 78);
+            this.panelControl5.Size = new System.Drawing.Size(463, 78);
             this.panelControl5.TabIndex = 0;
             // 
             // label3
@@ -821,7 +811,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label3.Location = new System.Drawing.Point(168, 20);
+            this.label3.Location = new System.Drawing.Point(208, 20);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(174, 24);
@@ -854,11 +844,8 @@
             this.panelControl2.Location = new System.Drawing.Point(2, 2);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panelControl2.Name = "panelControl2";
-
-            this.panelControl2.Size = new System.Drawing.Size(731, 455);
-
+            this.panelControl2.Size = new System.Drawing.Size(731, 565);
             this.panelControl2.TabIndex = 30;
-            /*this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint_1);*/
             // 
             // ttvtComboBox
             // 
@@ -1118,10 +1105,8 @@
             this.Controls.Add(this.barDockControl2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormPhieuXuat";
-
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Text = "Phiếu xuất";
-
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormPhieuXuat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
