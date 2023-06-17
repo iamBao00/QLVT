@@ -699,5 +699,10 @@ namespace QLVT
 
             }
         }
+
+        private void CTDDHGridControl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

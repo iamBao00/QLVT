@@ -197,6 +197,7 @@ namespace QLVT
 
         private void FormKho_Load(object sender, EventArgs e)
         {
+            
             DSKHO.EnforceConstraints = false;
             this.khoTableAdapter.Connection.ConnectionString = Program.connstr;
             this.khoTableAdapter.Fill(this.DSKHO.Kho);
@@ -210,13 +211,22 @@ namespace QLVT
             this.phieuXuatTableAdapter.Connection.ConnectionString = Program.connstr;
             this.phieuXuatTableAdapter.Fill(this.DSKHO.PhieuXuat);
 
+            this.nhanVienTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.nhanVienTableAdapter.Fill(this.dS1.NhanVien);
+
+            if (bds_NhanVien.Count == 0)
+            {
+                MessageBox.Show("Bảng nhân viên trống, ứng dụng không còn login!", "", MessageBoxButtons.OK);
+                return;
+            }
+            macn = ((DataRowView)bds_NhanVien[0])["MaCN"].ToString();
+
             /*if (bds_Kho.Count == 0)
             {
-                macn = "CN" + (Program.mChinhNhanh+1).ToString();
+                macn = "CN" + (Program.mChinhNhanh + 1).ToString();
             }
-            else macn = ((DataRowView)bds_Kho[0])["MaCN"].ToString();*/
-
-            macn = "CN" + (Program.mChinhNhanh+1).ToString();
+            else macn = ((DataRowView)bds_Kho[0])["MaCN"].ToString();
+            macn = "CN" + (Program.mChinhNhanh+1).ToString();*/
             
             cbChiNhanh.DataSource = Program.bds_dspm;
             cbChiNhanh.DisplayMember = "TENCN";

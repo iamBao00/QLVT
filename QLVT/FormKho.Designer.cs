@@ -72,6 +72,10 @@
             this.bds_DatHang = new System.Windows.Forms.BindingSource(this.components);
             this.bds_PhieuNhap = new System.Windows.Forms.BindingSource(this.components);
             this.bds_PhieuXuat = new System.Windows.Forms.BindingSource(this.components);
+            this.dS1 = new QLVT.DS1();
+            this.bds_NhanVien = new System.Windows.Forms.BindingSource(this.components);
+            this.nhanVienTableAdapter = new QLVT.DS1TableAdapters.NhanVienTableAdapter();
+            this.tableAdapterManager1 = new QLVT.DS1TableAdapters.TableAdapterManager();
             mAKHOLabel = new System.Windows.Forms.Label();
             tENKHOLabel = new System.Windows.Forms.Label();
             dIACHILabel = new System.Windows.Forms.Label();
@@ -88,6 +92,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bds_DatHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bds_PhieuNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bds_PhieuXuat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bds_NhanVien)).BeginInit();
             this.SuspendLayout();
             // 
             // mAKHOLabel
@@ -246,7 +252,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 562);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 651);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(1000, 0);
             // 
@@ -256,7 +262,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 532);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 621);
             // 
             // barDockControlRight
             // 
@@ -264,7 +270,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1000, 30);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 532);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 621);
             // 
             // panelControl1
             // 
@@ -417,7 +423,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 387);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1000, 175);
+            this.panelControl2.Size = new System.Drawing.Size(1000, 264);
             this.panelControl2.TabIndex = 7;
             this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
             // 
@@ -476,11 +482,35 @@
             this.bds_PhieuXuat.DataMember = "FK_PhieuXuat_Kho";
             this.bds_PhieuXuat.DataSource = this.bds_Kho;
             // 
+            // dS1
+            // 
+            this.dS1.DataSetName = "DS1";
+            this.dS1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bds_NhanVien
+            // 
+            this.bds_NhanVien.DataMember = "NhanVien";
+            this.bds_NhanVien.DataSource = this.dS1;
+            // 
+            // nhanVienTableAdapter
+            // 
+            this.nhanVienTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.DatHangTableAdapter = null;
+            this.tableAdapterManager1.NhanVienTableAdapter = this.nhanVienTableAdapter;
+            this.tableAdapterManager1.PhieuNhapTableAdapter = null;
+            this.tableAdapterManager1.PhieuXuatTableAdapter = null;
+            this.tableAdapterManager1.ThongTinNhanVienTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = QLVT.DS1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // FormKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.ClientSize = new System.Drawing.Size(1000, 651);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.khoGridControl);
             this.Controls.Add(this.panelControl1);
@@ -508,6 +538,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bds_DatHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bds_PhieuNhap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bds_PhieuXuat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dS1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bds_NhanVien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -553,5 +585,9 @@
         private System.Windows.Forms.BindingSource bds_PhieuNhap;
         private DSKHOTableAdapters.PhieuXuatTableAdapter phieuXuatTableAdapter;
         private System.Windows.Forms.BindingSource bds_PhieuXuat;
+        private DS1 dS1;
+        private System.Windows.Forms.BindingSource bds_NhanVien;
+        private DS1TableAdapters.NhanVienTableAdapter nhanVienTableAdapter;
+        private DS1TableAdapters.TableAdapterManager tableAdapterManager1;
     }
 }

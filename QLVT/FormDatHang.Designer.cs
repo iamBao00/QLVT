@@ -702,6 +702,7 @@
             this.CTDDHGridControl.TabIndex = 31;
             this.CTDDHGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
+            this.CTDDHGridControl.Click += new System.EventHandler(this.CTDDHGridControl_Click);
             // 
             // gridView2
             // 
@@ -716,36 +717,44 @@
             // 
             // colMasoDDH2
             // 
+            this.colMasoDDH2.Caption = "Mã số DDH";
             this.colMasoDDH2.FieldName = "MasoDDH";
             this.colMasoDDH2.MinWidth = 49;
             this.colMasoDDH2.Name = "colMasoDDH2";
+            this.colMasoDDH2.OptionsColumn.ReadOnly = true;
             this.colMasoDDH2.Visible = true;
             this.colMasoDDH2.VisibleIndex = 0;
             this.colMasoDDH2.Width = 182;
             // 
             // colMAVT
             // 
+            this.colMAVT.Caption = "Mã Vật Tư";
             this.colMAVT.FieldName = "MAVT";
             this.colMAVT.MinWidth = 49;
             this.colMAVT.Name = "colMAVT";
+            this.colMAVT.OptionsColumn.ReadOnly = true;
             this.colMAVT.Visible = true;
             this.colMAVT.VisibleIndex = 1;
             this.colMAVT.Width = 182;
             // 
             // colSOLUONG
             // 
+            this.colSOLUONG.Caption = "Số Lượng";
             this.colSOLUONG.FieldName = "SOLUONG";
             this.colSOLUONG.MinWidth = 49;
             this.colSOLUONG.Name = "colSOLUONG";
+            this.colSOLUONG.OptionsColumn.ReadOnly = true;
             this.colSOLUONG.Visible = true;
             this.colSOLUONG.VisibleIndex = 2;
             this.colSOLUONG.Width = 182;
             // 
             // colDONGIA
             // 
+            this.colDONGIA.Caption = "Đơn Giá";
             this.colDONGIA.FieldName = "DONGIA";
             this.colDONGIA.MinWidth = 49;
             this.colDONGIA.Name = "colDONGIA";
+            this.colDONGIA.OptionsColumn.ReadOnly = true;
             this.colDONGIA.Visible = true;
             this.colDONGIA.VisibleIndex = 3;
             this.colDONGIA.Width = 182;

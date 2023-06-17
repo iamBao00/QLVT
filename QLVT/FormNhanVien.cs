@@ -69,11 +69,13 @@ namespace QLVT
             this.userTableAdapter.Connection.ConnectionString = Program.connstr;
             this.userTableAdapter.Fill(this.DS1.USER);
 
+            if(nhanVienBindingSource.Count == 0)
+            {
+                MessageBox.Show("Bảng nhân viên trống, ứng dụng không còn login!", "", MessageBoxButtons.OK);
+                return;
+            }
             macn = ((DataRowView)nhanVienBindingSource[0])["MaCN"].ToString();
 
-          
-
-            // Van con loi, tu xu li, thay k sua, thay se check khi thi
             cbChiNhanh.DataSource = Program.bds_dspm;
             cbChiNhanh.DisplayMember = "TENCN";
             cbChiNhanh.ValueMember = "TENSERVER";
