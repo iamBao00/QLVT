@@ -32,8 +32,8 @@
             System.Windows.Forms.Label tTKHOLabel;
             System.Windows.Forms.Label mAPNLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPhieuNhap));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.barDockControl2 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
             this.btnThemPX = new DevExpress.XtraBars.BarButtonItem();
@@ -413,9 +413,9 @@
             this.phieuNhapGridControl.DataSource = this.phieuNhapBindingSource;
             this.phieuNhapGridControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.phieuNhapGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6);
-            gridLevelNode1.RelationName = "FK_CTPN_PhieuNhap";
+            gridLevelNode3.RelationName = "FK_CTPN_PhieuNhap";
             this.phieuNhapGridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode3});
             this.phieuNhapGridControl.Location = new System.Drawing.Point(0, 142);
             this.phieuNhapGridControl.MainView = this.gridView1;
             this.phieuNhapGridControl.Margin = new System.Windows.Forms.Padding(6);
@@ -449,45 +449,55 @@
             // 
             // colMAPN
             // 
+            this.colMAPN.Caption = "Mã phiếu nhập";
             this.colMAPN.FieldName = "MAPN";
             this.colMAPN.MinWidth = 49;
             this.colMAPN.Name = "colMAPN";
+            this.colMAPN.OptionsColumn.ReadOnly = true;
             this.colMAPN.Visible = true;
             this.colMAPN.VisibleIndex = 0;
             this.colMAPN.Width = 182;
             // 
             // colNGAY
             // 
+            this.colNGAY.Caption = "Ngày";
             this.colNGAY.FieldName = "NGAY";
             this.colNGAY.MinWidth = 49;
             this.colNGAY.Name = "colNGAY";
+            this.colNGAY.OptionsColumn.ReadOnly = true;
             this.colNGAY.Visible = true;
             this.colNGAY.VisibleIndex = 1;
             this.colNGAY.Width = 182;
             // 
             // colMasoDDH
             // 
+            this.colMasoDDH.Caption = "Mã số DDH";
             this.colMasoDDH.FieldName = "MasoDDH";
             this.colMasoDDH.MinWidth = 49;
             this.colMasoDDH.Name = "colMasoDDH";
+            this.colMasoDDH.OptionsColumn.ReadOnly = true;
             this.colMasoDDH.Visible = true;
             this.colMasoDDH.VisibleIndex = 2;
             this.colMasoDDH.Width = 182;
             // 
             // colMANV
             // 
+            this.colMANV.Caption = "Mã nhân viên";
             this.colMANV.FieldName = "MANV";
             this.colMANV.MinWidth = 49;
             this.colMANV.Name = "colMANV";
+            this.colMANV.OptionsColumn.ReadOnly = true;
             this.colMANV.Visible = true;
             this.colMANV.VisibleIndex = 3;
             this.colMANV.Width = 182;
             // 
             // colMAKHO
             // 
+            this.colMAKHO.Caption = "Mã kho";
             this.colMAKHO.FieldName = "MAKHO";
             this.colMAKHO.MinWidth = 49;
             this.colMAKHO.Name = "colMAKHO";
+            this.colMAKHO.OptionsColumn.ReadOnly = true;
             this.colMAKHO.Visible = true;
             this.colMAKHO.VisibleIndex = 4;
             this.colMAKHO.Width = 182;
@@ -592,7 +602,7 @@
             this.TTVTComboBox.Location = new System.Drawing.Point(411, 113);
             this.TTVTComboBox.Margin = new System.Windows.Forms.Padding(6);
             this.TTVTComboBox.Name = "TTVTComboBox";
-            this.TTVTComboBox.Size = new System.Drawing.Size(284, 24);
+            this.TTVTComboBox.Size = new System.Drawing.Size(268, 24);
             this.TTVTComboBox.TabIndex = 44;
             this.TTVTComboBox.ValueMember = "MAVT";
             this.TTVTComboBox.Visible = false;
@@ -604,7 +614,8 @@
             this.txtMAVT.Location = new System.Drawing.Point(496, 67);
             this.txtMAVT.Margin = new System.Windows.Forms.Padding(6);
             this.txtMAVT.Name = "txtMAVT";
-            this.txtMAVT.Size = new System.Drawing.Size(156, 22);
+            this.txtMAVT.Properties.ReadOnly = true;
+            this.txtMAVT.Size = new System.Drawing.Size(79, 22);
             this.txtMAVT.TabIndex = 40;
             this.txtMAVT.Visible = false;
             // 
@@ -614,10 +625,10 @@
             this.TTKHOComboBox.DataSource = this.TTKHOBindingSource;
             this.TTKHOComboBox.DisplayMember = "TTKHO";
             this.TTKHOComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TTKHOComboBox.Location = new System.Drawing.Point(306, 282);
+            this.TTKHOComboBox.Location = new System.Drawing.Point(267, 282);
             this.TTKHOComboBox.Margin = new System.Windows.Forms.Padding(6);
             this.TTKHOComboBox.Name = "TTKHOComboBox";
-            this.TTKHOComboBox.Size = new System.Drawing.Size(428, 24);
+            this.TTKHOComboBox.Size = new System.Drawing.Size(412, 24);
             this.TTKHOComboBox.TabIndex = 45;
             this.TTKHOComboBox.ValueMember = "MAKHO";
             this.TTKHOComboBox.SelectedIndexChanged += new System.EventHandler(this.TTKHOComboBox_SelectedIndexChanged);
@@ -629,7 +640,8 @@
             this.txtMAKHO.Location = new System.Drawing.Point(152, 282);
             this.txtMAKHO.Margin = new System.Windows.Forms.Padding(6);
             this.txtMAKHO.Name = "txtMAKHO";
-            this.txtMAKHO.Size = new System.Drawing.Size(122, 22);
+            this.txtMAKHO.Properties.ReadOnly = true;
+            this.txtMAKHO.Size = new System.Drawing.Size(79, 22);
             this.txtMAKHO.TabIndex = 38;
             // 
             // txtMANV
@@ -672,7 +684,8 @@
             this.txtMAPN.Location = new System.Drawing.Point(152, 64);
             this.txtMAPN.Margin = new System.Windows.Forms.Padding(6);
             this.txtMAPN.Name = "txtMAPN";
-            this.txtMAPN.Size = new System.Drawing.Size(153, 22);
+            this.txtMAPN.Properties.ReadOnly = true;
+            this.txtMAPN.Size = new System.Drawing.Size(79, 22);
             this.txtMAPN.TabIndex = 34;
             // 
             // lbDONGIA
@@ -799,9 +812,9 @@
             this.cTPNGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cTPNGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6);
             this.cTPNGridControl.Enabled = false;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.cTPNGridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.cTPNGridControl.Location = new System.Drawing.Point(781, 426);
             this.cTPNGridControl.MainView = this.gridView2;
             this.cTPNGridControl.Margin = new System.Windows.Forms.Padding(6);
@@ -824,36 +837,44 @@
             // 
             // colMAPN1
             // 
+            this.colMAPN1.Caption = "Mã phiếu nhập";
             this.colMAPN1.FieldName = "MAPN";
             this.colMAPN1.MinWidth = 49;
             this.colMAPN1.Name = "colMAPN1";
+            this.colMAPN1.OptionsColumn.ReadOnly = true;
             this.colMAPN1.Visible = true;
             this.colMAPN1.VisibleIndex = 0;
             this.colMAPN1.Width = 182;
             // 
             // colMAVT
             // 
+            this.colMAVT.Caption = "Mã vật tư";
             this.colMAVT.FieldName = "MAVT";
             this.colMAVT.MinWidth = 49;
             this.colMAVT.Name = "colMAVT";
+            this.colMAVT.OptionsColumn.ReadOnly = true;
             this.colMAVT.Visible = true;
             this.colMAVT.VisibleIndex = 1;
             this.colMAVT.Width = 182;
             // 
             // colSOLUONG
             // 
+            this.colSOLUONG.Caption = "Số lượng";
             this.colSOLUONG.FieldName = "SOLUONG";
             this.colSOLUONG.MinWidth = 49;
             this.colSOLUONG.Name = "colSOLUONG";
+            this.colSOLUONG.OptionsColumn.ReadOnly = true;
             this.colSOLUONG.Visible = true;
             this.colSOLUONG.VisibleIndex = 2;
             this.colSOLUONG.Width = 182;
             // 
             // colDONGIA
             // 
+            this.colDONGIA.Caption = "Đơn giá";
             this.colDONGIA.FieldName = "DONGIA";
             this.colDONGIA.MinWidth = 49;
             this.colDONGIA.Name = "colDONGIA";
+            this.colDONGIA.OptionsColumn.ReadOnly = true;
             this.colDONGIA.Visible = true;
             this.colDONGIA.VisibleIndex = 3;
             this.colDONGIA.Width = 182;

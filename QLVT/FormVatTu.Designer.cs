@@ -429,6 +429,7 @@
             // 
             // cbChiNhanh
             // 
+            this.cbChiNhanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbChiNhanh.Location = new System.Drawing.Point(339, 48);
             this.cbChiNhanh.Margin = new System.Windows.Forms.Padding(6);
             this.cbChiNhanh.Name = "cbChiNhanh";
@@ -487,36 +488,44 @@
             // 
             // colMAVT
             // 
+            this.colMAVT.Caption = "Mã vật tư";
             this.colMAVT.FieldName = "MAVT";
             this.colMAVT.MinWidth = 39;
             this.colMAVT.Name = "colMAVT";
+            this.colMAVT.OptionsColumn.ReadOnly = true;
             this.colMAVT.Visible = true;
             this.colMAVT.VisibleIndex = 0;
             this.colMAVT.Width = 146;
             // 
             // colTENVT
             // 
+            this.colTENVT.Caption = "Tên vật tư";
             this.colTENVT.FieldName = "TENVT";
             this.colTENVT.MinWidth = 39;
             this.colTENVT.Name = "colTENVT";
+            this.colTENVT.OptionsColumn.ReadOnly = true;
             this.colTENVT.Visible = true;
             this.colTENVT.VisibleIndex = 1;
             this.colTENVT.Width = 146;
             // 
             // colDVT
             // 
+            this.colDVT.Caption = "Đơn vị tính";
             this.colDVT.FieldName = "DVT";
             this.colDVT.MinWidth = 39;
             this.colDVT.Name = "colDVT";
+            this.colDVT.OptionsColumn.ReadOnly = true;
             this.colDVT.Visible = true;
             this.colDVT.VisibleIndex = 2;
             this.colDVT.Width = 146;
             // 
             // colSOLUONGTON
             // 
+            this.colSOLUONGTON.Caption = "Số lượng tồn";
             this.colSOLUONGTON.FieldName = "SOLUONGTON";
             this.colSOLUONGTON.MinWidth = 39;
             this.colSOLUONGTON.Name = "colSOLUONGTON";
+            this.colSOLUONGTON.OptionsColumn.ReadOnly = true;
             this.colSOLUONGTON.Visible = true;
             this.colSOLUONGTON.VisibleIndex = 3;
             this.colSOLUONGTON.Width = 146;

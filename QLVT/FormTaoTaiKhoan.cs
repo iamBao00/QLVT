@@ -116,7 +116,7 @@ namespace QLVT
             btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnReload.Enabled = btnThoat.Enabled = true;
             btnGhi.Enabled = btnHuy.Enabled = GROUPP.Enabled = LOGINNAME.Enabled = PASSWORD.Visible = passLabel.Visible = false;
             nhanVienGridControl.Enabled = true;
-            loginnameOld.Visible = false;
+            loginnameOld.Visible = lbloginnameOld.Visible =  false;
 
             
         }
@@ -301,7 +301,7 @@ namespace QLVT
                     btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnReload.Enabled = btnThoat.Enabled = true;
                     btnGhi.Enabled = btnHuy.Enabled = GROUPP.Enabled = LOGINNAME.Enabled = PASSWORD.Visible = passLabel.Visible = false;
                     nhanVienGridControl.Enabled = true;
-                    loginnameOld.Visible = false;
+                    loginnameOld.Visible =  lbloginnameOld.Visible  = false;
                     nhanVienBindingSource.Position = vitri;
                 }
                 catch (Exception ex)
@@ -312,7 +312,7 @@ namespace QLVT
                     btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnReload.Enabled = btnThoat.Enabled = true;
                     btnGhi.Enabled = btnHuy.Enabled = GROUPP.Enabled = LOGINNAME.Enabled = PASSWORD.Visible = passLabel.Visible = false;
                     nhanVienGridControl.Enabled = true;
-                    loginnameOld.Visible = false;
+                    loginnameOld.Visible = lbloginnameOld.Visible = false;
                     nhanVienBindingSource.Position = vitri;
                     return;
                 }
@@ -339,7 +339,7 @@ namespace QLVT
                     btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnReload.Enabled = btnThoat.Enabled = true;
                     btnGhi.Enabled = btnHuy.Enabled = GROUPP.Enabled = LOGINNAME.Enabled = PASSWORD.Visible = passLabel.Visible = false;
                     nhanVienGridControl.Enabled = true;
-                    loginnameOld.Visible = false;
+                    loginnameOld.Visible = lbloginnameOld.Visible = false;
                 }
                 catch (Exception ex)
                 {
@@ -349,7 +349,7 @@ namespace QLVT
                     btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnReload.Enabled = btnThoat.Enabled = true;
                     btnGhi.Enabled = btnHuy.Enabled = GROUPP.Enabled = LOGINNAME.Enabled = PASSWORD.Visible = passLabel.Visible = false;
                     nhanVienGridControl.Enabled = true;
-                    loginnameOld.Visible = false;
+                    loginnameOld.Visible = lbloginnameOld.Visible = false;
                     return;
                 }
 
@@ -385,7 +385,7 @@ namespace QLVT
             btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnReload.Enabled = btnThoat.Enabled = false;
             btnGhi.Enabled = btnHuy.Enabled = GROUPP.Enabled = LOGINNAME.Enabled = PASSWORD.Visible = passLabel.Visible = true;
             nhanVienGridControl.Enabled = GROUPP.Enabled = false;
-            loginnameOld.Visible = true;
+            loginnameOld.Visible = lbloginnameOld.Visible = true;
             check_them = false;
         }
 
