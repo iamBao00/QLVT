@@ -95,7 +95,7 @@
             this.btnPreview.Name = "btnPreview";
             this.btnPreview.Size = new System.Drawing.Size(160, 37);
             this.btnPreview.TabIndex = 13;
-            this.btnPreview.Text = "Preview";
+            this.btnPreview.Text = "PREVIEW";
             this.btnPreview.UseVisualStyleBackColor = true;
             this.btnPreview.Click += new System.EventHandler(this.btnPreview_Click);
             // 

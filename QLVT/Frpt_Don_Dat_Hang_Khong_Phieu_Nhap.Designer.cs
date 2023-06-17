@@ -59,7 +59,7 @@
             this.btPreview.Name = "btPreview";
             this.btPreview.Size = new System.Drawing.Size(139, 38);
             this.btPreview.TabIndex = 4;
-            this.btPreview.Text = "preview";
+            this.btPreview.Text = "PREVIEW";
             this.btPreview.UseVisualStyleBackColor = true;
             this.btPreview.Click += new System.EventHandler(this.btPreview_Click);
             // 
@@ -72,7 +72,7 @@
             this.Controls.Add(this.cbChiNhanh);
             this.Controls.Add(this.label1);
             this.Name = "Frpt_Don_Dat_Hang_Khong_Phieu_Nhap";
-            this.Text = "Frpt_Don_Dat_Hang_Khong_Phieu_Nhap";
+            this.Text = "Xem đơn đặt hàng không có phiếu nhập";
             this.Load += new System.EventHandler(this.Frpt_Don_Dat_Hang_Khong_Phieu_Nhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
