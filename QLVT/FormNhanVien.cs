@@ -317,7 +317,7 @@ namespace QLVT
                     this.nhanVienTableAdapter.Connection.ConnectionString = Program.connstr;
                     this.nhanVienTableAdapter.Update(this.DS1.NhanVien);
                     String query = String.Format("INSERT INTO DBO.NHANVIEN(MANV,HO,TEN,SOCMND,DIACHI,NGAYSINH,LUONG,MACN, TrangThaiXoa) " +
-                                                " VALUES({0},'{1}','{2}','{3}', N'{4}' ,{5}, {6},'{7}', {8})", manv, ho, ten,cmnd, diachi, ToString(ngaysinh, "yyyy-MM-dd"), luong, macn, trangthaixoa);
+                                                " VALUES({0},N'{1}',N'{2}','{3}', N'{4}' ,{5}, {6},'{7}', {8})", manv, ho, ten,cmnd, diachi, ToString(ngaysinh, "yyyy-MM-dd"), luong, macn, trangthaixoa);
                     Console.WriteLine(query);
                     stack.Push(query);
                 }
@@ -540,10 +540,10 @@ namespace QLVT
                 {
                     query = "UPDATE DBO.NhanVien " +
                             "SET " +
-                            "HO = '" + ho + "'," +
-                            "TEN = '" + ten + "'," +
+                            "HO = N'" + ho + "'," +
+                            "TEN = N'" + ten + "'," +
                             "SOCMND = '" + cmnd + "'," +
-                            "DIACHI = '" + diachi + "'," +
+                            "DIACHI = N'" + diachi + "'," +
                             "NGAYSINH = " +ToString(ngaysinh, "yyyy-MM-dd") + ","+
                             "LUONG = '" + luong + "'," +
                             "MACN = '" + macn + "'," +

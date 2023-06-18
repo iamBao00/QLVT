@@ -22,20 +22,11 @@ namespace QLVT
             string[] unitNumbers = new string[] { "không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín" };
             string[] placeValues = new string[] { "", "nghìn", "triệu", "tỷ" };
 
-            // -12345678.3445435 => "-12345678"
-            //int number = Convert.ToInt32(inputNumber);
-            //if (number < 0)
-            //{
-            //    number = -number;
-            //    sNumber = number.ToString();
-            //    isNegative = true;
-            //}
-
             String sNumber = number.ToString();
 
             int ones, tens, hundreds;
 
-            int positionDigit = sNumber.Length;   // last -> first
+            int positionDigit = sNumber.Length;  
 
             string result = " ";
 
@@ -44,14 +35,9 @@ namespace QLVT
                 result = unitNumbers[0];
             else
             {
-                // 0:       ###
-                // 1: nghìn ###,###
-                // 2: triệu ###,###,###
-                // 3: tỷ    ###,###,###,###
                 int placeValue = 0;
                 while (positionDigit > 0)
                 {
-                    // Check last 3 digits remain ### (hundreds tens ones)
                     tens = hundreds = -1;
                     ones = Convert.ToInt32(sNumber.Substring(positionDigit - 1, 1));
                     positionDigit--;
